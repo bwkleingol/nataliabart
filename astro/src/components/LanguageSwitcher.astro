@@ -2,22 +2,76 @@
 import { localizePath } from 'astro-i18next';
 import i18next, { t } from 'i18next';
 
-const currentLanguage = i18next.language;
+// Extract the language from the URL path
+const pathSegments = Astro.url.pathname.split('/');
+let currentLanguage = pathSegments[1] || 'en';
+
+// Validate that it's one of our supported languages
+if (!['en', 'nl', 'id'].includes(currentLanguage)) {
+  currentLanguage = 'en';
+}
+
 const currentPath = Astro.url.pathname;
+
+const languages = [
+  { code: 'en', name: t('languageSwitcher.en') },
+  { code: 'nl', name: t('languageSwitcher.nl') },
+  { code: 'id', name: t('languageSwitcher.id') }
+];
+
+console.log('Current language from URL:', currentLanguage);
 ---
 
 <div class="language-switcher">
-  <span class="language-label">{t('languageSwitcher.label')}:</span>
-  <div class="language-options">
-    <a href={localizePath(currentPath, 'en')} class={`language-option ${currentLanguage === 'en' ? 'active' : ''}`} hreflang="en">
-      {t('languageSwitcher.en')}
-    </a>
-    <a href={localizePath(currentPath, 'nl')} class={`language-option ${currentLanguage === 'nl' ? 'active' : ''}`} hreflang="nl">
-      {t('languageSwitcher.nl')}
-    </a>
-    <a href={localizePath(currentPath, 'id')} class={`language-option ${currentLanguage === 'id' ? 'active' : ''}`} hreflang="id">
-      {t('languageSwitcher.id')}
-    </a>
+  <div class="language-switcher-desktop">
+    <!--<span class="language-label">{t('languageSwitcher.label')}:</span>-->
+    <div class="language-options">
+      {languages.map((lang) => (
+        <a
+          href={localizePath(currentPath, lang.code)}
+          class={`language-option ${currentLanguage === lang.code ? 'active' : ''}`}
+          hreflang={lang.code}
+          title={lang.name}
+        >
+          <img
+            src={`/images/flags/${lang.code}.svg`}
+            alt={`${lang.name} flag`}
+            class="flag-icon"
+          />
+          <span class="lang-code">{lang.code.toUpperCase()}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="language-switcher-mobile">
+    <div class="dropdown">
+      <button class="dropdown-button">
+        <img
+          src={`/images/flags/${currentLanguage}.svg`}
+          alt={`${currentLanguage} flag`}
+          class="flag-icon"
+        />
+        <span class="lang-code">{currentLanguage.toUpperCase()}</span>
+        <span class="dropdown-arrow">▼</span>
+      </button>
+      <div class="dropdown-content">
+        {languages.map((lang) => (
+          <a
+            href={localizePath(currentPath, lang.code)}
+            class={`dropdown-item ${currentLanguage === lang.code ? 'active' : ''}`}
+            hreflang={lang.code}
+          >
+            <img
+              src={`/images/flags/${lang.code}.svg`}
+              alt={`${lang.name} flag`}
+              class="flag-icon"
+            />
+            <span class="lang-name">{lang.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -25,8 +79,18 @@ const currentPath = Astro.url.pathname;
   .language-switcher {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     margin-left: 1rem;
+    position: relative;
+  }
+
+  .language-switcher-desktop {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .language-switcher-mobile {
+    display: none;
   }
 
   .language-label {
@@ -40,28 +104,118 @@ const currentPath = Astro.url.pathname;
   }
 
   .language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
     font-size: 0.9rem;
     color: var(--text-color);
     text-decoration: none;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
   }
 
   .language-option:hover {
     background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
   }
 
   .language-option.active {
     font-weight: bold;
     color: var(--primary-color);
+    border-color: var(--primary-color);
   }
 
+  .flag-icon {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dropdown styles for mobile */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 0.25rem;
+    color: var(--text-color);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 100;
+    margin-top: 0.5rem;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: background-color 0.2s ease;
+  }
+
+  .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .dropdown-item.active {
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.05);
+  }
+
+  .lang-code {
+    font-weight: 500;
+  }
+
+  /* Media queries for responsive design */
   @media (max-width: 768px) {
     .language-switcher {
-      margin-top: 1rem;
-      justify-content: center;
-      width: 100%;
+      margin: 0;
+      position: absolute;
+      top: 1rem;
+      right: 4rem;
+    }
+
+    .language-switcher-desktop {
+      display: none;
+    }
+
+    .language-switcher-mobile {
+      display: block;
     }
   }
 </style>
