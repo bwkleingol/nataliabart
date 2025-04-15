@@ -1,4 +1,4 @@
-import { getLocale } from 'astro-i18n';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import enTranslations from './en.json';
 import nlTranslations from './nl.json';
 import idTranslations from './id.json';
@@ -17,15 +17,23 @@ const translations = {
   id: idTranslations,
 };
 
-export function getTranslations() {
-  const locale = getLocale() || 'en';
-  return translations[locale as keyof typeof translations] || translations.en;
+// Store the current locale - will be set by components that have access to Astro.currentLocale
+let _currentLocale = 'en';
+
+// Function to set the current locale from components
+export function setCurrentLocale(locale: string) {
+  _currentLocale = locale;
 }
 
-export function t(key: TranslationKey): string {
-  const locale = getLocale() || 'en';
-  const translationObj = translations[locale as keyof typeof translations] || translations.en;
-  
+export function getTranslations(locale?: string) {
+  const currentLocale = locale || _currentLocale;
+  return translations[currentLocale as keyof typeof translations] || translations.en;
+}
+
+export function t(key: TranslationKey, locale?: string): string {
+  const currentLocale = locale || _currentLocale;
+  const translationObj = translations[currentLocale as keyof typeof translations] || translations.en;
+
   return getNestedValue(translationObj, key) || getNestedValue(translations.en, key) || key;
 }
 
@@ -38,22 +46,28 @@ export const defaultLocale = 'en';
 export const locales = ['en', 'nl', 'id'];
 
 export function getLocalizedPathname(pathname: string, locale: string): string {
-  // Remove the current locale prefix if it exists
-  const currentLocale = getLocale();
-  let path = pathname;
-  
-  if (currentLocale) {
-    const localePrefix = `/${currentLocale}`;
-    if (pathname.startsWith(localePrefix)) {
-      path = pathname.substring(localePrefix.length) || '/';
+  // Use Astro's built-in function to get the localized URL
+  try {
+    return getRelativeLocaleUrl(locale, pathname);
+  } catch (error) {
+    // Fallback implementation if the Astro function fails
+    // Remove any existing locale prefix
+    const strippedPath = stripLocalePrefixFromPath(pathname);
+
+    // Add the new locale prefix if it's not the default locale
+    return locale === defaultLocale ? strippedPath : `/${locale}${strippedPath}`;
+  }
+}
+
+// Helper function to strip locale prefix from a path
+function stripLocalePrefixFromPath(pathname: string): string {
+  // Check if the path starts with any of the locales
+  for (const locale of locales) {
+    if (pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`) {
+      return pathname.substring(locale.length + 1) || '/';
     }
   }
-  
+
   // Ensure path starts with a slash
-  if (!path.startsWith('/')) {
-    path = `/${path}`;
-  }
-  
-  // Add the new locale prefix
-  return locale === defaultLocale ? path : `/${locale}${path}`;
+  return pathname.startsWith('/') ? pathname : `/${pathname}`;
 }

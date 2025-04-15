@@ -1,17 +1,21 @@
 ---
-import { t } from 'i18next';
-import { localizePath } from 'astro-i18next';
+import { t, setCurrentLocale } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 
 interface Props {
 	title?: string;
 }
 
+// Set the current locale for the i18n utility
+const currentLocale = Astro.currentLocale || 'en';
+setCurrentLocale(currentLocale);
+
 const { title = t('site.title') } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={t('site.lang') || 'en'}>
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -30,15 +34,15 @@ const { title = t('site.title') } = Astro.props;
 		<header>
 			<nav>
 				<div class="logo">
-					<a href={localizePath('/')}>N&B</a>
+					<a href={getRelativeLocaleUrl(currentLocale, '')}>N&B</a>
 				</div>
 				<div class="nav-links">
-					<a href={localizePath('/')}>{t('nav.home')}</a>
-					<a href={localizePath('/our-story')}>{t('nav.ourStory')}</a>
-					<a href={localizePath('/event-details')}>{t('nav.eventDetails')}</a>
-					<a href={localizePath('/travel')}>{t('nav.travel')}</a>
-					<a href={localizePath('/gallery')}>{t('nav.gallery')}</a>
-					<a href={localizePath('/contact')} class="rsvp-button">{t('nav.contact')}</a>
+					<a href={getRelativeLocaleUrl(currentLocale, '')}>{t('nav.home')}</a>
+					<a href={getRelativeLocaleUrl(currentLocale, 'our-story')}>{t('nav.ourStory')}</a>
+					<a href={getRelativeLocaleUrl(currentLocale, 'event-details')}>{t('nav.eventDetails')}</a>
+					<a href={getRelativeLocaleUrl(currentLocale, 'travel')}>{t('nav.travel')}</a>
+					<a href={getRelativeLocaleUrl(currentLocale, 'gallery')}>{t('nav.gallery')}</a>
+					<a href={getRelativeLocaleUrl(currentLocale, 'contact')} class="rsvp-button">{t('nav.contact')}</a>
 				</div>
 				<LanguageSwitcher />
 				<button class="mobile-menu-button" aria-label="Menu">

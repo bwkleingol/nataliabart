@@ -1,25 +1,18 @@
 ---
-import { localizePath } from 'astro-i18next';
-import i18next, { t } from 'i18next';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { t, setCurrentLocale } from '../i18n/utils';
 
-// Extract the language from the URL path
-const pathSegments = Astro.url.pathname.split('/');
-let currentLanguage = pathSegments[1] || 'en';
-
-// Validate that it's one of our supported languages
-if (!['en', 'nl', 'id'].includes(currentLanguage)) {
-  currentLanguage = 'en';
-}
-
+// Get the current locale from Astro and set it for the i18n utility
+const currentLanguage = Astro.currentLocale || 'en';
+setCurrentLocale(currentLanguage);
 const currentPath = Astro.url.pathname;
 
+// Define the languages
 const languages = [
   { code: 'en', name: t('languageSwitcher.en') },
   { code: 'nl', name: t('languageSwitcher.nl') },
   { code: 'id', name: t('languageSwitcher.id') }
 ];
-
-console.log('Current language from URL:', currentLanguage);
 ---
 
 <div class="language-switcher">
@@ -28,7 +21,7 @@ console.log('Current language from URL:', currentLanguage);
     <div class="language-options">
       {languages.map((lang) => (
         <a
-          href={localizePath(currentPath, lang.code)}
+          href={getRelativeLocaleUrl(lang.code, '')}
           class={`language-option ${currentLanguage === lang.code ? 'active' : ''}`}
           hreflang={lang.code}
           title={lang.name}
@@ -58,7 +51,7 @@ console.log('Current language from URL:', currentLanguage);
       <div class="dropdown-content">
         {languages.map((lang) => (
           <a
-            href={localizePath(currentPath, lang.code)}
+            href={getRelativeLocaleUrl(lang.code, '')}
             class={`dropdown-item ${currentLanguage === lang.code ? 'active' : ''}`}
             hreflang={lang.code}
           >

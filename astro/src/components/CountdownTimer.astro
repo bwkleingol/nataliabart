@@ -1,5 +1,9 @@
 ---
-import { t } from 'i18next';
+import { t, setCurrentLocale } from '../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'en';
+setCurrentLocale(currentLocale);
 
 // The wedding date: June 14, 2025
 const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia time zone (UTC+7)

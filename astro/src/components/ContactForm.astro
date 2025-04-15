@@ -1,6 +1,9 @@
 ---
-import { t } from 'i18next';
-import { Trans } from 'astro-i18next/components';
+import { t, setCurrentLocale } from '../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'en';
+setCurrentLocale(currentLocale);
 ---
 
 <section class="contact-section">

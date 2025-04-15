@@ -1,7 +1,10 @@
 ---
 import CountdownTimer from './CountdownTimer.astro';
-import { t } from 'i18next';
-import { localizePath } from 'astro-i18next';
+import { t, setCurrentLocale } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const currentLocale = Astro.currentLocale || 'en';
+setCurrentLocale(currentLocale);
 ---
 
 <section class="hero">
@@ -11,7 +14,7 @@ import { localizePath } from 'astro-i18next';
         <div class="divider"></div>
         <p class="invitation">{t('hero.invitation')}</p>
         <CountdownTimer />
-        <a href={localizePath('/contact')} class="cta-button">{t('hero.cta')}</a>
+        <a href={getRelativeLocaleUrl(currentLocale, 'contact')} class="cta-button">{t('hero.cta')}</a>
     </div>
 </section>
 

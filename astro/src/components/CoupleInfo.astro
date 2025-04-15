@@ -1,5 +1,9 @@
 ---
-import { t } from 'i18next';
+import { t, setCurrentLocale } from '../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'en';
+setCurrentLocale(currentLocale);
 ---
 
 <section class="couple-info">
