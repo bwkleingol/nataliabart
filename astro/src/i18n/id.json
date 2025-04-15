@@ -1,0 +1,142 @@
+{
+  "site": {
+    "title": "Pernikahan Bart & Nathalia",
+    "description": "Bergabunglah dengan kami di hari spesial kami pada 14 Juni 2025 di Semarang, Indonesia"
+  },
+  "nav": {
+    "home": "Beranda",
+    "ourStory": "Kisah Kami",
+    "eventDetails": "Detail Acara",
+    "travel": "Perjalanan & Penginapan",
+    "gallery": "Galeri",
+    "contact": "Hubungi Kami"
+  },
+  "hero": {
+    "date": "14 Juni 2025 • Semarang, Indonesia",
+    "invitation": "Kami akan menikah dan kami ingin Anda bergabung di hari spesial kami",
+    "cta": "Hubungi Kami"
+  },
+  "countdown": {
+    "days": "Hari",
+    "hours": "Jam",
+    "minutes": "Menit",
+    "seconds": "Detik"
+  },
+  "couple": {
+    "title": "Pasangan",
+    "bart": {
+      "origin": "dari Belanda",
+      "description": "Bart tumbuh di Amsterdam dan pindah ke Semarang pada tahun 2020 di mana ia bekerja sebagai digital nomad. Dia suka menjelajahi kota dan mendalami budaya Jawa lokal."
+    },
+    "nathalia": {
+      "origin": "dari Indonesia",
+      "description": "Nathalia lahir dan dibesarkan di Semarang. Dia bekerja di bidang perhotelan di kota kelahirannya. Dia menikmati memasak hidangan tradisional Jawa dan berbagi warisan budayanya."
+    }
+  },
+  "events": {
+    "title": "Detail Acara",
+    "ceremony": {
+      "title": "Upacara Adat Jawa",
+      "time": "14 Juni 2025 • 10:00 WIB",
+      "location": "Semarang Grand Ballroom",
+      "address": "Jl. Pemuda No. 123, Semarang, Indonesia",
+      "description": "Bergabunglah dengan kami untuk upacara pernikahan adat Jawa yang menghormati latar belakang budaya kami berdua."
+    },
+    "reception": {
+      "title": "Resepsi",
+      "time": "14 Juni 2025 • 18:00 WIB",
+      "location": "Semarang Beachfront",
+      "address": "Pantai Marina, Semarang, Indonesia",
+      "description": "Rayakan bersama kami di resepsi tepi pantai kami yang menampilkan perpaduan masakan Indonesia dan Belanda, musik live, dan dansa di bawah bintang-bintang."
+    },
+    "location": "Lokasi"
+  },
+  "gallery": {
+    "title": "Galeri Kami",
+    "categories": {
+      "all": "Semua Foto",
+      "engagement": "Pertunangan",
+      "travels": "Perjalanan Kami",
+      "family": "Keluarga"
+    },
+    "photos": {
+      "proposal": {
+        "title": "Lamaran",
+        "description": "Gunung Batur, Februari 2024"
+      },
+      "party": {
+        "title": "Pesta Pertunangan",
+        "description": "Ubud, Maret 2024"
+      },
+      "photoshoot": {
+        "title": "Foto Pertunangan",
+        "description": "Terasering Sawah Bali, April 2024"
+      }
+    }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "intro": "Kami sangat bersemangat untuk merayakan hari spesial kami dengan Anda! Jika Anda memiliki pertanyaan atau ingin memberi tahu kami apakah Anda dapat hadir, silakan hubungi kami melalui WhatsApp. Kami menghargai kabar dari Anda sebelum",
+    "deadline": "14 Mei 2025",
+    "whatsapp": {
+      "title": "Hubungi Kami melalui WhatsApp",
+      "description": "Untuk pertanyaan tentang pernikahan kami atau untuk memberi tahu kami apakah Anda dapat hadir, silakan hubungi kami langsung melalui WhatsApp. Kami akan dengan senang hati membantu dengan informasi apa pun yang Anda butuhkan.",
+      "number": "WhatsApp:",
+      "button": "Hubungi Kami di WhatsApp"
+    },
+    "info": {
+      "message": "Saat mengirim pesan, Anda mungkin ingin menyertakan:",
+      "items": [
+        "Nama lengkap Anda",
+        "Jika Anda berencana untuk hadir",
+        "Jumlah orang dalam kelompok Anda",
+        "Pembatasan makanan apa pun",
+        "Pertanyaan tentang pernikahan"
+      ]
+    },
+    "important": {
+      "title": "Informasi Penting",
+      "items": [
+        "Harap beri tahu kami jika Anda dapat hadir sebelum 14 Mei 2025",
+        "Saat mengirim pesan di WhatsApp, harap sertakan nama semua tamu dalam kelompok Anda",
+        "Anak-anak dipersilakan di upacara dan resepsi",
+        "Harap sebutkan pembatasan makanan apa pun dalam pesan WhatsApp Anda"
+      ]
+    },
+    "questions": {
+      "title": "Pertanyaan?",
+      "text": "Jika Anda memiliki pertanyaan tentang pernikahan atau perlu memperbarui status kehadiran Anda, silakan hubungi kami langsung melalui WhatsApp atau hubungi koordinator pernikahan kami:"
+    }
+  },
+  "travel": {
+    "title": "Perjalanan & Penginapan",
+    "intro": "Kami senang menyambut Anda ke Semarang, Indonesia untuk perayaan pernikahan kami. Di bawah ini Anda akan menemukan informasi untuk membantu Anda merencanakan perjalanan dan membuat penginapan Anda nyaman.",
+    "getting": "Menuju ke Semarang",
+    "byAir": {
+      "title": "Dengan Pesawat",
+      "description": "Bandara terdekat adalah Bandara Internasional Ahmad Yani (SRG) di Semarang. Untuk pelancong internasional, Anda mungkin perlu transit melalui bandara Jakarta (CGK) atau Bali (DPS).",
+      "airlines": "Maskapai yang Direkomendasikan:"
+    },
+    "tips": {
+      "title": "Tips Perjalanan",
+      "currency": {
+        "title": "Mata Uang",
+        "description": "Mata uang lokal adalah Rupiah Indonesia (IDR). ATM tersedia secara luas, dan kartu kredit utama diterima di hotel dan tempat yang lebih besar. Baik untuk memiliki beberapa uang tunai untuk vendor dan transportasi yang lebih kecil."
+      },
+      "language": {
+        "title": "Bahasa",
+        "description": "Bahasa Indonesia adalah bahasa resmi, dengan bahasa Jawa yang banyak digunakan di Semarang. Bahasa Inggris digunakan di area wisata dan hotel besar. Kami akan menyediakan buku frasa kecil dalam paket selamat datang Anda."
+      }
+    }
+  },
+  "footer": {
+    "date": "14 Juni 2025 • Semarang, Indonesia",
+    "copyright": "© 2024 Pernikahan Bart & Nathalia"
+  },
+  "languageSwitcher": {
+    "label": "Bahasa",
+    "en": "Inggris",
+    "nl": "Belanda",
+    "id": "Indonesia"
+  }
+}

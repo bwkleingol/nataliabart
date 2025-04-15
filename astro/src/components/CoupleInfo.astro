@@ -1,9 +1,10 @@
 ---
+import { t } from 'i18next';
 ---
 
 <section class="couple-info">
     <div class="section-header">
-        <h2>The Couple</h2>
+        <h2>{t('couple.title')}</h2>
         <div class="divider"></div>
     </div>
 
@@ -11,11 +12,8 @@
         <div class="person">
             <div class="person-image bart"></div>
             <h3>Bart</h3>
-            <p class="origin">from The Netherlands</p>
-            <p class="description">
-                Bart grew up in Amsterdam and moved to Semarang in 2020 where he works as a digital nomad.
-                He loves exploring the city, and immersing himself in the local Javanese culture.
-            </p>
+            <p class="origin">{t('couple.bart.origin')}</p>
+            <p class="description">{t('couple.bart.description')}</p>
         </div>
 
         <div class="heart-divider">❤</div>
@@ -23,11 +21,8 @@
         <div class="person">
             <div class="person-image nathalia"></div>
             <h3>Nathalia</h3>
-            <p class="origin">from Indonesia</p>
-            <p class="description">
-                Nathalia was born and raised in Semarang. She works in hospitality in her hometown.
-                She enjoys cooking traditional Javanese dishes and sharing her cultural heritage.
-            </p>
+            <p class="origin">{t('couple.nathalia.origin')}</p>
+            <p class="description">{t('couple.nathalia.description')}</p>
         </div>
     </div>
 </section>

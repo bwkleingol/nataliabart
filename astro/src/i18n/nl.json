@@ -1,0 +1,142 @@
+{
+  "site": {
+    "title": "Bruiloft van Bart & Nathalia",
+    "description": "Vier met ons mee op 14 juni 2025 in Semarang, Indonesië"
+  },
+  "nav": {
+    "home": "Home",
+    "ourStory": "Ons Verhaal",
+    "eventDetails": "Evenement Details",
+    "travel": "Reis & Verblijf",
+    "gallery": "Galerij",
+    "contact": "Contact"
+  },
+  "hero": {
+    "date": "14 juni 2025 • Semarang, Indonesië",
+    "invitation": "Wij gaan trouwen en we zouden het geweldig vinden als je erbij bent op onze speciale dag",
+    "cta": "Neem Contact Op"
+  },
+  "countdown": {
+    "days": "Dagen",
+    "hours": "Uren",
+    "minutes": "Minuten",
+    "seconds": "Seconden"
+  },
+  "couple": {
+    "title": "Het Bruidspaar",
+    "bart": {
+      "origin": "uit Nederland",
+      "description": "Bart groeide op in Amsterdam en verhuisde in 2020 naar Semarang waar hij werkt als digital nomad. Hij houdt ervan om de stad te verkennen en zich onder te dompelen in de lokale Javaanse cultuur."
+    },
+    "nathalia": {
+      "origin": "uit Indonesië",
+      "description": "Nathalia is geboren en getogen in Semarang. Ze werkt in de horeca in haar geboortestad. Ze geniet van het koken van traditionele Javaanse gerechten en het delen van haar culturele erfgoed."
+    }
+  },
+  "events": {
+    "title": "Evenement Details",
+    "ceremony": {
+      "title": "Traditionele Javaanse Ceremonie",
+      "time": "14 juni 2025 • 10:00 uur",
+      "location": "Semarang Grand Ballroom",
+      "address": "Jl. Pemuda No. 123, Semarang, Indonesië",
+      "description": "Wees erbij voor een traditionele Javaanse huwelijksceremonie die beide culturele achtergronden eert."
+    },
+    "reception": {
+      "title": "Receptie",
+      "time": "14 juni 2025 • 18:00 uur",
+      "location": "Semarang Beachfront",
+      "address": "Pantai Marina, Semarang, Indonesië",
+      "description": "Vier met ons mee op onze strandreceptie met een mix van Indonesische en Nederlandse gerechten, live muziek en dansen onder de sterren."
+    },
+    "location": "Locatie"
+  },
+  "gallery": {
+    "title": "Onze Galerij",
+    "categories": {
+      "all": "Alle Foto's",
+      "engagement": "Verloving",
+      "travels": "Onze Reizen",
+      "family": "Familie"
+    },
+    "photos": {
+      "proposal": {
+        "title": "Het Aanzoek",
+        "description": "Mount Batur, februari 2024"
+      },
+      "party": {
+        "title": "Verlovingsfeest",
+        "description": "Ubud, maart 2024"
+      },
+      "photoshoot": {
+        "title": "Verlovingsfotoshoot",
+        "description": "Rijstterrassen van Bali, april 2024"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "We kijken ernaar uit om onze speciale dag met je te vieren! Als je vragen hebt of wilt laten weten of je aanwezig kunt zijn, neem dan contact met ons op via WhatsApp. We horen graag van je vóór",
+    "deadline": "14 mei 2025",
+    "whatsapp": {
+      "title": "Neem Contact Op via WhatsApp",
+      "description": "Voor vragen over onze bruiloft of om te laten weten of je aanwezig kunt zijn, neem direct contact met ons op via WhatsApp. We helpen je graag met alle informatie die je nodig hebt.",
+      "number": "WhatsApp:",
+      "button": "Contact Via WhatsApp"
+    },
+    "info": {
+      "message": "Bij het sturen van een bericht kun je het volgende vermelden:",
+      "items": [
+        "Je volledige naam",
+        "Of je van plan bent te komen",
+        "Aantal personen in je gezelschap",
+        "Eventuele dieetwensen",
+        "Vragen over de bruiloft"
+      ]
+    },
+    "important": {
+      "title": "Belangrijke Informatie",
+      "items": [
+        "Laat ons weten of je aanwezig kunt zijn vóór 14 mei 2025",
+        "Vermeld bij het sturen van een WhatsApp-bericht de namen van alle gasten in je gezelschap",
+        "Kinderen zijn welkom bij zowel de ceremonie als de receptie",
+        "Vermeld eventuele dieetwensen in je WhatsApp-bericht"
+      ]
+    },
+    "questions": {
+      "title": "Vragen?",
+      "text": "Als je vragen hebt over de bruiloft of je aanwezigheidsstatus wilt bijwerken, neem dan direct contact met ons op via WhatsApp of neem contact op met onze weddingplanner:"
+    }
+  },
+  "travel": {
+    "title": "Reis & Verblijf",
+    "intro": "We kijken ernaar uit je te verwelkomen in Semarang, Indonesië voor onze bruiloft. Hieronder vind je informatie om je reis te plannen en je verblijf comfortabel te maken.",
+    "getting": "Naar Semarang reizen",
+    "byAir": {
+      "title": "Per Vliegtuig",
+      "description": "De dichtstbijzijnde luchthaven is Ahmad Yani International Airport (SRG) in Semarang. Internationale reizigers moeten mogelijk overstappen via Jakarta (CGK) of Bali (DPS).",
+      "airlines": "Aanbevolen Luchtvaartmaatschappijen:"
+    },
+    "tips": {
+      "title": "Reistips",
+      "currency": {
+        "title": "Valuta",
+        "description": "De lokale munteenheid is de Indonesische Roepia (IDR). Geldautomaten zijn ruim beschikbaar en grote creditcards worden geaccepteerd in hotels en grotere etablissementen. Het is handig om wat contant geld te hebben voor kleinere verkopers en transport."
+      },
+      "language": {
+        "title": "Taal",
+        "description": "Bahasa Indonesia is de officiële taal, met Javaans dat veel wordt gesproken in Semarang. Engels wordt gesproken in toeristische gebieden en grote hotels. We zullen een klein taalgidsje in je welkomstpakket opnemen."
+      }
+    }
+  },
+  "footer": {
+    "date": "14 juni 2025 • Semarang, Indonesië",
+    "copyright": "© 2024 Bruiloft van Bart & Nathalia"
+  },
+  "languageSwitcher": {
+    "label": "Taal",
+    "en": "Engels",
+    "nl": "Nederlands",
+    "id": "Indonesisch"
+  }
+}

@@ -1,37 +1,46 @@
 ---
+import { t } from 'i18next';
+import { localizePath } from 'astro-i18next';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+
 interface Props {
 	title?: string;
 }
 
-const { title = "Bart & Nathalia's Wedding" } = Astro.props;
+const { title = t('site.title') } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={t('site.lang') || 'en'}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={t('site.description')} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="alternate" hreflang="en" href="https://bartnathaliawedding.com/en" />
+		<link rel="alternate" hreflang="nl" href="https://bartnathaliawedding.com/nl" />
+		<link rel="alternate" hreflang="id" href="https://bartnathaliawedding.com/id" />
 		<title>{title}</title>
 	</head>
 	<body>
 		<header>
 			<nav>
 				<div class="logo">
-					<a href="/">B&N</a>
+					<a href={localizePath('/')}>B&N</a>
 				</div>
 				<div class="nav-links">
-					<a href="/">Home</a>
-					<a href="/our-story">Our Story</a>
-					<a href="/event-details">Event Details</a>
-					<a href="/travel">Travel & Stay</a>
-					<a href="/gallery">Gallery</a>
-					<a href="/contact" class="rsvp-button">Contact Us</a>
+					<a href={localizePath('/')}>{t('nav.home')}</a>
+					<a href={localizePath('/our-story')}>{t('nav.ourStory')}</a>
+					<a href={localizePath('/event-details')}>{t('nav.eventDetails')}</a>
+					<a href={localizePath('/travel')}>{t('nav.travel')}</a>
+					<a href={localizePath('/gallery')}>{t('nav.gallery')}</a>
+					<a href={localizePath('/contact')} class="rsvp-button">{t('nav.contact')}</a>
 				</div>
+				<LanguageSwitcher />
 				<button class="mobile-menu-button" aria-label="Menu">
 					<span></span>
 					<span></span>
@@ -47,8 +56,8 @@ const { title = "Bart & Nathalia's Wedding" } = Astro.props;
 		<footer>
 			<div class="footer-content">
 				<div class="footer-logo">B&N</div>
-				<p class="footer-date">June 14, 2025 • Semarang, Indonesia</p>
-				<p class="footer-copyright">&copy; 2024 Bart & Nathalia's Wedding</p>
+				<p class="footer-date">{t('footer.date')}</p>
+				<p class="footer-copyright">{t('footer.copyright')}</p>
 			</div>
 		</footer>
 	</body>

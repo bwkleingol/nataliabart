@@ -1,16 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import CoupleInfo from '../components/CoupleInfo.astro';
-import EventDetails from '../components/EventDetails.astro';
-import Gallery from '../components/Gallery.astro';
-import ContactForm from '../components/ContactForm.astro';
----
+// Enable server-side rendering for this page
+export const prerender = false;
 
-<Layout title="Bart & Nathalia's Wedding - June 14, 2025">
-	<HeroSection />
-	<CoupleInfo />
-	<EventDetails />
-	<Gallery />
-	<ContactForm />
-</Layout>
+// Redirect to the default language (en)
+const defaultLanguage = 'en';
+const browserLanguage = Astro.request.headers.get('accept-language')?.split(',')[0].split('-')[0];
+let redirectLanguage = defaultLanguage;
+
+// Check if browser language is supported
+if (browserLanguage && ['en', 'nl', 'id'].includes(browserLanguage)) {
+  redirectLanguage = browserLanguage;
+}
+
+Astro.response.status = 302;
+Astro.response.headers.set('Location', `/${redirectLanguage}`);
+---

@@ -1,15 +1,17 @@
 ---
 import CountdownTimer from './CountdownTimer.astro';
+import { t } from 'i18next';
+import { localizePath } from 'astro-i18next';
 ---
 
 <section class="hero">
     <div class="hero-content">
         <h1 class="names">Bart & Nathalia</h1>
-        <p class="wedding-date">June 14, 2025 • Semarang, Indonesia</p>
+        <p class="wedding-date">{t('hero.date')}</p>
         <div class="divider"></div>
-        <p class="invitation">We're getting married and we'd love for you to join us on our special day</p>
+        <p class="invitation">{t('hero.invitation')}</p>
         <CountdownTimer />
-        <a href="/contact" class="cta-button">Contact Us</a>
+        <a href={localizePath('/contact')} class="cta-button">{t('hero.cta')}</a>
     </div>
 </section>
 

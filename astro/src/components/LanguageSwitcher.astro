@@ -1,0 +1,67 @@
+---
+import { localizePath } from 'astro-i18next';
+import i18next, { t } from 'i18next';
+
+const currentLanguage = i18next.language;
+const currentPath = Astro.url.pathname;
+---
+
+<div class="language-switcher">
+  <span class="language-label">{t('languageSwitcher.label')}:</span>
+  <div class="language-options">
+    <a href={localizePath(currentPath, 'en')} class={`language-option ${currentLanguage === 'en' ? 'active' : ''}`} hreflang="en">
+      {t('languageSwitcher.en')}
+    </a>
+    <a href={localizePath(currentPath, 'nl')} class={`language-option ${currentLanguage === 'nl' ? 'active' : ''}`} hreflang="nl">
+      {t('languageSwitcher.nl')}
+    </a>
+    <a href={localizePath(currentPath, 'id')} class={`language-option ${currentLanguage === 'id' ? 'active' : ''}`} hreflang="id">
+      {t('languageSwitcher.id')}
+    </a>
+  </div>
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .language-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+
+  .language-options {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .language-option {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .language-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .language-option.active {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .language-switcher {
+      margin-top: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>

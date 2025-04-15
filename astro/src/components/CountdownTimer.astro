@@ -1,4 +1,6 @@
 ---
+import { t } from 'i18next';
+
 // The wedding date: June 14, 2025
 const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia time zone (UTC+7)
 ---
@@ -7,19 +9,19 @@ const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia ti
     <div class="countdown-timer">
         <div class="countdown-item">
             <span id="days">0</span>
-            <span class="countdown-label">Days</span>
+            <span class="countdown-label">{t('countdown.days')}</span>
         </div>
         <div class="countdown-item">
             <span id="hours">0</span>
-            <span class="countdown-label">Hours</span>
+            <span class="countdown-label">{t('countdown.hours')}</span>
         </div>
         <div class="countdown-item">
             <span id="minutes">0</span>
-            <span class="countdown-label">Minutes</span>
+            <span class="countdown-label">{t('countdown.minutes')}</span>
         </div>
         <div class="countdown-item">
             <span id="seconds">0</span>
-            <span class="countdown-label">Seconds</span>
+            <span class="countdown-label">{t('countdown.seconds')}</span>
         </div>
     </div>
 </div>
@@ -82,22 +84,22 @@ const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia ti
     const countdown = setInterval(function() {
         // Get current date and time
         const now = new Date().getTime();
-        
+
         // Calculate the time remaining
         const distance = weddingDate - now;
-        
+
         // Calculate days, hours, minutes, and seconds
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
+
         // Display the result
         document.getElementById("days").textContent = days;
         document.getElementById("hours").textContent = hours;
         document.getElementById("minutes").textContent = minutes;
         document.getElementById("seconds").textContent = seconds;
-        
+
         // If the countdown is over, display a message
         if (distance < 0) {
             clearInterval(countdown);
