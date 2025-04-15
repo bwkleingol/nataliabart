@@ -36,6 +36,12 @@ const { title = t('site.title') } = Astro.props;
 				<div class="logo">
 					<a href={getRelativeLocaleUrl(currentLocale, '')}>N&B</a>
 				</div>
+				<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" />
+				<label for="menu-toggle" class="mobile-menu-button" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
 				<div class="nav-links">
 					<a href={getRelativeLocaleUrl(currentLocale, '')}>{t('nav.home')}</a>
 					<a href={getRelativeLocaleUrl(currentLocale, 'our-story')}>{t('nav.ourStory')}</a>
@@ -45,11 +51,6 @@ const { title = t('site.title') } = Astro.props;
 					<a href={getRelativeLocaleUrl(currentLocale, 'contact')} class="rsvp-button">{t('nav.contact')}</a>
 				</div>
 				<LanguageSwitcher />
-				<button class="mobile-menu-button" aria-label="Menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
 			</nav>
 		</header>
 
@@ -143,6 +144,16 @@ const { title = t('site.title') } = Astro.props;
 		background-color: var(--secondary-color);
 	}
 
+	.menu-toggle {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+		z-index: 30; /* Higher than the button to ensure it's clickable */
+		margin: 0;
+		padding: 0;
+	}
+
 	.mobile-menu-button {
 		display: none;
 		background: none;
@@ -151,7 +162,7 @@ const { title = t('site.title') } = Astro.props;
 		padding: 0.5rem;
 		margin-left: 1rem;
 		position: relative;
-		z-index: 10;
+		z-index: 25; /* Higher than the menu to ensure it's clickable */
 	}
 
 	.mobile-menu-button span {
@@ -161,6 +172,19 @@ const { title = t('site.title') } = Astro.props;
 		background-color: var(--text-color);
 		margin: 5px 0;
 		transition: all 0.3s ease;
+	}
+
+	/* Hamburger menu animation for CSS-only solution */
+	.menu-toggle:checked + .mobile-menu-button span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.menu-toggle:checked + .mobile-menu-button span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.menu-toggle:checked + .mobile-menu-button span:nth-child(3) {
+		transform: rotate(-45deg) translate(7px, -7px);
 	}
 
 	main {
@@ -210,8 +234,15 @@ const { title = t('site.title') } = Astro.props;
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 			text-align: center;
 			gap: 1rem;
+			z-index: 15;
 		}
 
+		/* CSS-only menu toggle using the checkbox hack */
+		.menu-toggle:checked ~ .nav-links {
+			display: flex;
+		}
+
+		/* For JavaScript enhancement */
 		.nav-links.active {
 			display: flex;
 		}
@@ -223,13 +254,20 @@ const { title = t('site.title') } = Astro.props;
 </style>
 
 <script>
-	// Mobile menu toggle functionality
+	// Mobile menu toggle functionality - progressive enhancement
 	const menuButton = document.querySelector('.mobile-menu-button');
 	const navLinks = document.querySelector('.nav-links');
+	const menuToggle = document.querySelector('.menu-toggle');
 
-	if (menuButton && navLinks) {
-		menuButton.addEventListener('click', () => {
-			navLinks.classList.toggle('active');
+	if (menuButton && navLinks && menuToggle) {
+		// When JavaScript is enabled, we can use the click event on the button
+		// The label already toggles the checkbox, so we just need to add the active class
+		menuToggle.addEventListener('change', () => {
+			if (menuToggle.checked) {
+				navLinks.classList.add('active');
+			} else {
+				navLinks.classList.remove('active');
+			}
 		});
 	}
 </script>
