@@ -3,11 +3,12 @@ export default {
   defaultLocale: "en",
   locales: ["en", "nl", "id"],
   i18nextServer: {
-    debug: true,
+    debug: false,
   },
   i18nextClient: {
-    debug: true,
+    debug: false,
   },
+  resourcesBasePath: "/locales",
   routes: {
     en: {
       "our-story": "our-story",
