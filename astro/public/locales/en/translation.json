@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Nathalia & Bart's Wedding",
+    "title": "Natalia & Bart's Wedding",
     "description": "Join us for our special day on June 14, 2025 in Semarang, Indonesia",
     "lang": "en"
   },
@@ -29,9 +29,9 @@
       "origin": "from The Netherlands",
       "description": "Bart grew up in Amsterdam and moved to Semarang in 2020 where he works as a digital nomad. He loves exploring the city, and immersing himself in the local Javanese culture."
     },
-    "nathalia": {
+    "natalia": {
       "origin": "from Indonesia",
-      "description": "Nathalia was born and raised in Semarang. She works in hospitality in her hometown. She enjoys cooking traditional Javanese dishes and sharing her cultural heritage."
+      "description": "Natalia was born and raised in Semarang. She works in hospitality in her hometown. She enjoys cooking traditional Javanese dishes and sharing her cultural heritage."
     }
   },
   "events": {
@@ -132,7 +132,7 @@
   },
   "footer": {
     "date": "June 14, 2025 • Semarang, Indonesia",
-    "copyright": "© 2024 Nathalia & Bart's Wedding"
+    "copyright": "© 2024 Natalia & Bart's Wedding"
   },
   "languageSwitcher": {
     "label": "Language",

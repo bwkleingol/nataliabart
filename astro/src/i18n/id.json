@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Pernikahan Nathalia & Bart",
+    "title": "Pernikahan Natalia & Bart",
     "description": "Bergabunglah dengan kami di hari spesial kami pada 14 Juni 2025 di Semarang, Indonesia"
   },
   "nav": {
@@ -28,9 +28,9 @@
       "origin": "dari Belanda",
       "description": "Bart tumbuh di Amsterdam dan pindah ke Semarang pada tahun 2020 di mana ia bekerja sebagai digital nomad. Dia suka menjelajahi kota dan mendalami budaya Jawa lokal."
     },
-    "nathalia": {
+    "natalia": {
       "origin": "dari Indonesia",
-      "description": "Nathalia lahir dan dibesarkan di Semarang. Dia bekerja di bidang perhotelan di kota kelahirannya. Dia menikmati memasak hidangan tradisional Jawa dan berbagi warisan budayanya."
+      "description": "Natalia lahir dan dibesarkan di Semarang. Dia bekerja di bidang perhotelan di kota kelahirannya. Dia menikmati memasak hidangan tradisional Jawa dan berbagi warisan budayanya."
     }
   },
   "events": {
@@ -131,7 +131,7 @@
   },
   "footer": {
     "date": "14 Juni 2025 • Semarang, Indonesia",
-    "copyright": "© 2024 Pernikahan Nathalia & Bart"
+    "copyright": "© 2024 Pernikahan Natalia & Bart"
   },
   "languageSwitcher": {
     "label": "Bahasa",

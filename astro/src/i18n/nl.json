@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Bruiloft van Nathalia & Bart",
+    "title": "Bruiloft van Natalia & Bart",
     "description": "Vier met ons mee op 14 juni 2025 in Semarang, Indonesië"
   },
   "nav": {
@@ -28,9 +28,9 @@
       "origin": "uit Nederland",
       "description": "Bart groeide op in Amsterdam en verhuisde in 2020 naar Semarang waar hij werkt als digital nomad. Hij houdt ervan om de stad te verkennen en zich onder te dompelen in de lokale Javaanse cultuur."
     },
-    "nathalia": {
+    "natalia": {
       "origin": "uit Indonesië",
-      "description": "Nathalia is geboren en getogen in Semarang. Ze werkt in de horeca in haar geboortestad. Ze geniet van het koken van traditionele Javaanse gerechten en het delen van haar culturele erfgoed."
+      "description": "Natalia is geboren en getogen in Semarang. Ze werkt in de horeca in haar geboortestad. Ze geniet van het koken van traditionele Javaanse gerechten en het delen van haar culturele erfgoed."
     }
   },
   "events": {
@@ -131,7 +131,7 @@
   },
   "footer": {
     "date": "14 juni 2025 • Semarang, Indonesië",
-    "copyright": "© 2024 Bruiloft van Nathalia & Bart"
+    "copyright": "© 2024 Bruiloft van Natalia & Bart"
   },
   "languageSwitcher": {
     "label": "Taal",
