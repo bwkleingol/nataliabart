@@ -1,0 +1,91 @@
+---
+import CountdownTimer from './CountdownTimer.astro';
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="names">Bart & Nathalia</h1>
+        <p class="wedding-date">June 14, 2025 • Semarang, Indonesia</p>
+        <div class="divider"></div>
+        <p class="invitation">We're getting married and we'd love for you to join us on our special day</p>
+        <CountdownTimer />
+        <a href="/rsvp" class="cta-button">RSVP Now</a>
+    </div>
+</section>
+
+<style>
+    .hero {
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/hero-background.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: -80px; /* To offset the header padding */
+    }
+
+    .hero-content {
+        max-width: 800px;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+    }
+
+    .names {
+        font-family: 'Great Vibes', cursive;
+        font-size: 5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .wedding-date {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.5rem;
+    }
+
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto 1.5rem;
+    }
+
+    .invitation {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .cta-button:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .names {
+            font-size: 3.5rem;
+        }
+
+        .wedding-date, .invitation {
+            font-size: 1rem;
+        }
+    }
+</style>

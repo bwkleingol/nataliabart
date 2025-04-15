@@ -1,0 +1,402 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Gallery - Bart & Nathalia's Wedding">
+    <section class="page-header">
+        <h1>Our Gallery</h1>
+        <div class="divider"></div>
+    </section>
+    
+    <section class="gallery-content">
+        <div class="gallery-categories">
+            <button class="category-button active" data-category="all">All Photos</button>
+            <button class="category-button" data-category="engagement">Engagement</button>
+            <button class="category-button" data-category="travels">Our Travels</button>
+            <button class="category-button" data-category="family">Family</button>
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- Engagement Photos -->
+            <div class="gallery-item" data-category="engagement">
+                <img src="/images/gallery1.jpg" alt="Engagement photo 1" />
+                <div class="gallery-caption">
+                    <h3>The Proposal</h3>
+                    <p>Mount Batur, February 2024</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="engagement">
+                <img src="/images/gallery2.jpg" alt="Engagement photo 2" />
+                <div class="gallery-caption">
+                    <h3>Engagement Party</h3>
+                    <p>Ubud, March 2024</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="engagement">
+                <img src="/images/gallery3.jpg" alt="Engagement photo 3" />
+                <div class="gallery-caption">
+                    <h3>Engagement Photoshoot</h3>
+                    <p>Bali Rice Terraces, April 2024</p>
+                </div>
+            </div>
+            
+            <!-- Travel Photos -->
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery4.jpg" alt="Travel photo 1" />
+                <div class="gallery-caption">
+                    <h3>First Trip Together</h3>
+                    <p>Lombok, August 2020</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery5.jpg" alt="Travel photo 2" />
+                <div class="gallery-caption">
+                    <h3>Amsterdam Visit</h3>
+                    <p>Netherlands, December 2021</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery6.jpg" alt="Travel photo 3" />
+                <div class="gallery-caption">
+                    <h3>Beach Day</h3>
+                    <p>Nusa Penida, July 2022</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery7.jpg" alt="Travel photo 4" />
+                <div class="gallery-caption">
+                    <h3>Temple Visit</h3>
+                    <p>Bali, October 2022</p>
+                </div>
+            </div>
+            
+            <!-- Family Photos -->
+            <div class="gallery-item" data-category="family">
+                <img src="/images/gallery8.jpg" alt="Family photo 1" />
+                <div class="gallery-caption">
+                    <h3>With Bart's Family</h3>
+                    <p>Christmas in Amsterdam, 2021</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="family">
+                <img src="/images/gallery9.jpg" alt="Family photo 2" />
+                <div class="gallery-caption">
+                    <h3>With Nathalia's Family</h3>
+                    <p>Semarang, January 2022</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="family">
+                <img src="/images/gallery10.jpg" alt="Family photo 3" />
+                <div class="gallery-caption">
+                    <h3>Family Gathering</h3>
+                    <p>Bali, June 2023</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="family">
+                <img src="/images/gallery11.jpg" alt="Family photo 4" />
+                <div class="gallery-caption">
+                    <h3>Engagement Celebration</h3>
+                    <p>With both families, March 2024</p>
+                </div>
+            </div>
+            
+            <!-- More Photos -->
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery12.jpg" alt="More photos 1" />
+                <div class="gallery-caption">
+                    <h3>Sunset Walk</h3>
+                    <p>Kuta Beach, September 2021</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery13.jpg" alt="More photos 2" />
+                <div class="gallery-caption">
+                    <h3>Hiking Adventure</h3>
+                    <p>Mount Batur, May 2022</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="engagement">
+                <img src="/images/gallery14.jpg" alt="More photos 3" />
+                <div class="gallery-caption">
+                    <h3>Pre-wedding Shoot</h3>
+                    <p>Ubud, April 2024</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/gallery15.jpg" alt="More photos 4" />
+                <div class="gallery-caption">
+                    <h3>Cultural Experience</h3>
+                    <p>Traditional Ceremony, August 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 5rem 1rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto;
+    }
+    
+    .gallery-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem 5rem;
+    }
+    
+    .gallery-categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .category-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .category-button:hover, .category-button.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .gallery-item {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+    
+    .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: white;
+        padding: 1.5rem 1rem 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-caption {
+        transform: translateY(0);
+    }
+    
+    .gallery-caption h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .gallery-caption p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+    
+    /* Lightbox styles will be handled by JavaScript */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    .lightbox.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 80vh;
+    }
+    
+    .lightbox-image {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 5px;
+    }
+    
+    .lightbox-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+    
+    .lightbox-caption {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        color: white;
+        text-align: center;
+    }
+    
+    @media (max-width: 992px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    // Gallery filtering
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active button
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Filter gallery items
+            const category = button.dataset.category;
+            
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Create lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    
+    const lightboxContent = document.createElement('div');
+    lightboxContent.className = 'lightbox-content';
+    
+    const lightboxImage = document.createElement('img');
+    lightboxImage.className = 'lightbox-image';
+    
+    const lightboxClose = document.createElement('button');
+    lightboxClose.className = 'lightbox-close';
+    lightboxClose.innerHTML = '&times;';
+    
+    const lightboxCaption = document.createElement('div');
+    lightboxCaption.className = 'lightbox-caption';
+    
+    lightboxContent.appendChild(lightboxImage);
+    lightboxContent.appendChild(lightboxClose);
+    lightboxContent.appendChild(lightboxCaption);
+    lightbox.appendChild(lightboxContent);
+    document.body.appendChild(lightbox);
+    
+    // Lightbox functionality
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            const caption = item.querySelector('.gallery-caption');
+            
+            lightboxImage.src = img.src;
+            lightboxCaption.innerHTML = caption.innerHTML;
+            lightbox.classList.add('active');
+            
+            // Prevent scrolling when lightbox is open
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close lightbox
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>

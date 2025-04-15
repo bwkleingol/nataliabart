@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
+    <circle cx="64" cy="64" r="64" fill="#8D5A97" />
+    <text x="64" y="80" font-family="Arial" font-size="60" font-weight="bold" text-anchor="middle" fill="white">B&N</text>
+    <style>
+        circle { fill: #8D5A97; }
+        text { fill: white; }
+        @media (prefers-color-scheme: dark) {
+            circle { fill: #8D5A97; }
+            text { fill: white; }
+        }
+    </style>
+</svg>

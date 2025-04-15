@@ -1,0 +1,184 @@
+---
+---
+
+<section class="event-details">
+    <div class="section-header">
+        <h2>Event Details</h2>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="events-container">
+        <div class="event-card">
+            <div class="event-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </div>
+            <h3>Traditional Indonesian Ceremony</h3>
+            <p class="event-time">June 14, 2025 • 10:00 AM</p>
+            <p class="event-location">Semarang Grand Ballroom</p>
+            <p class="event-address">Jl. Pemuda No. 123, Semarang, Indonesia</p>
+            <p class="event-description">
+                Join us for a traditional Indonesian wedding ceremony where we will honor Nathalia's cultural heritage.
+                Traditional attire is encouraged but not required.
+            </p>
+        </div>
+        
+        <div class="event-card">
+            <div class="event-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 3a2.85 2.85 0 1 1 0 5.7"></path>
+                    <path d="M10 3a2.85 2.85 0 1 1 0 5.7"></path>
+                    <path d="M21 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <path d="M14 13a4 4 0 1 0-8 0v1h8z"></path>
+                </svg>
+            </div>
+            <h3>Reception</h3>
+            <p class="event-time">June 14, 2025 • 6:00 PM</p>
+            <p class="event-location">Semarang Beachfront</p>
+            <p class="event-address">Pantai Marina, Semarang, Indonesia</p>
+            <p class="event-description">
+                Celebrate with us at our beachfront reception featuring a blend of Indonesian and Dutch cuisines,
+                live music, and dancing under the stars.
+            </p>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <h3>Location</h3>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126715.80811299356!2d110.33462282321103!3d-6.9903430016397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4d3f0d024d%3A0x1e0432b9da5cb9f2!2sSemarang%2C%20Semarang%20City%2C%20Central%20Java%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1649825200000!5m2!1sen!2sus" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<style>
+    .event-details {
+        padding: 5rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: var(--background-color);
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto;
+    }
+    
+    .events-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .event-card {
+        flex: 1;
+        max-width: 500px;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .event-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .event-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+    }
+    
+    .event-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .event-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+    
+    .event-time {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    
+    .event-location {
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+    }
+    
+    .event-address {
+        font-style: italic;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .event-description {
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    .map-container {
+        margin-top: 3rem;
+    }
+    
+    .map-container h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+    }
+    
+    .map {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .events-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .event-card {
+            margin-bottom: 2rem;
+        }
+    }
+</style>

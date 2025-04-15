@@ -1,0 +1,123 @@
+---
+---
+
+<section class="couple-info">
+    <div class="section-header">
+        <h2>The Couple</h2>
+        <div class="divider"></div>
+    </div>
+    
+    <div class="couple-container">
+        <div class="person">
+            <div class="person-image bart"></div>
+            <h3>Bart</h3>
+            <p class="origin">from The Netherlands</p>
+            <p class="description">
+                Bart grew up in Amsterdam and moved to Bali in 2020 where he works as a digital nomad. 
+                He loves surfing, exploring the island, and immersing himself in the local culture.
+            </p>
+        </div>
+        
+        <div class="heart-divider">❤</div>
+        
+        <div class="person">
+            <div class="person-image nathalia"></div>
+            <h3>Nathalia</h3>
+            <p class="origin">from Indonesia</p>
+            <p class="description">
+                Nathalia was born and raised in Semarang. She moved to Bali to pursue her career in hospitality. 
+                She enjoys cooking traditional Indonesian dishes and sharing her cultural heritage.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .couple-info {
+        padding: 5rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto;
+    }
+    
+    .couple-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .person {
+        flex: 1;
+        max-width: 400px;
+    }
+    
+    .person-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto 1.5rem;
+        background-size: cover;
+        background-position: center;
+        border: 5px solid var(--primary-color);
+    }
+    
+    .bart {
+        background-image: url('/images/bart.jpg');
+    }
+    
+    .nathalia {
+        background-image: url('/images/nathalia.jpg');
+    }
+    
+    .person h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+    }
+    
+    .origin {
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .description {
+        line-height: 1.6;
+    }
+    
+    .heart-divider {
+        display: flex;
+        align-items: center;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+    }
+    
+    @media (max-width: 768px) {
+        .couple-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .heart-divider {
+            margin: 1rem 0;
+        }
+    }
+</style>

@@ -1,0 +1,217 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title = "Bart & Nathalia's Wedding" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="logo">
+					<a href="/">B&N</a>
+				</div>
+				<div class="nav-links">
+					<a href="/">Home</a>
+					<a href="/our-story">Our Story</a>
+					<a href="/event-details">Event Details</a>
+					<a href="/travel">Travel & Stay</a>
+					<a href="/gallery">Gallery</a>
+					<a href="/rsvp" class="rsvp-button">RSVP</a>
+				</div>
+				<button class="mobile-menu-button" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</nav>
+		</header>
+
+		<main>
+			<slot />
+		</main>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-logo">B&N</div>
+				<p class="footer-date">June 14, 2025 • Semarang, Indonesia</p>
+				<p class="footer-copyright">&copy; 2024 Bart & Nathalia's Wedding</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	:root {
+		--primary-color: #8D5A97; /* Purple - representing Indonesian traditional colors */
+		--secondary-color: #F4A259; /* Warm orange - complementary to purple */
+		--accent-color: #5B8C5A; /* Green - representing Bali's lush landscapes */
+		--text-color: #333333;
+		--light-color: #FFFFFF;
+		--background-color: #FFF9F5; /* Warm off-white */
+	}
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		padding: 0;
+		font-family: 'Montserrat', sans-serif;
+		color: var(--text-color);
+		background-color: var(--background-color);
+	}
+
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.95);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 5%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.logo a {
+		font-family: 'Great Vibes', cursive;
+		font-size: 2rem;
+		color: var(--primary-color);
+		text-decoration: none;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		color: var(--text-color);
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.nav-links a:hover {
+		color: var(--primary-color);
+	}
+
+	.rsvp-button {
+		background-color: var(--primary-color);
+		color: white !important;
+		padding: 0.5rem 1.5rem;
+		border-radius: 30px;
+		transition: background-color 0.3s ease;
+	}
+
+	.rsvp-button:hover {
+		background-color: var(--secondary-color);
+	}
+
+	.mobile-menu-button {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+	}
+
+	.mobile-menu-button span {
+		display: block;
+		width: 25px;
+		height: 3px;
+		background-color: var(--text-color);
+		margin: 5px 0;
+		transition: all 0.3s ease;
+	}
+
+	main {
+		padding-top: 80px; /* To account for fixed header */
+		min-height: calc(100vh - 180px); /* Ensures footer stays at bottom */
+	}
+
+	footer {
+		background-color: var(--primary-color);
+		color: white;
+		padding: 2rem 0;
+		text-align: center;
+	}
+
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 5%;
+	}
+
+	.footer-logo {
+		font-family: 'Great Vibes', cursive;
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.footer-date {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.footer-copyright {
+		font-size: 0.8rem;
+		opacity: 0.8;
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+			position: absolute;
+			top: 70px;
+			left: 0;
+			width: 100%;
+			background-color: white;
+			flex-direction: column;
+			padding: 1rem 0;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			gap: 1rem;
+		}
+
+		.nav-links.active {
+			display: flex;
+		}
+
+		.mobile-menu-button {
+			display: block;
+		}
+	}
+</style>
+
+<script>
+	// Mobile menu toggle functionality
+	const menuButton = document.querySelector('.mobile-menu-button');
+	const navLinks = document.querySelector('.nav-links');
+
+	if (menuButton && navLinks) {
+		menuButton.addEventListener('click', () => {
+			navLinks.classList.toggle('active');
+		});
+	}
+</script>

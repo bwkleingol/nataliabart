@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RsvpForm from '../components/RsvpForm.astro';
+---
+
+<Layout title="RSVP - Bart & Nathalia's Wedding">
+    <section class="page-header">
+        <h1>RSVP</h1>
+        <div class="divider"></div>
+    </section>
+    
+    <section class="rsvp-content">
+        <div class="rsvp-intro">
+            <p>
+                We're excited to celebrate our special day with you! Please let us know if you'll be able to join us 
+                by filling out the form below. We kindly request your response by <strong>May 14, 2025</strong>.
+            </p>
+        </div>
+        
+        <RsvpForm />
+        
+        <div class="rsvp-info">
+            <div class="info-card">
+                <h3>Important Information</h3>
+                <ul>
+                    <li>Please RSVP by May 14, 2025</li>
+                    <li>Each invited guest must be registered</li>
+                    <li>Children are welcome at both the ceremony and reception</li>
+                    <li>Please indicate any dietary restrictions in your RSVP</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3>Questions?</h3>
+                <p>
+                    If you have any questions about the RSVP process or need to update your response after submission, 
+                    please contact our wedding coordinator:
+                </p>
+                <p><strong>Maya Wijaya</strong><br>
+                Email: maya@bartnathaliawedding.com<br>
+                Phone: +62 812 3456 7890</p>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .page-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 5rem 1rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto;
+    }
+    
+    .rsvp-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1rem 5rem;
+    }
+    
+    .rsvp-intro {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .rsvp-intro p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .rsvp-info {
+        display: flex;
+        gap: 2rem;
+        margin-top: 4rem;
+    }
+    
+    .info-card {
+        flex: 1;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+    
+    .info-card ul {
+        padding-left: 1.5rem;
+    }
+    
+    .info-card li {
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+    }
+    
+    .info-card p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .rsvp-info {
+            flex-direction: column;
+        }
+    }
+</style>

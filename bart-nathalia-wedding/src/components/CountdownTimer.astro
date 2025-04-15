@@ -1,0 +1,110 @@
+---
+// The wedding date: June 14, 2025
+const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia time zone (UTC+7)
+---
+
+<div class="countdown-container">
+    <div class="countdown-timer">
+        <div class="countdown-item">
+            <span id="days">0</span>
+            <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">0</span>
+            <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">0</span>
+            <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">0</span>
+            <span class="countdown-label">Seconds</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .countdown-container {
+        margin: 2rem 0;
+    }
+
+    .countdown-timer {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 80px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .countdown-label {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .countdown-timer {
+            gap: 1rem;
+        }
+
+        .countdown-item {
+            min-width: 60px;
+        }
+
+        .countdown-item span:first-child {
+            font-size: 2rem;
+        }
+
+        .countdown-label {
+            font-size: 0.7rem;
+        }
+    }
+</style>
+
+<script>
+    // Set the wedding date (June 14, 2025)
+    const weddingDate = new Date('2025-06-14T00:00:00+07:00').getTime();
+
+    // Update the countdown every second
+    const countdown = setInterval(function() {
+        // Get current date and time
+        const now = new Date().getTime();
+        
+        // Calculate the time remaining
+        const distance = weddingDate - now;
+        
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the result
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+        
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById("days").textContent = "0";
+            document.getElementById("hours").textContent = "0";
+            document.getElementById("minutes").textContent = "0";
+            document.getElementById("seconds").textContent = "0";
+        }
+    }, 1000);
+</script>

@@ -1,0 +1,122 @@
+---
+---
+
+<section class="gallery-section">
+    <div class="section-header">
+        <h2>Our Journey</h2>
+        <div class="divider"></div>
+        <p class="section-description">A glimpse into our love story</p>
+    </div>
+    
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="/images/gallery1.jpg" alt="Bart and Nathalia in Bali" />
+        </div>
+        <div class="gallery-item">
+            <img src="/images/gallery2.jpg" alt="Couple at the beach" />
+        </div>
+        <div class="gallery-item">
+            <img src="/images/gallery3.jpg" alt="Exploring Indonesia" />
+        </div>
+        <div class="gallery-item">
+            <img src="/images/gallery4.jpg" alt="Traditional Indonesian ceremony" />
+        </div>
+        <div class="gallery-item">
+            <img src="/images/gallery5.jpg" alt="Trip to the Netherlands" />
+        </div>
+        <div class="gallery-item">
+            <img src="/images/gallery6.jpg" alt="Engagement day" />
+        </div>
+    </div>
+    
+    <a href="/gallery" class="view-more">View Full Gallery</a>
+</section>
+
+<style>
+    .gallery-section {
+        padding: 5rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .section-header {
+        margin-bottom: 3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+    
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto 1rem;
+    }
+    
+    .section-description {
+        font-size: 1.2rem;
+        color: var(--text-color);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        aspect-ratio: 1 / 1;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+    
+    .view-more {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        margin-top: 2rem;
+    }
+    
+    .view-more:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
