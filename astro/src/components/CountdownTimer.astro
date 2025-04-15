@@ -3,24 +3,40 @@ import { t } from 'i18next';
 
 // The wedding date: June 14, 2025
 const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia time zone (UTC+7)
+const now = new Date();
+
+// Calculate the time remaining
+const distance = weddingDate.getTime() - now.getTime();
+
+// Calculate days, hours, minutes, and seconds
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Ensure we don't show negative values if the wedding date has passed
+const daysDisplay = distance > 0 ? days : 0;
+const hoursDisplay = distance > 0 ? hours : 0;
+const minutesDisplay = distance > 0 ? minutes : 0;
+const secondsDisplay = distance > 0 ? seconds : 0;
 ---
 
 <div class="countdown-container">
     <div class="countdown-timer">
         <div class="countdown-item">
-            <span id="days">0</span>
+            <span id="days" data-value={daysDisplay}>{daysDisplay}</span>
             <span class="countdown-label">{t('countdown.days')}</span>
         </div>
         <div class="countdown-item">
-            <span id="hours">0</span>
+            <span id="hours" data-value={hoursDisplay}>{hoursDisplay}</span>
             <span class="countdown-label">{t('countdown.hours')}</span>
         </div>
         <div class="countdown-item">
-            <span id="minutes">0</span>
+            <span id="minutes" data-value={minutesDisplay}>{minutesDisplay}</span>
             <span class="countdown-label">{t('countdown.minutes')}</span>
         </div>
         <div class="countdown-item">
-            <span id="seconds">0</span>
+            <span id="seconds" data-value={secondsDisplay}>{secondsDisplay}</span>
             <span class="countdown-label">{t('countdown.seconds')}</span>
         </div>
     </div>
@@ -48,6 +64,11 @@ const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia ti
         font-size: 3rem;
         font-weight: 700;
         color: var(--primary-color);
+        transition: opacity 0.2s ease;
+    }
+
+    .countdown-item span.updating {
+        opacity: 0.7;
     }
 
     .countdown-label {
@@ -80,8 +101,14 @@ const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia ti
     // Set the wedding date (June 14, 2025)
     const weddingDate = new Date('2025-06-14T00:00:00+07:00').getTime();
 
-    // Update the countdown every second
-    const countdown = setInterval(function() {
+    // Get the DOM elements
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
+
+    // Function to update the countdown
+    function updateCountdown() {
         // Get current date and time
         const now = new Date().getTime();
 
@@ -95,18 +122,35 @@ const weddingDate = new Date('2025-06-14T00:00:00+07:00'); // Using Indonesia ti
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
+        if (distance > 0) {
+            // Add animation class when updating
+            const updateWithAnimation = (element, newValue) => {
+                if (element.textContent !== newValue.toString()) {
+                    element.classList.add('updating');
+                    setTimeout(() => {
+                        element.textContent = newValue;
+                        element.classList.remove('updating');
+                    }, 100);
+                }
+            };
 
-        // If the countdown is over, display a message
-        if (distance < 0) {
+            updateWithAnimation(daysElement, days);
+            updateWithAnimation(hoursElement, hours);
+            updateWithAnimation(minutesElement, minutes);
+            updateWithAnimation(secondsElement, seconds);
+        } else {
+            // If the countdown is over, display zeros
             clearInterval(countdown);
-            document.getElementById("days").textContent = "0";
-            document.getElementById("hours").textContent = "0";
-            document.getElementById("minutes").textContent = "0";
-            document.getElementById("seconds").textContent = "0";
+            daysElement.textContent = "0";
+            hoursElement.textContent = "0";
+            minutesElement.textContent = "0";
+            secondsElement.textContent = "0";
         }
-    }, 1000);
+    }
+
+    // Update immediately to sync with current time
+    updateCountdown();
+
+    // Update the countdown every second
+    const countdown = setInterval(updateCountdown, 1000);
 </script>
