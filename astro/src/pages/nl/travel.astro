@@ -1,0 +1,589 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t, setCurrentLocale } from '../../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'nl';
+setCurrentLocale(currentLocale);
+---
+
+<Layout title={`${t('nav.travel')} - ${t('site.title')}`}>
+    <section class="page-header">
+        <h1>{t('nav.travel')}</h1>
+        <div class="divider"></div>
+    </section>
+
+    <div class="content-container">
+        <section class="travel-section">
+            <div class="section-header">
+                <h2>Getting to Semarang</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="travel-options">
+                <div class="travel-option">
+                    <div class="icon">✈️</div>
+                    <h3>By Air</h3>
+                    <p>Ahmad Yani International Airport (SRG) serves Semarang with direct flights from Jakarta, Bali, Singapore, and Kuala Lumpur.</p>
+                    <p>For international guests, you'll likely connect through Jakarta's Soekarno-Hatta International Airport (CGK) or Bali's Ngurah Rai International Airport (DPS).</p>
+                    <div class="recommended-airlines">
+                        <h4>Recommended Airlines:</h4>
+                        <ul>
+                            <li>Garuda Indonesia</li>
+                            <li>Singapore Airlines (to Jakarta/Bali, then connect)</li>
+                            <li>KLM (to Jakarta, then connect)</li>
+                            <li>Emirates (to Jakarta, then connect)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="travel-option">
+                    <div class="icon">🚆</div>
+                    <h3>By Train</h3>
+                    <p>Semarang is well-connected by train to major cities in Java. Executive class trains from Jakarta (Gambir Station) to Semarang (Tawang Station) take approximately 5-6 hours.</p>
+                    <p>Trains are comfortable and offer beautiful views of the Javanese countryside.</p>
+                    <div class="booking-info">
+                        <h4>Booking Information:</h4>
+                        <p>Tickets can be purchased through the official Indonesian Railways website or app: <a href="https://kai.id" target="_blank">KAI.id</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="accommodation-section">
+            <div class="section-header">
+                <h2>Where to Stay</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="accommodation-info">
+                <p class="intro-text">We've arranged special rates at several hotels in Semarang. Please mention "Natalia & Bart Wedding" when booking to receive the discounted rate.</p>
+
+                <div class="hotels">
+                    <div class="hotel-card">
+                        <div class="hotel-image gumaya"></div>
+                        <div class="hotel-info">
+                            <h3>Gumaya Tower Hotel</h3>
+                            <div class="hotel-rating">★★★★★</div>
+                            <p class="hotel-description">Our reception venue and recommended accommodation. This 5-star hotel offers luxury rooms with city views, a rooftop pool, and is conveniently located in the heart of Semarang.</p>
+                            <div class="hotel-details">
+                                <div class="detail-item">
+                                    <span class="label">Address:</span>
+                                    <span>Jl. Gajahmada No.59-61, Semarang</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Distance to Reception:</span>
+                                    <span>On-site</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Distance to Ceremony:</span>
+                                    <span>3.5 km (10 min drive)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Special Rate:</span>
+                                    <span>IDR 1,200,000/night (approx. $80 USD)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Booking:</span>
+                                    <span><a href="https://gumayatowerhotel.com" target="_blank">Website</a> | <a href="tel:+62248355555">+62 24 835 5555</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-image oakwood"></div>
+                        <div class="hotel-info">
+                            <h3>Oakwood Hotel & Residence</h3>
+                            <div class="hotel-rating">★★★★</div>
+                            <p class="hotel-description">Modern serviced apartments with kitchen facilities, perfect for families or longer stays. Features a pool, fitness center, and restaurant.</p>
+                            <div class="hotel-details">
+                                <div class="detail-item">
+                                    <span class="label">Address:</span>
+                                    <span>Jl. Pandanaran No.40, Semarang</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Distance to Reception:</span>
+                                    <span>1.2 km (5 min drive)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Distance to Ceremony:</span>
+                                    <span>2.8 km (8 min drive)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Special Rate:</span>
+                                    <span>IDR 950,000/night (approx. $65 USD)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Booking:</span>
+                                    <span><a href="https://oakwood.com/semarang" target="_blank">Website</a> | <a href="tel:+62248455555">+62 24 845 5555</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-image santika"></div>
+                        <div class="hotel-info">
+                            <h3>Hotel Santika Premiere</h3>
+                            <div class="hotel-rating">★★★★</div>
+                            <p class="hotel-description">Comfortable rooms with traditional Javanese touches. Offers a swimming pool, spa, and excellent breakfast buffet.</p>
+                            <div class="hotel-details">
+                                <div class="detail-item">
+                                    <span class="label">Address:</span>
+                                    <span>Jl. Pandanaran No.116-120, Semarang</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Distance to Reception:</span>
+                                    <span>1.5 km (5 min drive)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Distance to Ceremony:</span>
+                                    <span>2.2 km (7 min drive)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Special Rate:</span>
+                                    <span>IDR 850,000/night (approx. $58 USD)</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Booking:</span>
+                                    <span><a href="https://santika.com/semarang" target="_blank">Website</a> | <a href="tel:+62248413115">+62 24 841 3115</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transportation-section">
+            <div class="section-header">
+                <h2>Local Transportation</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="transportation-options">
+                <div class="transport-option">
+                    <div class="icon">🚕</div>
+                    <h3>Taxis</h3>
+                    <p>Blue Bird taxis are reliable and use meters. They can be hailed on the street or booked through their app.</p>
+                </div>
+
+                <div class="transport-option">
+                    <div class="icon">📱</div>
+                    <h3>Ride-Sharing</h3>
+                    <p>Grab and Gojek apps offer convenient and affordable transportation options, including cars and motorbikes.</p>
+                </div>
+
+                <div class="transport-option">
+                    <div class="icon">🚐</div>
+                    <h3>Wedding Shuttle</h3>
+                    <p>We'll provide shuttle service between the recommended hotels and wedding venues on the day of the ceremony and reception.</p>
+                </div>
+
+                <div class="transport-option">
+                    <div class="icon">🚗</div>
+                    <h3>Car Rental</h3>
+                    <p>Several car rental services are available at the airport and in the city center. International driver's license required.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-section">
+            <div class="section-header">
+                <h2>Exploring Semarang</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="attractions">
+                <div class="attraction-card">
+                    <div class="attraction-image lawang-sewu"></div>
+                    <div class="attraction-info">
+                        <h3>Lawang Sewu</h3>
+                        <p>Historic Dutch colonial building with "a thousand doors" and beautiful stained glass windows.</p>
+                    </div>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="attraction-image sam-poo-kong"></div>
+                    <div class="attraction-info">
+                        <h3>Sam Poo Kong Temple</h3>
+                        <p>The oldest Chinese temple in Semarang, featuring beautiful architecture and cultural significance.</p>
+                    </div>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="attraction-image old-town"></div>
+                    <div class="attraction-info">
+                        <h3>Kota Lama (Old Town)</h3>
+                        <p>Charming district with well-preserved Dutch colonial buildings, cafes, and art spaces.</p>
+                    </div>
+                </div>
+
+                <div class="attraction-card">
+                    <div class="attraction-image culinary"></div>
+                    <div class="attraction-info">
+                        <h3>Culinary Delights</h3>
+                        <p>Try local specialties like Lumpia Semarang (spring rolls), Bandeng Presto (milkfish), and Wingko Babat (coconut cake).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extended-stay">
+                <h3>Extending Your Stay</h3>
+                <p>If you're traveling from abroad, we recommend extending your trip to explore more of Indonesia. Consider visiting:</p>
+                <ul>
+                    <li><strong>Yogyakarta</strong> (3 hours from Semarang): Home to Borobudur and Prambanan temples</li>
+                    <li><strong>Bali</strong>: Beautiful beaches, cultural experiences, and luxury resorts</li>
+                    <li><strong>Komodo National Park</strong>: See the famous Komodo dragons and pristine marine environments</li>
+                    <li><strong>Raja Ampat</strong>: World-class diving and breathtaking island scenery</li>
+                </ul>
+                <p>We're happy to provide recommendations for your extended stay in Indonesia. Feel free to contact us for suggestions!</p>
+            </div>
+        </section>
+
+        <section class="travel-tips">
+            <div class="section-header">
+                <h2>Travel Tips</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>Visa Information</h3>
+                    <p>Many countries receive visa-free entry to Indonesia for up to 30 days. Check the <a href="https://www.imigrasi.go.id" target="_blank">Indonesian Immigration website</a> for the most current information.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>Weather</h3>
+                    <p>June in Semarang is typically warm and relatively dry. Expect temperatures between 24-32°C (75-90°F). Light, breathable clothing is recommended.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>Currency</h3>
+                    <p>The local currency is Indonesian Rupiah (IDR). ATMs are widely available, and major credit cards are accepted at hotels and larger establishments.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>Language</h3>
+                    <p>Bahasa Indonesia is the official language, with Javanese being widely spoken in Semarang. English is spoken in tourist areas and major hotels.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>Health & Safety</h3>
+                    <p>We recommend travel insurance that covers medical emergencies. Drink bottled water and use mosquito repellent, especially in the evenings.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h3>Electricity</h3>
+                    <p>Indonesia uses 220V with European-style round pin plugs (types C and F). Bring an adapter if needed.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .travel-section, .accommodation-section, .transportation-section, .explore-section, .travel-tips {
+        margin: 4rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto;
+    }
+
+    /* Travel Options */
+    .travel-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .travel-option {
+        background-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .travel-option:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .travel-option h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .recommended-airlines, .booking-info {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .recommended-airlines h4, .booking-info h4 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .recommended-airlines ul {
+        padding-left: 1.5rem;
+    }
+
+    .recommended-airlines li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Accommodation */
+    .intro-text {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .hotels {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hotel-card {
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hotel-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hotel-image {
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hotel-image.gumaya {
+        background-image: url('/images/gumaya-hotel.jpg');
+    }
+
+    .hotel-image.oakwood {
+        background-image: url('/images/oakwood-hotel.jpg');
+    }
+
+    .hotel-image.santika {
+        background-image: url('/images/santika-hotel.jpg');
+    }
+
+    .hotel-info {
+        flex: 1;
+        padding: 2rem;
+    }
+
+    .hotel-info h3 {
+        color: var(--primary-color);
+        margin: 0 0 0.5rem 0;
+    }
+
+    .hotel-rating {
+        color: gold;
+        margin-bottom: 1rem;
+    }
+
+    .hotel-description {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .hotel-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .detail-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label {
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 0.25rem;
+    }
+
+    /* Transportation */
+    .transportation-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .transport-option {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .transport-option:hover {
+        transform: translateY(-5px);
+    }
+
+    .transport-option .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .transport-option h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    /* Explore Section */
+    .attractions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .attraction-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .attraction-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .attraction-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .attraction-image.lawang-sewu {
+        background-image: url('/images/lawang-sewu.jpg');
+    }
+
+    .attraction-image.sam-poo-kong {
+        background-image: url('/images/sam-poo-kong.jpg');
+    }
+
+    .attraction-image.old-town {
+        background-image: url('/images/old-town.jpg');
+    }
+
+    .attraction-image.culinary {
+        background-image: url('/images/semarang-food.jpg');
+    }
+
+    .attraction-info {
+        padding: 1.5rem;
+    }
+
+    .attraction-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .extended-stay {
+        background-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .extended-stay h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .extended-stay ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .extended-stay li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+
+    /* Travel Tips */
+    .tips-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .tip-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .tip-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .hotel-card {
+            flex-direction: column;
+        }
+
+        .hotel-image {
+            width: 100%;
+            height: 200px;
+        }
+
+        .hotel-details {
+            grid-template-columns: 1fr;
+        }
+
+        .icon {
+            font-size: 2rem;
+        }
+    }
+</style>

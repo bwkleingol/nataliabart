@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t, setCurrentLocale } from '../../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'id';
+setCurrentLocale(currentLocale);
+---
+
+<Layout title={`${t('nav.ourStory')} - ${t('site.title')}`}>
+    <section class="page-header">
+        <h1>{t('nav.ourStory')}</h1>
+        <div class="divider"></div>
+    </section>
+
+    <!-- Content is the same as the English version, but will display with Indonesian translations -->
+    <div class="content-container">
+        <section class="timeline-section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h3>First Meeting</h3>
+                        <p>We first met in Jakarta during a business conference. Bart was there representing his company from the Netherlands, and Natalia was working as a consultant for local businesses.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3>Long Distance Relationship</h3>
+                        <p>After staying in touch for months, we decided to start dating despite the distance. We made it work through regular video calls and visits every few months.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Pandemic Challenges</h3>
+                        <p>The COVID-19 pandemic kept us apart for over a year, but our relationship grew stronger through the challenges. We spent countless hours on video calls, watching movies together, and planning our future.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Moving In Together</h3>
+                        <p>Natalia moved to the Netherlands to be with Bart, and we started our life together in Amsterdam. We explored Europe together and created a home that blended both our cultures.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>The Proposal</h3>
+                        <p>During a trip to Bali, Bart proposed at sunset on a cliff overlooking the ocean. It was a perfect moment that we'll cherish forever.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Our Wedding</h3>
+                        <p>We're excited to celebrate our love with family and friends from around the world in Semarang, Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <blockquote>
+                "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope."
+                <cite>— Maya Angelou</cite>
+            </blockquote>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .content-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .timeline-section {
+        margin: 4rem 0;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: var(--primary-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+    }
+
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 50%;
+    }
+
+    .timeline-dot {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 4px solid var(--primary-color);
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        z-index: 10;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+        right: -14px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: -14px;
+    }
+
+    .timeline-date {
+        display: inline-block;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-content h3 {
+        margin-top: 0;
+        color: var(--primary-color);
+    }
+
+    .quote-section {
+        text-align: center;
+        margin: 5rem 0;
+        padding: 2rem;
+        background-color: rgba(var(--primary-color-rgb), 0.05);
+        border-radius: 10px;
+    }
+
+    blockquote {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+    }
+
+    cite {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-style: normal;
+        color: var(--text-color-light);
+    }
+
+    @media (max-width: 768px) {
+        .timeline::before {
+            left: 40px;
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 20px;
+            left: 0 !important;
+            text-align: left !important;
+        }
+
+        .timeline-dot {
+            left: 30px !important;
+            right: auto !important;
+        }
+    }
+</style>

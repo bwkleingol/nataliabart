@@ -1,0 +1,17 @@
+---
+// Enable server-side rendering for this page
+export const prerender = false;
+
+// Redirect to the appropriate language version
+const defaultLanguage = 'en';
+const browserLanguage = Astro.request.headers.get('accept-language')?.split(',')[0].split('-')[0];
+let redirectLanguage = defaultLanguage;
+
+// Check if browser language is supported
+if (browserLanguage && ['en', 'nl', 'id'].includes(browserLanguage)) {
+  redirectLanguage = browserLanguage;
+}
+
+Astro.response.status = 302;
+Astro.response.headers.set('Location', `/${redirectLanguage}/event-details`);
+---

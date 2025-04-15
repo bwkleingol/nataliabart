@@ -1,0 +1,228 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { t, setCurrentLocale } from '../../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'nl';
+setCurrentLocale(currentLocale);
+---
+
+<Layout title={`${t('nav.gallery')} - ${t('site.title')}`}>
+    <section class="page-header">
+        <h1>{t('nav.gallery')}</h1>
+        <div class="divider"></div>
+    </section>
+
+    <div class="content-container">
+        <div class="gallery-intro">
+            <p>A collection of our favorite moments together. We'll add more photos after the wedding!</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-1.jpg" alt="Natalia and Bart in Amsterdam" loading="lazy" />
+                <div class="caption">Amsterdam, 2022</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-2.jpg" alt="Natalia and Bart in Bali" loading="lazy" />
+                <div class="caption">Bali, 2023</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-3.jpg" alt="Natalia and Bart hiking" loading="lazy" />
+                <div class="caption">Hiking in Java, 2023</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-4.jpg" alt="Natalia and Bart at a dinner" loading="lazy" />
+                <div class="caption">Anniversary Dinner, 2024</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-5.jpg" alt="Natalia and Bart at the beach" loading="lazy" />
+                <div class="caption">Scheveningen Beach, 2022</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-6.jpg" alt="Natalia and Bart in Jakarta" loading="lazy" />
+                <div class="caption">Jakarta, 2019</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-7.jpg" alt="Natalia and Bart at a festival" loading="lazy" />
+                <div class="caption">King's Day, Amsterdam, 2023</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/couple-8.jpg" alt="Natalia and Bart cooking together" loading="lazy" />
+                <div class="caption">Cooking Class, 2024</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/engagement-1.jpg" alt="Engagement photo" loading="lazy" />
+                <div class="caption">Engagement Day, Bali, 2023</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/engagement-2.jpg" alt="Engagement ring" loading="lazy" />
+                <div class="caption">The Proposal</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/family-1.jpg" alt="Family gathering" loading="lazy" />
+                <div class="caption">Family Gathering, 2023</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/gallery/family-2.jpg" alt="Family dinner" loading="lazy" />
+                <div class="caption">Christmas Dinner, 2023</div>
+            </div>
+        </div>
+
+        <div class="share-photos">
+            <h2>Share Your Photos With Us</h2>
+            <div class="divider"></div>
+            <p>We'd love to see your photos from our wedding day! Please share them using our wedding hashtag or upload them to our shared album.</p>
+            
+            <div class="share-options">
+                <div class="share-option">
+                    <h3>Wedding Hashtag</h3>
+                    <p class="hashtag">#NathaliaAndBart2025</p>
+                    <p>Use this hashtag when posting on Instagram or Facebook</p>
+                </div>
+                
+                <div class="share-option">
+                    <h3>Photo Sharing App</h3>
+                    <p>We'll be using a photo sharing app for the wedding. Details will be provided closer to the date.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .gallery-intro {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-intro p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .gallery-item {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .caption {
+        transform: translateY(0);
+    }
+
+    .share-photos {
+        background-color: white;
+        border-radius: 10px;
+        padding: 3rem;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .share-photos h2 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .share-photos .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto 1.5rem;
+    }
+
+    .share-photos p {
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+    }
+
+    .share-options {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .share-option {
+        flex: 1;
+        min-width: 250px;
+        max-width: 400px;
+        padding: 1.5rem;
+        background-color: rgba(var(--primary-color-rgb), 0.05);
+        border-radius: 8px;
+    }
+
+    .share-option h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .hashtag {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-grid {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .gallery-item img {
+            height: 250px;
+        }
+
+        .share-photos {
+            padding: 2rem 1.5rem;
+        }
+    }
+</style>
