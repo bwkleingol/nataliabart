@@ -144,6 +144,9 @@ const { title = t('site.title') } = Astro.props;
 		border: none;
 		cursor: pointer;
 		padding: 0.5rem;
+		margin-left: 1rem;
+		position: relative;
+		z-index: 10;
 	}
 
 	.mobile-menu-button span {
@@ -189,7 +192,7 @@ const { title = t('site.title') } = Astro.props;
 		opacity: 0.8;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1130px) {
 		.nav-links {
 			display: none;
 			position: absolute;
