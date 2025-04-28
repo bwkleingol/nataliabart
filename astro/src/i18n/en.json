@@ -24,22 +24,24 @@
   },
   "couple": {
     "title": "The Couple",
-    "bart": {
+    "bart": 
+    {
       "origin": "from The Netherlands",
-      "description": "Bart grew up in Amsterdam and moved to Semarang in 2020 where he works as a digital nomad. He loves exploring the city, and immersing himself in the local Javanese culture."
+      "description": "Bart grew up in Mariënvelde, a small town of 900 people located in 'de Achterhoek' (translated as 'the back corner'), where he enjoyed a peaceful and worry-free youth. He grew up with one older sister and parents running a workshop. Bart was brought up possessing an entrepreneurial mindset, Bart studied to become an electrical engineer. After some years in corporate life, he decided that wasn't for him, and Bart traveled the world, where he discovered his true passion. He moved to Bali in 2022 to work on a startup and has been permanently based there since 2023, pursuing his dream."
     },
-    "natalia": {
+    "natalia": 
+    {
       "origin": "from Indonesia",
-      "description": "Natalia was born and raised in Semarang. She works in hospitality in her hometown. She enjoys cooking traditional Javanese dishes and sharing her cultural heritage."
+      "description": "Natalia was born and raised in Semarang, the capital city of Central Java, with a population of 1.7 million citizens. As the youngest of three siblings, with two older brothers, she experienced a warm family life. Natalia pursued her academic interests by studying to become an accountant. Seeking professional growth after her studies, she moved to West Java to work for a prominent property development company. Driven by a desire for new challenges and experiences, Natalia made the move to Bali in 2021. Deeply rooted in her upbringing, she embraces Javanese wisdom and holds a strong sense of pride in her rich Javanese culture."
     }
   },
   "events": {
-    "title": "Event Details",
+    "title": "The Marriage Blessing Ceremony:",
     "ceremony": {
-      "title": "Traditional Javanese Ceremony",
+      "title": "Wedding eve prayer ceremony",
       "time": "June 14, 2025 • 10:00 AM",
-      "location": "Semarang Grand Ballroom",
-      "address": "Jl. Pemuda No. 123, Semarang, Indonesia",
+      "location": "Saint Peter Catholic Church, Sambiroto",
+      "address": "Jl. Arum Sari Raya No.A5, Sambiroto, Kec. Tembalang, Kota Semarang, Jawa Tengah 50276",
       "description": "Join us for a traditional Javanese wedding ceremony that honors both of our cultural backgrounds."
     },
     "reception": {

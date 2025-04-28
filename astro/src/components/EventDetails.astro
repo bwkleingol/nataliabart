@@ -1,4 +1,7 @@
 ---
+const churchLocationUrl = "https://maps.app.goo.gl/AXGPccTVMRjiZpcS8";
+const venueLocationUrl = "https://maps.app.goo.gl/N7UPNPzJqzXVYJZa8"
+const keroncongURL = "https://youtu.be/SbEuCjx9tU4?si=lf7yKD-10Lr5eaLe";
 ---
 
 <section class="event-details">
@@ -10,20 +13,27 @@
     <div class="events-container">
         <div class="event-card">
             <div class="event-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
+                <svg  viewBox="0 0 38 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.8991 22.2188L20.1952 7.6256C19.609 7.11241 18.7384 7.11241 18.1522 7.6256L1.44831 22.2188C0.798906 22.7855 0.733282 23.7681 1.29752 24.4174C1.86421 25.0644 2.84681 25.1325 3.49615 24.5658L19.174 10.8679L34.8518 24.5658C35.1388 24.8114 35.5036 24.9452 35.8781 24.9476C36.3281 24.9501 36.7562 24.7555 37.0504 24.4174C37.3228 24.1061 37.459 23.7 37.4298 23.2865C37.4031 22.8755 37.2104 22.4912 36.8991 22.2188Z" fill="white"/>
+                    <path d="M33.2312 19.524C32.8202 19.5216 32.4213 19.6845 32.1295 19.9764C31.8376 20.2707 31.6746 20.6671 31.6746 21.0805V41.0047H6.67231V21.0805C6.67231 20.2196 5.97428 19.524 5.11574 19.524C4.25477 19.524 3.55916 20.2196 3.55916 21.0805V42.5538C3.55916 42.9673 3.72212 43.3637 4.01398 43.6556C4.30584 43.9474 4.7023 44.1104 5.11572 44.1104H33.2312C33.6447 44.1104 34.0411 43.9474 34.3329 43.6556C34.6248 43.3637 34.7878 42.9672 34.7878 42.5538V21.0805C34.7878 20.6671 34.6248 20.2706 34.3329 19.9788C34.0411 19.687 33.6446 19.524 33.2312 19.524Z" fill="white"/>
+                    <path d="M19.1735 0.166504C18.3149 0.166504 17.6169 0.862106 17.6169 1.72308V8.80051C17.6169 9.66149 18.3149 10.3571 19.1735 10.3571C20.032 10.3571 20.73 9.66149 20.73 8.80051V1.72308C20.73 1.30962 20.5671 0.913161 20.2752 0.621335C19.9834 0.329508 19.5869 0.166504 19.1735 0.166504Z" fill="white"/>
+                    <path d="M22.1116 3.09967H16.2356C15.3746 3.09967 14.679 3.79528 14.679 4.65625C14.679 5.51479 15.3746 6.21282 16.2356 6.21282H22.1141H22.1116C22.9726 6.21282 23.6682 5.51479 23.6682 4.65625C23.6682 3.79528 22.9726 3.09967 22.1116 3.09967Z" fill="white"/>
+                    <path d="M23.6682 28.1095H14.6787C13.8177 28.1095 13.1221 28.8075 13.1221 29.666V42.5538C13.1221 43.4148 13.8177 44.1104 14.6787 44.1104C15.5372 44.1104 16.2353 43.4148 16.2353 42.5538V31.2226H22.1138V42.5538H22.1113C22.1113 43.4148 22.8094 44.1104 23.6679 44.1104C24.5289 44.1104 25.2245 43.4148 25.2245 42.5538V29.666C25.2245 29.2526 25.0615 28.8585 24.7697 28.5643C24.4778 28.2724 24.0817 28.1095 23.6682 28.1095Z" fill="white"/>
+                    </svg>                    
             </div>
-            <h3>Traditional Javanese Ceremony</h3>
+            <h3>Pemberkatan Pernikahan</h3>
             <p class="event-time">June 14, 2025 • 10:00 AM</p>
-            <p class="event-location">Semarang Grand Ballroom</p>
-            <p class="event-address">Jl. Pemuda No. 123, Semarang, Indonesia</p>
+            <p class="event-location">
+                <a href={churchLocationUrl} target="_blank" rel="noopener noreferrer">
+                    Gereja Katolik St. Petrus Sambiroto
+                </a>
+              </p>
+            <p class="event-address"> 
+                <a href={churchLocationUrl} target="_blank" rel="noopener noreferrer">
+                Jl. Arum Sari Raya No.A5, Sambiroto, Kec. Tembalang, Kota Semarang, Jawa Tengah 50276
+              </a></p>
             <p class="event-description">
-                Join us for a traditional Javanese wedding ceremony where we will honor Nathalia's cultural heritage.
-                Traditional attire is encouraged but not required.
+                The <bold>pemberkatan pernikahan</bold>, or wedding blessing ceremony, serves as a vital spiritual foundation for our marriage. During this ceremony, we will exchange vows before God and the church, and receive prayers for a lifetime of love, happiness, and spiritual growth together.
             </p>
         </div>
 
@@ -37,12 +47,16 @@
                 </svg>
             </div>
             <h3>Reception</h3>
-            <p class="event-time">June 14, 2025 • 6:00 PM</p>
-            <p class="event-location">Semarang Beachfront</p>
-            <p class="event-address">Pantai Marina, Semarang, Indonesia</p>
+            <p class="event-time">June 14, 2025 • 01:30 PM</p>
+            <p class="event-location">
+                <a href={venueLocationUrl} target="_blank" rel="noopener noreferrer">Hotel Grand Candi</a></p>
+            <p class="event-address">
+                <a href={venueLocationUrl} target="_blank" rel="noopener noreferrer">
+                    Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232
+                </a></p>
             <p class="event-description">
-                Celebrate with us at our beachfront reception featuring a blend of Indonesian and Dutch cuisines,
-                live music, and dancing under the stars.
+                After the church ceremony, our reception will be at Hotel Grand Candi. Upon arrival, guests can traditionally congratulate the newlyweds and families seated at the front on a stage. Following this, we'll enjoy a festive meal of typical Indonesian wedding dishes with live <a href={keroncongURL} target="_blank" rel="noopener noreferrer">
+                Keroncong </a> music creating a vibrant atmosphere.
             </p>
         </div>
     </div>
@@ -144,11 +158,23 @@
         margin-bottom: 0.5rem;
     }
 
+    .event-location a {
+    color: var(--secondary-color); /* Apply the orange color to the link */
+    text-decoration: none; /* Remove the default underline for links if you prefer */
+    }
+
     .event-address {
         font-style: italic;
         margin-bottom: 1rem;
         font-size: 0.9rem;
     }
+
+    .event-address a {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
 
     .event-description {
         line-height: 1.6;
