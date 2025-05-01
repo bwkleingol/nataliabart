@@ -1,0 +1,276 @@
+---
+import { t, setCurrentLocale } from '../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'en';
+setCurrentLocale(currentLocale);
+---
+
+
+
+<div class="content-container">
+    <section class="timeline-section">
+        <div class="section-header">
+            <h2>Our Journey</h2>
+            <div class="divider"></div>
+            <p class="section-description">A glimpse into our love story</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">December 2023</div>
+                <div class="timeline-content">
+                    <h3>First Meeting</h3>
+                    <p>December 10th, 2023. Warung Kecil in Sanur, Bali. That's where it started. We both picked it as our workspace for the day, and happened to be seated side-by-side. We noticed each other instantly, and the conversation just took off. That afternoon, we decided to go for a walk on the beach, and we clicked, like, immediately. It was that rare thing – a shared vision, the same values and similar goals. It wasn't just a spark, it was like finding someone who saw the world the exact same way. And honestly? That feeling has only grown stronger since.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Februari 2024</div>
+                <div class="timeline-content">
+                    <h3>Reunited</h3>
+                    <p>End December, Bart had to return to the Netherlands for 1.5 months. This early separation immediately proved to be a good test to validate our strong feelings. After lots of video calls we finally reunited on February 15th and we have been practically inseparable since. :)</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">March 2024</div>
+                <div class="timeline-content">
+                    <h3>Entepreneurship</h3>
+                    <p>While Bart was busy with his startup, Natalia also embarked on an entrepreneurial adventure, opening her own cafe in Ubud. Balancing this with her fixed job and freelance accounting work eventually became too time-consuming, though it was a great adventure with eventful weekends in Ubud.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">May 2024</div>
+                <div class="timeline-content">
+                    <h3>Meeting the Semerang Family</h3>
+                    <p>On the 24th of May, we decided to take a 12-hour train ride from Banyuwangi to Semarang to meet Natalia's family for the first time. Bart received a lovely and warm welcome from Natalia's family, especially from her mother who spent a lot of time in the kitchen ensuring he was well-fed – a very kind gesture so typical of an Indonesian mom.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">November 2024</div>
+                <div class="timeline-content">
+                    <h3>The Proposal</h3>
+                    <p>On the 1st of November, during a trip to Nusa Penida with friends Lambros and Melissa, Bart found the perfect spot. At the end of a trail near Manta Point, they discovered a beautiful hidden beach where Bart proposed to Natalia, and she said yes! It was a truly unforgettable moment.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">January 2025</div>
+                <div class="timeline-content">
+                    <h3>Meeting the Marienvelde Family</h3>
+                    <p>Natalia joined Bart for a 2.5-week trip to the Netherlands, where she met his family and attended Niels & Marit's wedding. Despite the chilly Dutch weather, she was met with the same warm hospitality Bart had experienced in Semarang</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">June 2025</div>
+                <div class="timeline-content">
+                    <h3>Wedding</h3>
+                    <p>For Natalia and Bart, the profound love we share has naturally led us to this exciting next chapter of marriage in June. We are filled with gratitude that so many of our dear friends and family, from near and far, are making the considerable journey to Bali and Semarang to celebrate with us. Your effort to be there means the world to us.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <blockquote>
+            "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope."
+            <cite>— Maya Angelou</cite>
+        </blockquote>
+    </section>
+</div>
+
+<style>
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .divider {
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 0 auto 1rem;
+    }
+
+
+    .content-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .timeline-section {
+        margin: 4rem 0;
+        text-align: center;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: var(--primary-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+    }
+
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 50%;
+    }
+
+    .timeline-dot {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 4px solid var(--primary-color);
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        z-index: 10;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+        right: -14px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: -14px;
+    }
+
+    .timeline-date {
+        display: inline-block;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-content h3 {
+        margin-top: 0;
+        color: var(--primary-color);
+    }
+
+    .quote-section {
+        text-align: center;
+        margin: 5rem 0;
+        padding: 2rem;
+        background-color: rgba(var(--primary-color-rgb), 0.05);
+        border-radius: 10px;
+    }
+
+    blockquote {
+        font-size: 1.5rem;
+        font-style: italic;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+    }
+
+    cite {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-style: normal;
+        color: var(--text-color-light);
+    }
+
+    @media (max-width: 768px) {
+        .timeline::before {
+            left: 40px;
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 20px;
+            left: 0 !important;
+            text-align: left !important;
+        }
+
+        .timeline-dot {
+            left: 30px !important;
+            right: auto !important;
+        }
+    }
+
+    <style>
+  .page-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5rem 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    /* Add these background image properties */
+    background-image: url('/images/natalia_winter.avif');
+    background-size: cover; /* Or 'contain', 'auto', etc. */
+    background-position: center center; /* Adjust as needed: top, bottom, left, right */
+    background-repeat: no-repeat; /* Prevent the image from tiling */
+    /* Ensure the text is readable on top of the image */
+    /* You might need to adjust text color or add an overlay */
+    min-height: 300px; /* Adjust the minimum height of the banner */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    align-items: center; /* Center the text horizontally */
+  }
+
+  .page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    /* Add a background color with some transparency if needed for text readability */
+    /* background-color: rgba(var(--primary-color-rgb), 0.5); */
+    /* padding: 0.5rem; */
+    /* border-radius: 5px; */
+  }
+
+  .divider {
+    width: 100px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 0.5rem auto; /* Adjust margin for better spacing */
+  }
+
+  /* ... your other styles ... */
+
+</style>
