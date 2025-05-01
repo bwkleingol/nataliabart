@@ -80,10 +80,12 @@
     "title": "Contact Us",
     "intro": "Almost there! We hope the website has all the information you need. If there's anything else at all, please feel free to drop us a line.",
     "whatsapp": {
-      "title": "Contact Us via WhatsApp",
-      "description": "For any questions about our wedding or to let us know if you can attend, please contact us directly via WhatsApp. We'll be happy to help with any information you need.",
+      "title": "Reach Out Via WhatsApp",
+      "description": "For any questions about our wedding, please contact us directly via WhatsApp. We'll be happy to help with any information you need.",
       "number": "WhatsApp:",
-      "button": "Contact Us on WhatsApp"
+      "button": "WhatsApp Bart",
+      "number2": "WhatsApp:",
+      "button2": "WhatsApp Natalia"
     },
     "info": {
       "message": "When messaging us, you might want to include:",
