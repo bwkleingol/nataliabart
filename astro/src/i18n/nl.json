@@ -26,11 +26,11 @@
     "title": "Het Bruidspaar",
     "bart": {
       "origin": "uit Nederland",
-      "description": "Bart groeide op in Amsterdam en verhuisde in 2020 naar Semarang waar hij werkt als digital nomad. Hij houdt ervan om de stad te verkennen en zich onder te dompelen in de lokale Javaanse cultuur."
+      "description": "Bart groeide op in Mariënvelde, een klein dorp met 900 inwoners in 'de Achterhoek', waar hij genoot van een vredige en zorgeloze jeugd. Hij groeide op met een oudere zus en ouders die een werkplaats runden. Bart werd opgevoed met een ondernemende mentaliteit. Bart studeerde om elektrotechnisch ingenieur te worden. Na enkele jaren in het bedrijfsleven mistte hij uitdaging en Bart besloot de wereld over te reizen, waar hij zijn ware passie ontdekte. Hij verhuisde in 2022 naar Bali om aan een startup te werken en is sinds 2023 permanent daar gevestigd, zijn droom najagend."
     },
     "natalia": {
       "origin": "uit Indonesië",
-      "description": "Natalia is geboren en getogen in Semarang. Ze werkt in de horeca in haar geboortestad. Ze geniet van het koken van traditionele Javaanse gerechten en het delen van haar culturele erfgoed."
+      "description": "Natalia is geboren en getogen in Semarang, de hoofdstad van Midden-Java, met een bevolking van 1,7 miljoen inwoners. Als de jongste van drie kinderen, met twee oudere broers, ervoer ze een warm familieleven. Natalia streefde haar academische interesses na door accountant te studeren. Op zoek naar professionele groei na haar studie verhuisde ze naar West-Java om voor een vooraanstaand projectontwikkelingsbedrijf te werken. Gedreven door een verlangen naar nieuwe uitdagingen en ervaringen maakte Natalia in 2021 de overstap naar Bali. iep geworteld in haar opvoeding omarmt ze de Javaanse wijsheid. De rijke Javaanse cultuur is een belangrijk deel van haar identiteit, waar ze trots op is."
     }
   },
   "events": {
@@ -38,16 +38,16 @@
     "ceremony": {
       "title": "Traditionele Javaanse Ceremonie",
       "time": "14 juni 2025 • 10:00 uur",
-      "location": "Semarang Grand Ballroom",
-      "address": "Jl. Pemuda No. 123, Semarang, Indonesië",
-      "description": "Wees erbij voor een traditionele Javaanse huwelijksceremonie die beide culturele achtergronden eert."
+      "location": "Gereja Katolik St. Petrus Sambiroto",
+      "address": "Jl. Arum Sari Raya No.A5, Sambiroto, Kec. Tembalang, Kota Semarang, Jawa Tengah 50276",
+      "description": "De 'pemberkatan pernikahan', ofwel de huwelijksinzegening, dient als een essentiële spirituele basis voor ons huwelijk. Tijdens deze ceremonie zullen we elkaar trouw beloven voor God en de kerk, en gebeden ontvangen voor een levenslang samenzijn vol liefde, geluk en spirituele groei."
     },
     "reception": {
       "title": "Receptie",
-      "time": "14 juni 2025 • 18:00 uur",
-      "location": "Semarang Beachfront",
-      "address": "Pantai Marina, Semarang, Indonesië",
-      "description": "Vier met ons mee op onze strandreceptie met een mix van Indonesische en Nederlandse gerechten, live muziek en dansen onder de sterren."
+      "time": "14 juni 2025 • 13:30 uur",
+      "location": "Hotel Grand Candi",
+      "address": "Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232",
+      "description": "Na de kerkelijke ceremonie vindt onze receptie plaats in Hotel Grand Candi, waar gasten de pasgetrouwden en families die vooraan op een podium zitten traditioneel kunnen feliciteren. Zodra u de pasgetrouwden en families heeft begroet, zullen de heerlijke Indonesische bruiloftsgerechten beschikbaar zijn om van te genieten, met live muziek die gespeeld wordt in"
     },
     "location": "Locatie"
   },
@@ -56,8 +56,7 @@
     "categories": {
       "all": "Alle Foto's",
       "engagement": "Verloving",
-      "travels": "Onze Reizen",
-      "family": "Familie"
+      "travels": "Onze Reizen"
     },
     "photos": {
       "proposal": {

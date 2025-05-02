@@ -36,20 +36,20 @@
     }
   },
   "events": {
-    "title": "The Marriage Blessing Ceremony:",
+    "title": "Pemberkatan Pernikahan",
     "ceremony": {
       "title": "Wedding eve prayer ceremony",
       "time": "June 14, 2025 • 10:00 AM",
-      "location": "Saint Peter Catholic Church, Sambiroto",
+      "location": "Gereja Katolik St. Petrus Sambiroto",
       "address": "Jl. Arum Sari Raya No.A5, Sambiroto, Kec. Tembalang, Kota Semarang, Jawa Tengah 50276",
-      "description": "Join us for a traditional Javanese wedding ceremony that honors both of our cultural backgrounds."
+      "description": "The 'pemberkatan pernikahan', or wedding blessing ceremony, serves as a vital spiritual foundation for our marriage. During this ceremony, we will exchange vows before God and the church, and receive prayers for a lifetime of love, happiness, and spiritual growth together."
     },
     "reception": {
       "title": "Reception",
-      "time": "June 14, 2025 • 6:00 PM",
-      "location": "Semarang Beachfront",
-      "address": "Pantai Marina, Semarang, Indonesia",
-      "description": "Celebrate with us at our beachfront reception featuring a blend of Indonesian and Dutch cuisines, live music, and dancing under the stars."
+      "time": "June 14, 2025 • 01:30 PM",
+      "location": "Hotel Grand Candi",
+      "address": "Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232",
+      "description": "Na de kerkelijke ceremonie vindt onze receptie plaats in Hotel Grand Candi, waar gasten de pasgetrouwden en families die vooraan op een podium zitten traditioneel kunnen feliciteren. Zodra u de pasgetrouwden en families heeft begroet, zullen de heerlijke Indonesische bruiloftsgerechten beschikbaar zijn om van te genieten, met live muziek die gespeeld wordt in"
     },
     "location": "Location"
   },

@@ -1,4 +1,10 @@
 ---
+import { t, setCurrentLocale } from '../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'nl';
+setCurrentLocale(currentLocale);
+
 const churchLocationUrl = "https://maps.app.goo.gl/AXGPccTVMRjiZpcS8";
 const venueLocationUrl = "https://maps.app.goo.gl/N7UPNPzJqzXVYJZa8"
 const keroncongURL = "https://youtu.be/SbEuCjx9tU4?si=lf7yKD-10Lr5eaLe";
@@ -21,15 +27,15 @@ const keroncongURL = "https://youtu.be/SbEuCjx9tU4?si=lf7yKD-10Lr5eaLe";
                     <path d="M23.6682 28.1095H14.6787C13.8177 28.1095 13.1221 28.8075 13.1221 29.666V42.5538C13.1221 43.4148 13.8177 44.1104 14.6787 44.1104C15.5372 44.1104 16.2353 43.4148 16.2353 42.5538V31.2226H22.1138V42.5538H22.1113C22.1113 43.4148 22.8094 44.1104 23.6679 44.1104C24.5289 44.1104 25.2245 43.4148 25.2245 42.5538V29.666C25.2245 29.2526 25.0615 28.8585 24.7697 28.5643C24.4778 28.2724 24.0817 28.1095 23.6682 28.1095Z" fill="white"/>
                     </svg>                    
             </div>
-            <h3>Pemberkatan Pernikahan</h3>
-            <p class="event-time">June 14, 2025 • 10:00 AM</p>
+            <h3>{t('events.title')}</h3>
+            <p class="event-time">{t('events.ceremony.time')}</p>
             <p class="event-location">
                 <a href={churchLocationUrl} target="_blank" rel="noopener noreferrer">
-                    Gereja Katolik St. Petrus Sambiroto
+                    {t('events.ceremony.location')}
                 </a>
             </p>
             <p class="event-description">
-                The <bold>pemberkatan pernikahan</bold>, or wedding blessing ceremony, serves as a vital spiritual foundation for our marriage. During this ceremony, we will exchange vows before God and the church, and receive prayers for a lifetime of love, happiness, and spiritual growth together.
+                {t('events.ceremony.description')}
             </p>
             <div class="map-container">
                 <div class="map">
@@ -55,13 +61,12 @@ const keroncongURL = "https://youtu.be/SbEuCjx9tU4?si=lf7yKD-10Lr5eaLe";
                     <path d="M14 13a4 4 0 1 0-8 0v1h8z"></path>
                 </svg>
             </div>
-            <h3>Reception</h3>
-            <p class="event-time">June 14, 2025 • 01:30 PM</p>
+            <h3>{t('events.reception.title')}</h3>
+            <p class="event-time">{t('events.reception.time')}</p>
             <p class="event-location">
-                <a href={venueLocationUrl} target="_blank" rel="noopener noreferrer">Hotel Grand Candi</a></p>
+                <a href={venueLocationUrl} target="_blank" rel="noopener noreferrer">{t('events.reception.location')}</a></p>
             <p class="event-description">
-                After the church ceremony, our reception will be at Hotel Grand Candi, where guests can traditionally congratulate the newlyweds and families seated at the front on a stage. Once you've greeted the newlyweds and families, the delicious Indonesian wedding dishes will be available for you to enjoy, with live <a href={keroncongURL} target="_blank" rel="noopener noreferrer" style="color: rgb(66, 64, 64);">
-                Keroncong </a> music creating a vibrant atmosphere.
+                {t('events.reception.description')} <a href={keroncongURL} target="_blank" rel="noopener noreferrer" style="color: rgb(66, 64, 64);">Keroncong style</a>.
             </p>
             <div class="map-container">
                 <div class="map">
