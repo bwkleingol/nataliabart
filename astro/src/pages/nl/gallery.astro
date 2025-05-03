@@ -112,6 +112,38 @@ setCurrentLocale(currentLocale);
         margin: 0 auto;
     }
 
+    .gallery-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem 5rem;
+    }
+
+    .gallery-categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .category-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .category-button:hover, .category-button.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
     .content-container {
         max-width: 1200px;
         margin: 0 auto;
