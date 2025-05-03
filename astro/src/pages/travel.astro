@@ -9,22 +9,22 @@ import Layout from '../layouts/Layout.astro';
         <div class="divider"></div>
     </section>
 
-    <section class="travel-content">
-        <div class="intro">
-            <p>
-                We're excited to welcome you to Indonesia for our wedding celebration. Below you'll find information to help you plan your trip and make your stay comfortable. Use the tabs below to view details for Semarang (where the wedding will be held) and Bali (a nearby popular destination if you wish to extend your stay).
-            </p>
-        </div>
-
-
         <div class="location-tabs">
             <button class="tab-button active" data-location="all">All Info</button>
             <button class="tab-button" data-location="semarang">Semarang</button>
             <button class="tab-button" data-location="bali">Bali</button>
-            <button class="tab-button" data-location="bali">General Travel Tips</button>
+            <button class="tab-button" data-location="tips">General Travel Tips</button>
         </div>
 
-        <div class="location-content" id="semarang-content">
+        <div class="location-content" id="all-content">
+            <div class="intro">
+                <p>
+                    Below you'll find information to help you plan your trip to our wedding. It contains all the information for overseas guests, local guests, and guests traveling with us to and from Bali. Use the buttons above to view details per location.
+                </p>
+            </div>
+        </div>
+
+        <div class="location-content" id="semarang-content" style="display: none;">
             <div class="travel-section">
                 <h2>Getting to Semarang</h2>
                 <div class="travel-cards">
@@ -104,7 +104,6 @@ import Layout from '../layouts/Layout.astro';
 
             <div class="accommodation-section">
                 <h2>Where to Stay in Semarang</h2>
-
                 <div class="hotel-cards">
                     <div class="hotel-card">
                         <div class="hotel-image">
@@ -137,7 +136,7 @@ import Layout from '../layouts/Layout.astro';
                             <a href="https://trv.lk/7da45acc" target="_blank" class="book-button">Booking.com</a>
                             <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
                         </div>
-                    </div>
+                    </div> <!-- End of hotel card -->
                     <div class="hotel-card">
                         <div class="hotel-image">
                             <img src="/images/Lobby-Hotel-Aruss-Semarang.webp" alt="Grand Candi Hotel" />
@@ -198,15 +197,15 @@ import Layout from '../layouts/Layout.astro';
                             <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
                         </div>
                     </div>
-
+                </div>
+            </div>
+            
             <div class="explore-section">
                 <h2>Explore Semarang</h2>
-
                 <p class="explore-intro">
                     While you're in Semarang, take some time to explore this beautiful city.
                     Here are some attractions we recommend:
                 </p>
-
                 <div class="attraction-cards">
                     <div class="attraction-card">
                         <div class="attraction-image">
@@ -218,7 +217,6 @@ import Layout from '../layouts/Layout.astro';
                             featuring stunning Dutch architecture and interesting exhibitions.
                         </p>
                     </div>
-
                     <div class="attraction-card">
                         <div class="attraction-image">
                             <img src="/images/attraction2.jpg" alt="Sam Poo Kong Temple" />
@@ -229,7 +227,6 @@ import Layout from '../layouts/Layout.astro';
                             and a fascinating history of Chinese influence in Indonesia.
                         </p>
                     </div>
-
                     <div class="attraction-card">
                         <div class="attraction-image">
                             <img src="/images/attraction3.jpg" alt="Old Town (Kota Lama)" />
@@ -240,7 +237,6 @@ import Layout from '../layouts/Layout.astro';
                             cafes, and art galleries. Perfect for a leisurely stroll.
                         </p>
                     </div>
-
                     <div class="attraction-card">
                         <div class="attraction-image">
                             <img src="/images/attraction4.jpg" alt="Semawis Market" />
@@ -251,9 +247,11 @@ import Layout from '../layouts/Layout.astro';
                             Chinatown area, offering a variety of delicious Indonesian street food.
                         </p>
                     </div>
-                </div>
-            </div>
-        </div> <div class="location-content" id="bali-content" style="display: none;">
+                </div> <!-- End of attraction cards -->
+            </div> <!-- End of Explore Section -->
+        </div> <!-- End of Semarang Content -->
+        
+        <div class="location-content" id="bali-content" style="display: none;">
             <div class="travel-section">
                 <h2>Getting to Bali</h2>
                 <div class="travel-cards">
@@ -278,7 +276,6 @@ import Layout from '../layouts/Layout.astro';
                             <li>Many other international and budget carriers</li>
                         </ul>
                     </div>
-
                     <div class="travel-card">
                         <div class="card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -299,14 +296,45 @@ import Layout from '../layouts/Layout.astro';
                             <li>Private Driver: Can be hired for day trips or longer durations.</li>
                         </ul>
                     </div>
-                </div>
-            </div>
+                </div> <!-- close travel cards section -->
+            </div> <!-- Close travel section -->
 
             <div class="accommodation-section">
                 <h2>Where to Stay in Bali</h2>
-                <p>Bali offers a wide range of accommodation options to suit every budget and preference, from luxurious resorts to budget-friendly guesthouses in areas like Seminyak, Ubud, Canggu, and Nusa Dua.</p>
-                <p>We recommend exploring booking platforms like Booking.com, Agoda, and Airbnb to find the best deals and locations based on your interests.</p>
-                <p>Consider staying near popular areas for easier access to beaches, restaurants, and attractions.</p>
+                <div class="hotel-cards">
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="/images/lobby.webp" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Grand Candi Hotel (Recommended) </h3>
+                            <div class="hotel-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="hotel-description">
+                            Grand Candi Hotel is a 5-star hotel in Semarang, known for its facilities and service. It often serves as a venue for significant events, and provides accommodations with amenities like on-site dining and event spaces.
+                            </p>
+                            <div class="hotel-details">
+                            <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/xZS2ZtsepYT3zK5m6"target="_blank" style="color: #8D5A97;">Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232</a></p>
+                            <p><strong>Phone:</strong> +62 248 416 222</p>
+                            <p><strong>Email:</strong> <a href="mailto:reservation@grandcandihotel.com" target="_blank" style="color: #8D5A97;">reservation@grandcandihotel.com</a></p>
+                            <p><strong>Booking Info:</strong> We recommend staying here for your convenience, as the reception 
+                                will be held at this hotel. A night's stay starts from €35. <br>Next to 
+                                <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode="target="_blank" style="color: #8D5A97;">their own website</a>
+                                , We recommend exploring marketplaces like <a href="https://trv.lk/7da45acc"target="_blank" style="color: #8D5A97;">Traveloka</a> 
+                                , <a href="https://www.agoda.com/en-gb/grand-candi-hotel/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=5%2C16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                or <a href="https://www.booking.com/Share-aq8fWyABooking.com"target="_blank" style="color: #8D5A97;">Booking.com</a> for the best rates.</p>
+                            </div>
+                            <!-- <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode=" target="_blank" class="book-button">Own Website</a> 
+                            <a href="https://trv.lk/7da45acc" target="_blank" class="book-button">Booking.com</a>
+                            <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="explore-section">
@@ -348,12 +376,10 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!--End of Bali Section -->
 
-
-        <div class="travel-tips">
+        <div class="travel-tips" id="tips-content" style="display: none;">
             <h2>General Travel Tips</h2>
-
             <div class="tips-container">
                 <div class="tip">
                     <h3>Visa Information</h3>
@@ -363,7 +389,6 @@ import Layout from '../layouts/Layout.astro';
                         for the most up-to-date information regarding your country.
                     </p>
                 </div>
-
                 <div class="tip">
                     <h3>Weather</h3>
                     <p>
@@ -371,7 +396,6 @@ import Layout from '../layouts/Layout.astro';
                         Expect temperatures between 75-90°F (24-32°C). We recommend light, breathable clothing and sun protection.
                     </p>
                 </div>
-
                 <div class="tip">
                     <h3>Currency</h3>
                     <p>
@@ -380,7 +404,6 @@ import Layout from '../layouts/Layout.astro';
                         It's good to have some cash for smaller vendors and transportation.
                     </p>
                 </div>
-
                 <div class="tip">
                     <h3>Language</h3>
                     <p>
@@ -388,8 +411,8 @@ import Layout from '../layouts/Layout.astro';
                         We'll provide a small phrasebook in your welcome package.
                     </p>
                 </div>
-            </div>
-        </div>
+            </div> <!-- End of tips container -->
+        </div> <!-- End of Travel Tips -->
 
         <div class="contact-info">
             <h2>Need Assistance?</h2>
@@ -403,6 +426,7 @@ import Layout from '../layouts/Layout.astro';
                 <p><strong>Phone:</strong> +62 812 3456 7890</p>
             </div>
         </div>
+
     </section>
 </Layout>
 
@@ -769,29 +793,59 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script>
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const locationContents = document.querySelectorAll('.location-content');
-    const semarangContent = document.getElementById('semarang-content');
-    const baliContent = document.getElementById('bali-content');
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('.location-tabs .tab-button');
+        const allContent = document.getElementById('all-content');
+        const semarangContent = document.getElementById('semarang-content');
+        const baliContent = document.getElementById('bali-content');
+        const tipsContent = document.querySelector('.travel-tips');
+        const contactInfo = document.querySelector('.contact-info');
+        const allLocationContent = [allContent, semarangContent, baliContent, tipsContent];
 
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const location = button.dataset.location;
-
-            // Update active button
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Show/hide location content
-            if (location === 'all') {
-                semarangContent.style.display = 'block';
-                baliContent.style.display = 'block';
-            } else {
-                locationContents.forEach(content => {
+        const hideAllLocationContent = () => {
+            allLocationContent.forEach(content => {
+                if (content) {
                     content.style.display = 'none';
-                });
-                document.getElementById(`${location}-content`).style.display = 'block';
+                }
+            });
+            if (contactInfo) contactInfo.style.display = 'none';
+        };
+
+        // Initially show all relevant content and activate 'All Info'
+        hideAllLocationContent();
+        if (allContent) allContent.style.display = 'block';
+        if (semarangContent) semarangContent.style.display = 'block';
+        if (baliContent) baliContent.style.display = 'block';
+        if (tipsContent) tipsContent.style.display = 'block';
+
+        tabButtons.forEach(button => {
+            if (button.dataset.location === 'all') {
+                button.classList.add('active');
             }
+
+            button.addEventListener('click', function() {
+                const location = this.dataset.location;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                hideAllLocationContent();
+
+                if (location === 'all') {
+                    if (allContent) allContent.style.display = 'block';
+                    if (semarangContent) semarangContent.style.display = 'block';
+                    if (baliContent) baliContent.style.display = 'block';
+                    if (tipsContent) tipsContent.style.display = 'block';
+                } else if (location === 'semarang') {
+                    if (semarangContent) semarangContent.style.display = 'block';
+                } else if (location === 'bali') {
+                    if (baliContent) baliContent.style.display = 'block';
+                } else if (location === 'tips') {
+                    if (tipsContent) tipsContent.style.display = 'block';
+                }
+
+                if (contactInfo) contactInfo.style.display = 'block';
+            });
         });
     });
 </script>
