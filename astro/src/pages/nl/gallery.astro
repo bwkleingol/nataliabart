@@ -246,4 +246,245 @@ setCurrentLocale(currentLocale);
             padding: 2rem 1.5rem;
         }
     }
+    /* Lightbox styles */
+    #gallery-lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #gallery-lightbox.active {
+        opacity: 1;
+    }
+
+    #lightbox-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #lightbox-img {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 4px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #lightbox-img.loaded {
+        opacity: 1;
+    }
+
+    #lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    #lightbox-close:hover {
+        opacity: 1;
+    }
+
+    #lightbox-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #lightbox-loader {
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        border-top: 5px solid white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -20px;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+        #lightbox-img {
+            max-width: 95%;
+            max-height: 70vh;
+        }
+
+        #lightbox-close {
+            top: 10px;
+            right: 10px;
+        }
+    }
 </style>
+
+<!-- Lightbox HTML structure -->
+<div id="gallery-lightbox">
+    <button id="lightbox-close">&times;</button>
+    <div id="lightbox-wrapper">
+        <div id="lightbox-loader"></div>
+        <img id="lightbox-img" src="" alt="Enlarged image">
+    </div>
+    <div id="lightbox-caption"></div>
+</div>
+
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        // Get lightbox elements
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxWrapper = document.getElementById('lightbox-wrapper');
+        const lightboxLoader = document.getElementById('lightbox-loader');
+
+        // Function to open lightbox
+        function openLightbox(imgSrc, caption) {
+            // Show loader
+            lightboxLoader.style.display = 'block';
+            lightboxImg.classList.remove('loaded');
+
+            // Set caption
+            lightboxCaption.textContent = caption;
+
+            // Show lightbox container first
+            lightbox.style.display = 'block';
+
+            // Force browser reflow
+            void lightbox.offsetWidth;
+
+            // Add active class for fade-in effect
+            lightbox.classList.add('active');
+
+            // Load the image
+            lightboxImg.onload = function() {
+                // Hide loader
+                lightboxLoader.style.display = 'none';
+                // Show image with fade-in
+                lightboxImg.classList.add('loaded');
+            };
+
+            lightboxImg.onerror = function() {
+                // Hide loader if image fails to load
+                lightboxLoader.style.display = 'none';
+                lightboxCaption.textContent = 'Error loading image';
+            };
+
+            // Set image source after setting up event handlers
+            lightboxImg.src = imgSrc;
+
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to close lightbox
+        function closeLightbox() {
+            // Fade out
+            lightbox.classList.remove('active');
+            lightboxImg.classList.remove('loaded');
+
+            // Wait for animation to complete before hiding
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+                // Reset image source
+                lightboxImg.src = '';
+                // Restore body scrolling
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Add click event to each gallery item
+        galleryItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const img = item.querySelector('img');
+                const caption = item.querySelector('.caption').textContent;
+
+                openLightbox(img.src, caption);
+            });
+        });
+
+        // Close lightbox when clicking the close button
+        lightboxClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeLightbox();
+        });
+
+        // Close lightbox when clicking outside the image
+        lightboxWrapper.addEventListener('click', function(e) {
+            // Only close if clicking directly on the wrapper, not on the image
+            if (e.target === lightboxWrapper) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                closeLightbox();
+            }
+        });
+
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        lightboxWrapper.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        lightboxWrapper.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            // Detect left or right swipe (threshold of 50px)
+            if (touchEndX < touchStartX - 50 || touchEndX > touchStartX + 50) {
+                closeLightbox();
+            }
+        }
+    });
+</script>
