@@ -44,8 +44,8 @@ const { title = t('site.title') } = Astro.props;
 				</label>
 				<div class="nav-links">
 					<a href={getRelativeLocaleUrl(currentLocale, '')} class={Astro.url.pathname === '/' || Astro.url.pathname === `/${currentLocale}` || Astro.url.pathname === `/${currentLocale}/` ? 'active' : ''}>{t('nav.home')}</a>
-					<a href={getRelativeLocaleUrl(currentLocale, 'our-story')} class={Astro.url.pathname.includes('/our-story') ? 'active' : ''}>{t('nav.ourStory')}</a>
-					<a href={getRelativeLocaleUrl(currentLocale, 'event-details')} class={Astro.url.pathname.includes('/event-details') ? 'active' : ''}>{t('nav.eventDetails')}</a>
+					<!-- <a href={getRelativeLocaleUrl(currentLocale, 'our-story')} class={Astro.url.pathname.includes('/our-story') ? 'active' : ''}>{t('nav.ourStory')}</a> -->
+					<!-- <a href={getRelativeLocaleUrl(currentLocale, 'event-details')} class={Astro.url.pathname.includes('/event-details') ? 'active' : ''}>{t('nav.eventDetails')}</a> -->
 					<a href={getRelativeLocaleUrl(currentLocale, 'travel')} class={Astro.url.pathname.includes('/travel') ? 'active' : ''}>{t('nav.travel')}</a>
 					<a href={getRelativeLocaleUrl(currentLocale, 'gallery')} class={Astro.url.pathname.includes('/gallery') ? 'active' : ''}>{t('nav.gallery')}</a>
 					<a href={getRelativeLocaleUrl(currentLocale, 'contact')} class={`rsvp-button ${Astro.url.pathname.includes('/contact') ? 'active' : ''}`}>{t('nav.contact')}</a>
