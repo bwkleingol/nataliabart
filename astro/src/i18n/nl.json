@@ -56,7 +56,8 @@
     "categories": {
       "all": "Alle Foto's",
       "engagement": "Verloving",
-      "travels": "Onze Reizen"
+      "travels": "Onze Reizen",
+      "family": "Familie"
     },
     "photos": {
       "proposal": {
@@ -137,5 +138,29 @@
     "en": "Engels",
     "nl": "Nederlands",
     "id": "Indonesisch"
+  },
+
+  "storyTitle":
+  {
+    "firstmeeting": "Eerste Ontmoeting",
+    "reunited": "Herenigd",
+    "semarang": "Ontmoeting met de familie in Semarang",
+    "proposal": "Het aanzoek",
+    "marienvelde":"Ontmoeting met de familie in Marienvelde",
+    "wedding":"Bruiloft"
+  },
+
+  "story": 
+  {
+    "firstmeeting": "10 december 2023. Warung Kecil in Sanur, Bali. Daar begon het. We hadden het allebei uitgekozen als onze werkplek voor die dag en bleken naast elkaar te zitten. We merkten elkaar meteen op en het gesprek kwam direct op gang. Die middag besloten we een strandwandeling te maken en het klikte meteen, echt onmiddellijk. Het was zoiets zeldzaams – een gedeelde visie, dezelfde waarden en vergelijkbare doelen. Het was niet zomaar een vonk, het was alsof we iemand hadden gevonden die precies hetzelfde naar de wereld keek. En eerlijk? Dat gevoel is sindsdien alleen maar sterker geworden.",
+    "reunited": "Eind december moest Bart voor anderhalve maand terug naar Nederland. Deze vroege scheiding bleek meteen een goede test om onze sterke gevoelens te bevestigen. Na veel videogesprekken waren we eindelijk weer samen op 15 februari en sindsdien zijn we praktisch onafscheidelijk. :)",
+    "semarang": "Op 24 mei besloten we een 12-uur durende treinreis van Banyuwangi naar Semarang te maken om Natalia's familie voor het eerst te ontmoeten. Bart kreeg een hartelijk en warm welkom van Natalia's familie, vooral van haar moeder die veel tijd in de keuken doorbracht om ervoor te zorgen dat hij goed te eten had – een heel lief gebaar, zo typisch voor een Indonesische moeder.",
+    "proposal": "Op 1 november, tijdens een trip naar Nusa Penida met vrienden Lambros en Melissa, vond Bart de perfecte plek. Aan het einde van een pad vlakbij Manta Point ontdekten ze een prachtig, verborgen strand waar Bart Natalia ten huwelijk vroeg, en ze zei ja! Het was een werkelijk onvergetelijk moment.",
+    "marienvelde": "Natalia vergezelde Bart voor een reis van 2,5 week naar Nederland, waar ze zijn familie ontmoette en de bruiloft van Niels & Marit bijwoonde. Vanwege Barts werkverplichtingen verbleef Natalia een week bij zijn ouders, waardoor ze een hechte band met hen kon opbouwen. Ondanks het kille Nederlandse weer werd ze met dezelfde warme gastvrijheid ontvangen die Bart in Semarang had ervaren.",
+    "wedding": "Voor Natalia en Bart heeft de diepe liefde die we delen ons op natuurlijke wijze naar dit spannende volgende hoofdstuk van het huwelijk in juni geleid. We zijn ontzettend dankbaar dat zo veel van onze dierbare vrienden en familie, van dichtbij en ver, de aanzienlijke reis naar Bali en Semarang maken om dit met ons te vieren. Jullie moeite om erbij te zijn betekent de wereld voor ons."
   }
 }
+
+
+
+

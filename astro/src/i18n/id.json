@@ -133,10 +133,32 @@
     "date": "14 Juni 2025 • Semarang, Indonesia",
     "copyright": "© 2025 Pernikahan Natalia & Bart"
   },
-  "languageSwitcher": {
+
+  "languageSwitcher": 
+  {
     "label": "Bahasa",
     "en": "Inggris",
     "nl": "Belanda",
     "id": "Indonesia"
+  },
+
+  "storyTitle": 
+  {
+    "firstmeeting": "Pertemuan Pertama",
+    "reunited": "Bersatu Kembali",
+    "semarang": "Bertemu Keluarga Semarang",
+    "proposal": "Lamaran",
+    "marienvelde": "Bertemu Keluarga Mariënvelde",
+    "wedding": "Pernikahan"
+  },
+
+  "story": 
+  {
+    "firstmeeting": "10 Desember 2023. Warung Kecil di Sanur, Bali. Di sanalah semuanya dimulai. Kami berdua memilih tempat itu sebagai tempat kerja kami hari itu dan ternyata duduk bersebelahan. Kami langsung menyadari kehadiran satu sama lain dan percakapan langsung mengalir. Sore itu, kami memutuskan untuk berjalan-jalan di pantai dan kami langsung merasa cocok, benar-benar seketika. Itu adalah sesuatu yang langka – visi yang sama, nilai-nilai yang serupa, dan tujuan yang sebanding. Itu bukan hanya sekadar ketertarikan, rasanya seperti kami telah menemukan seseorang yang melihat dunia persis seperti kami. Dan jujur? Perasaan itu hanya semakin kuat sejak saat itu.",
+    "reunited": "Akhir Desember, Bart harus kembali ke Belanda selama 1,5 bulan. Perpisahan awal ini langsung terbukti menjadi ujian yang baik untuk menguji perasaan kuat kami. Setelah banyak panggilan video, kami akhirnya bersatu kembali pada tanggal 15 Februari dan sejak itu kami **praktis** tidak terpisahkan. :)",
+    "semarang": "Pada tanggal 24 Mei, kami memutuskan untuk melakukan perjalanan kereta api selama 12 jam dari Banyuwangi ke Semarang untuk bertemu dengan keluarga Natalia untuk pertama kalinya. Bart menerima sambutan yang hangat dan ramah dari keluarga Natalia, terutama dari ibunya yang menghabiskan banyak waktu di dapur memastikan dia makan dengan baik – sebuah gestur yang sangat baik hati, sangat khas dari seorang ibu Indonesia.",
+    "proposal": "Pada tanggal 1 November, saat perjalanan ke Nusa Penida bersama teman-teman Lambros dan Melissa, Bart menemukan tempat yang sempurna. Di ujung jalan setapak dekat Manta Point, mereka menemukan pantai tersembunyi yang indah tempat Bart melamar Natalia, dan dia berkata ya! Itu adalah momen yang benar-benar tak terlupakan.",
+    "marienvelde": "Natalia menemani Bart dalam perjalanan selama 2,5 minggu ke Belanda, di mana dia bertemu dengan keluarganya dan menghadiri pernikahan Niels & Marit. Karena komitmen pekerjaan Bart, Natalia tinggal selama seminggu dengan orang tuanya, yang memberinya kesempatan untuk menjalin ikatan yang erat dengan mereka. Terlepas dari cuaca dingin di Belanda, dia menerima keramahan yang sama seperti yang dialami Bart di Semarang.",
+    "wedding": "Bagi Natalia dan Bart, cinta mendalam yang kami bagi secara alami membawa kami ke babak selanjutnya yang menarik dalam pernikahan di bulan Juni. Kami sangat berterima kasih bahwa begitu banyak teman dan keluarga terkasih kami, dari dekat dan jauh, melakukan perjalanan yang cukup jauh ke Bali dan Semarang untuk merayakan bersama kami. Upaya kalian untuk hadir sangat berarti bagi kami."
   }
 }

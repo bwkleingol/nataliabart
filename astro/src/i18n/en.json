@@ -49,7 +49,7 @@
       "time": "June 14, 2025 • 01:30 PM",
       "location": "Hotel Grand Candi",
       "address": "Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232",
-      "description": "Na de kerkelijke ceremonie vindt onze receptie plaats in Hotel Grand Candi, waar gasten de pasgetrouwden en families die vooraan op een podium zitten traditioneel kunnen feliciteren. Zodra u de pasgetrouwden en families heeft begroet, zullen de heerlijke Indonesische bruiloftsgerechten beschikbaar zijn om van te genieten, met live muziek die gespeeld wordt in"
+      "description": "After the church ceremony, our reception will be at Hotel Grand Candi, where guests can traditionally congratulate the newlyweds and families seated at the front on a stage. Once you've greeted the newlyweds and families, the delicious Indonesian wedding dishes will be available for you to enjoy, with live music played in "
     },
     "location": "Location"
   },
@@ -141,5 +141,25 @@
     "en": "English",
     "nl": "Dutch",
     "id": "Indonesian"
+  },
+
+  "storyTitle":
+  {
+    "firstmeeting": "First Meeting",
+    "reunited": "Reunited",
+    "semarang": "Meeting the Semarang Family",
+    "proposal": "The Proposal",
+    "marienvelde":"Meeting the Marienvelde Family",
+    "wedding":"Wedding"
+  },
+
+  "story": {
+    "firstmeeting": "December 10th, 2023. Warung Kecil in Sanur, Bali. That's where it started. We both picked it as our workspace for the day, and happened to be seated side-by-side. We noticed each other instantly, and the conversation just took off. That afternoon, we decided to go for a walk on the beach, and we clicked, like, immediately. It was that rare thing – a shared vision, the same values and similar goals. It wasn't just a spark, it was like finding someone who saw the world the exact same way. And honestly? That feeling has only grown stronger since.",
+    "reunited": "End December, Bart had to return to the Netherlands for 1.5 months. This early separation immediately proved to be a good test to validate our strong feelings. After lots of video calls we finally reunited on February 15th and we have been practically inseparable since. :)",
+    "semarang": "On the 24th of May, we decided to take a 12-hour train ride from Banyuwangi to Semarang to meet Natalia's family for the first time. Bart received a lovely and warm welcome from Natalia's family, especially from her mother who spent a lot of time in the kitchen ensuring he was well-fed – a very kind gesture so typical of an Indonesian mom.",
+    "proposal": "On the 1st of November, during a trip to Nusa Penida with friends Lambros and Melissa, Bart found the perfect spot. At the end of a trail near Manta Point, they discovered a beautiful hidden beach where Bart proposed to Natalia, and she said yes! It was a truly unforgettable moment.",
+    "marienvelde": "Natalia joined Bart for a 2.5-week trip to the Netherlands, where she met his family and attended Niels & Marit's wedding. Natalia spent a week with his parents due to Bart's work commitments, allowing her to forge a close bond with them. Despite the chilly Dutch weather, she was met with the same warm hospitality Bart had experienced in Semarang.",
+    "wedding": "For Natalia and Bart, the profound love we share has naturally led us to this exciting next chapter of marriage in June. We are filled with gratitude that so many of our dear friends and family, from near and far, are making the considerable journey to Bali and Semarang to celebrate with us. Your effort to be there means the world to us."
   }
 }
+

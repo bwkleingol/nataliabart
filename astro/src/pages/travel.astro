@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Travel & Stay - Nathalia & Bart's Wedding">
+
     <section class="page-header">
         <h1>Travel & Accommodation</h1>
         <div class="divider"></div>
@@ -11,202 +12,258 @@ import Layout from '../layouts/Layout.astro';
     <section class="travel-content">
         <div class="intro">
             <p>
-                We're excited to welcome you to Semarang, Indonesia for our wedding celebration.
-                Below you'll find information to help you plan your trip and make your stay comfortable.
+                We're excited to welcome you to Indonesia for our wedding celebration. Below you'll find information to help you plan your trip and make your stay comfortable. Use the tabs below to view details for Semarang (where the wedding will be held) and Bali (a nearby popular destination if you wish to extend your stay).
             </p>
         </div>
 
-        <div class="travel-section">
-            <h2>Getting to Semarang</h2>
 
-            <div class="travel-cards">
-                <div class="travel-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 2L11 13"></path>
-                            <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
-                        </svg>
+        <div class="location-tabs">
+            <button class="tab-button active" data-location="all">All Info</button>
+            <button class="tab-button" data-location="semarang">Semarang</button>
+            <button class="tab-button" data-location="bali">Bali</button>
+            <button class="tab-button" data-location="bali">General Travel Tips</button>
+        </div>
+
+        <div class="location-content" id="semarang-content">
+            <div class="travel-section">
+                <h2>Getting to Semarang</h2>
+                <div class="travel-cards">
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                            </svg>
+                        </div>
+                        <h3>For Guests Arriving by Air</h3>
+                        <p>
+                            Semarang has one airport. Named Jenderal Ahmad Yani Airport International Airport (SRG). For international travelers, most connections are going through either Bali (DPS) or Jakarta (CGK) airports.
+                        </p><br>
+                            <h4>Flights from Bali (with the Bride & Groom)</h4>
+                            <p>
+                                We ourselves will be flying to Semarang on 12 June and fly back to Bali on 16 June. 
+                                Using the following flights:
+                            </p>
+                            <ul>
+                                <li><strong>To Semarang:</strong> June 12th, 3:00 PM, Lion Air JT 271</li>
+                                <li><strong>To Bali:</strong> June 16th, 11:30 AM, Lion Air JT 272</li>
+                            </ul>
+                            <p>
+                            The round-trip flight goes around €150 per person the last time we checked.<br> <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoqEgoyMDI1LTA2LTEyag0IAhIJL20vMDJuYmgxcg0IAxIJL20vMDQ5Nm1oGioSCjIwMjUtMDYtMTZqDQgDEgkvbS8wNDk2bWhyDQgCEgkvbS8wMm5iaDFAAUgBcAGCAQsI____________AZgBAQ&curr=EUR" target="_blank">Check availability & pricing.</a>
+                            </p>
+                        
                     </div>
-                    <h3>By Air</h3>
-                    <p>
-                        The closest airport is Ahmad Yani International Airport (SRG) in Semarang.
-                        For international travelers, you may need to connect through Jakarta (CGK)
-                        or Bali (DPS) airports.
-                    </p>
-                    <h4>Recommended Airlines:</h4>
-                    <ul>
-                        <li>Garuda Indonesia</li>
-                        <li>Singapore Airlines (to Jakarta, then connect)</li>
-                        <li>KLM (to Jakarta, then connect)</li>
-                        <li>Emirates (to Jakarta, then connect)</li>
-                    </ul>
+
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3>Ground Transportation</h3>
+                        <p>
+                            From Ahmad Yani International Airport, you have several transportation options to reach the Grand Candi Hotel. The ride to the Grad Candi hotel usually takes <a href="https://maps.app.goo.gl/RbU14qDYAJYUV5eAA" target="_blank">around 30 minutes.</a><p>
+                        <ul>
+                        <li><strong>Ride-Sharing Apps:</strong> Gojek and Grab are very popular and convenient ride-sharing services in Semarang. We recommend downloading the apps on your phone before arriving. This is often the most cost-effective way to get around. Towards the airport exit, you will run into a representative from each ride-sharing app. They happily help you find a ride and often provide a discount code.</li>
+                        <li><strong>Taxi:</strong> Taxis are readily available at the airport. Make sure the taxi uses the meter, or agree on a price beforehand. Travel time to Grand Candi Hotel is approximately 30-45 minutes, depending on traffic.</li>
+                        <li><strong>Hotel Transfer:</strong> The Grand Candi Hotel may offer airport transfer services. Please check with the hotel directly when making your reservation.</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
 
-                <div class="travel-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="1" y="3" width="15" height="13"></rect>
-                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
-                        </svg>
+            <div class="accommodation-section">
+                <h2>Where to Stay in Semarang</h2>
+
+                <div class="hotel-cards">
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="/images/lobby.webp" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Grand Candi Hotel </h3>
+                            <div class="hotel-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="hotel-description">
+                                Grand Candi Hotel is a 5-star hotel in Semarang, known for its facilities and service. It often serves as a venue for significant events, and provides accommodations with amenities like on-site dining and event spaces.
+                            </p>
+                            <div class="hotel-details">
+                                <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/xZS2ZtsepYT3zK5m6"target="_blank">Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232</a></p>
+                                <p><strong>Phone:</strong> +62 248 416 222</p>
+                                <p><strong>Recommended Stay:</strong> We recommend staying here for your convenience, as the reception 
+                                    will be held at this hotel. A night's stay starts from €35. <br>Next to 
+                                    <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode="target="_blank">their own website</a>
+                                    , We recommend exploring marketplaces like <a href="https://trv.lk/7da45acc"target="_blank">Traveloka</a> 
+                                    or <a href="https://www.booking.com/Share-aq8fWyABooking.com"target="_blank">Booking.com</a> for the best rates.</p>
+                            </div>
+                            <!-- <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode=" target="_blank" class="book-button">Own Website</a> 
+                            <a href="https://trv.lk/7da45acc" target="_blank" class="book-button">Booking.com</a>
+                            <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
+                        </div>
                     </div>
-                    <h3>Ground Transportation</h3>
-                    <p>
-                        From Ahmad Yani International Airport, you can reach the city center and hotels by:
-                    </p>
-                    <ul>
-                        <li>Taxi: Available at the airport (approx. 30 minutes to city center)</li>
-                        <li>Ride-sharing: Grab and Gojek apps are widely used in Indonesia</li>
-                        <li>Hotel Shuttle: Many hotels offer airport pickup services</li>
-                    </ul>
-                    <p>
-                        We will also arrange shuttle services from recommended hotels to the wedding venues.
-                        Details will be provided closer to the wedding date.
-                    </p>
+
+            <div class="explore-section">
+                <h2>Explore Semarang</h2>
+
+                <p class="explore-intro">
+                    While you're in Semarang, take some time to explore this beautiful city.
+                    Here are some attractions we recommend:
+                </p>
+
+                <div class="attraction-cards">
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/attraction1.jpg" alt="Lawang Sewu" />
+                        </div>
+                        <h3>Lawang Sewu</h3>
+                        <p>
+                            A historic colonial landmark known as the "Thousand Doors" building,
+                            featuring stunning Dutch architecture and interesting exhibitions.
+                        </p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/attraction2.jpg" alt="Sam Poo Kong Temple" />
+                        </div>
+                        <h3>Sam Poo Kong Temple</h3>
+                        <p>
+                            The oldest Chinese temple in Semarang, featuring beautiful red architecture
+                            and a fascinating history of Chinese influence in Indonesia.
+                        </p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/attraction3.jpg" alt="Old Town (Kota Lama)" />
+                        </div>
+                        <h3>Old Town (Kota Lama)</h3>
+                        <p>
+                            Explore the charming colonial district with well-preserved Dutch buildings,
+                            cafes, and art galleries. Perfect for a leisurely stroll.
+                        </p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/attraction4.jpg" alt="Semawis Market" />
+                        </div>
+                        <h3>Semawis Night Market</h3>
+                        <p>
+                            Experience local cuisine and culture at this vibrant night market in the
+                            Chinatown area, offering a variety of delicious Indonesian street food.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> <div class="location-content" id="bali-content" style="display: none;">
+            <div class="travel-section">
+                <h2>Getting to Bali</h2>
+                <div class="travel-cards">
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                            </svg>
+                        </div>
+                        <h3>By Air to Bali</h3>
+                        <p>
+                            The main airport in Bali is Denpasar (DPS), also known as Ngurah Rai International Airport.
+                            It's well-connected with international and domestic flights.
+                        </p>
+                        <h4>Airlines Serving Bali:</h4>
+                        <ul>
+                            <li>Garuda Indonesia</li>
+                            <li>Singapore Airlines</li>
+                            <li>Malaysia Airlines</li>
+                            <li>Qantas</li>
+                            <li>Many other international and budget carriers</li>
+                        </ul>
+                    </div>
+
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3>Ground Transportation in Bali</h3>
+                        <p>
+                            Getting around Bali is usually done by:
+                        </p>
+                        <ul>
+                            <li>Taxi: Widely available, agree on a price beforehand or use metered taxis.</li>
+                            <li>Ride-sharing: Grab and Gojek are popular.</li>
+                            <li>Scooter/Motorbike Rental: A common way to explore, but be cautious with traffic.</li>
+                            <li>Private Driver: Can be hired for day trips or longer durations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accommodation-section">
+                <h2>Where to Stay in Bali</h2>
+                <p>Bali offers a wide range of accommodation options to suit every budget and preference, from luxurious resorts to budget-friendly guesthouses in areas like Seminyak, Ubud, Canggu, and Nusa Dua.</p>
+                <p>We recommend exploring booking platforms like Booking.com, Agoda, and Airbnb to find the best deals and locations based on your interests.</p>
+                <p>Consider staying near popular areas for easier access to beaches, restaurants, and attractions.</p>
+            </div>
+
+            <div class="explore-section">
+                <h2>Explore Bali</h2>
+                <p class="explore-intro">
+                    Bali, the "Island of the Gods," is famous for its stunning natural beauty, vibrant culture, and spiritual atmosphere. Here are some popular attractions:
+                </p>
+                <div class="attraction-cards">
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel1.jpg" alt="Uluwatu Temple" />
+                        </div>
+                        <h3>Uluwatu Temple</h3>
+                        <p>A spectacular cliff-top temple with breathtaking ocean views, famous for its Kecak fire dance performance at sunset.</p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel2.jpg" alt="Ubud Rice Terraces" />
+                        </div>
+                        <h3>Tegalalang Rice Terraces (Ubud)</h3>
+                        <p>Iconic lush green rice paddies carved into the hillsides, offering stunning photo opportunities.</p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel3.jpg" alt="Seminyak Beach" />
+                        </div>
+                        <h3>Seminyak Beach</h3>
+                        <p>A popular beach known for its golden sands, surf breaks, trendy beach clubs, and vibrant nightlife.</p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel3.jpg" alt="Tanah Lot Temple" />
+                        </div>
+                        <h3>Tanah Lot Temple</h3>
+                        <p>A picturesque sea temple perched on a rock formation, especially beautiful during sunset.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="accommodation-section">
-            <h2>Where to Stay</h2>
-
-            <div class="hotel-cards">
-                <div class="hotel-card">
-                    <div class="hotel-image">
-                        <img src="/images/hotel1.jpg" alt="Luxury Hotel" />
-                    </div>
-                    <div class="hotel-content">
-                        <h3>Grand Semarang Hotel</h3>
-                        <div class="hotel-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="hotel-description">
-                            Luxury 5-star hotel located in the heart of Semarang, offering elegant rooms,
-                            multiple dining options, and a spa. Just 10 minutes from the ceremony venue.
-                        </p>
-                        <div class="hotel-details">
-                            <p><strong>Address:</strong> Jl. Gajah Mada No. 123, Semarang</p>
-                            <p><strong>Phone:</strong> +62 24 1234 5678</p>
-                            <p><strong>Special Rate:</strong> We've arranged a special rate for our guests.
-                            Use code "BARTNATHALIA" when booking.</p>
-                        </div>
-                        <a href="https://www.example.com" target="_blank" class="book-button">Book Now</a>
-                    </div>
-                </div>
-
-                <div class="hotel-card">
-                    <div class="hotel-image">
-                        <img src="/images/hotel2.jpg" alt="Mid-range Hotel" />
-                    </div>
-                    <div class="hotel-content">
-                        <h3>Semarang Comfort Inn</h3>
-                        <div class="hotel-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="hotel-description">
-                            Comfortable 4-star hotel with modern amenities, restaurant, and pool.
-                            Located 15 minutes from the ceremony venue and 20 minutes from the reception.
-                        </p>
-                        <div class="hotel-details">
-                            <p><strong>Address:</strong> Jl. Pemuda No. 456, Semarang</p>
-                            <p><strong>Phone:</strong> +62 24 2345 6789</p>
-                            <p><strong>Special Rate:</strong> Use code "BARTNATHALIA" when booking for a 15% discount.</p>
-                        </div>
-                        <a href="https://www.example.com" target="_blank" class="book-button">Book Now</a>
-                    </div>
-                </div>
-
-                <div class="hotel-card">
-                    <div class="hotel-image">
-                        <img src="/images/hotel3.jpg" alt="Budget Hotel" />
-                    </div>
-                    <div class="hotel-content">
-                        <h3>Semarang Budget Stay</h3>
-                        <div class="hotel-rating">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="hotel-description">
-                            Clean and comfortable 3-star hotel offering great value.
-                            Located 20 minutes from both venues with easy access to public transportation.
-                        </p>
-                        <div class="hotel-details">
-                            <p><strong>Address:</strong> Jl. Diponegoro No. 789, Semarang</p>
-                            <p><strong>Phone:</strong> +62 24 3456 7890</p>
-                            <p><strong>Special Rate:</strong> Mention "Bart and Nathalia Wedding" when booking for special rates.</p>
-                        </div>
-                        <a href="https://www.example.com" target="_blank" class="book-button">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="explore-section">
-            <h2>Explore Semarang</h2>
-
-            <p class="explore-intro">
-                While you're in Semarang, take some time to explore this beautiful city.
-                Here are some attractions we recommend:
-            </p>
-
-            <div class="attraction-cards">
-                <div class="attraction-card">
-                    <div class="attraction-image">
-                        <img src="/images/attraction1.jpg" alt="Lawang Sewu" />
-                    </div>
-                    <h3>Lawang Sewu</h3>
-                    <p>
-                        A historic colonial landmark known as the "Thousand Doors" building,
-                        featuring stunning Dutch architecture and interesting exhibitions.
-                    </p>
-                </div>
-
-                <div class="attraction-card">
-                    <div class="attraction-image">
-                        <img src="/images/attraction2.jpg" alt="Sam Poo Kong Temple" />
-                    </div>
-                    <h3>Sam Poo Kong Temple</h3>
-                    <p>
-                        The oldest Chinese temple in Semarang, featuring beautiful red architecture
-                        and a fascinating history of Chinese influence in Indonesia.
-                    </p>
-                </div>
-
-                <div class="attraction-card">
-                    <div class="attraction-image">
-                        <img src="/images/attraction3.jpg" alt="Old Town (Kota Lama)" />
-                    </div>
-                    <h3>Old Town (Kota Lama)</h3>
-                    <p>
-                        Explore the charming colonial district with well-preserved Dutch buildings,
-                        cafes, and art galleries. Perfect for a leisurely stroll.
-                    </p>
-                </div>
-
-                <div class="attraction-card">
-                    <div class="attraction-image">
-                        <img src="/images/attraction4.jpg" alt="Semawis Market" />
-                    </div>
-                    <h3>Semawis Night Market</h3>
-                    <p>
-                        Experience local cuisine and culture at this vibrant night market in the
-                        Chinatown area, offering a variety of delicious Indonesian street food.
-                    </p>
-                </div>
-            </div>
-        </div>
 
         <div class="travel-tips">
-            <h2>Travel Tips</h2>
+            <h2>General Travel Tips</h2>
 
             <div class="tips-container">
                 <div class="tip">
@@ -221,8 +278,8 @@ import Layout from '../layouts/Layout.astro';
                 <div class="tip">
                     <h3>Weather</h3>
                     <p>
-                        June in Semarang is typically warm and relatively dry. Expect temperatures
-                        between 75-90°F (24-32°C). We recommend light, breathable clothing and sun protection.
+                        June in Indonesia is generally warm and relatively dry, especially in Semarang and Bali.
+                        Expect temperatures between 75-90°F (24-32°C). We recommend light, breathable clothing and sun protection.
                     </p>
                 </div>
 
@@ -238,8 +295,8 @@ import Layout from '../layouts/Layout.astro';
                 <div class="tip">
                     <h3>Language</h3>
                     <p>
-                        Bahasa Indonesia is the official language, with Javanese being widely spoken in Semarang.
-                        English is spoken in tourist areas and major hotels. We'll provide a small phrasebook in your welcome package.
+                        Bahasa Indonesia is the official language. English is spoken in tourist areas and major hotels.
+                        We'll provide a small phrasebook in your welcome package.
                     </p>
                 </div>
             </div>
@@ -282,7 +339,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .travel-content {
-        max-width: 1000px;
+        max-max-width: 1000px;
         margin: 0 auto;
         padding: 0 1rem 5rem;
     }
@@ -299,7 +356,42 @@ import Layout from '../layouts/Layout.astro';
         margin: 0 auto;
     }
 
-    .travel-section, .accommodation-section, .explore-section, .travel-tips, .contact-info {
+    .location-tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .tab-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .location-content {
+        margin-bottom: 4rem;
+    }
+
+    .travel-section,
+    .accommodation-section,
+    .explore-section,
+    .travel-tips,
+    .contact-info {
         margin-bottom: 4rem;
     }
 
@@ -353,7 +445,8 @@ import Layout from '../layouts/Layout.astro';
         margin: 1rem 0 0.5rem;
     }
 
-    .travel-card p, .travel-card ul {
+    .travel-card p,
+    .travel-card ul {
         line-height: 1.6;
     }
 
@@ -545,8 +638,71 @@ import Layout from '../layouts/Layout.astro';
             flex: 0 0 200px;
         }
 
-        .attraction-cards, .tips-container {
+        .attraction-cards,
+        .tips-container {
             grid-template-columns: 1fr;
         }
     }
 </style>
+
+<style>
+    .location-tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .tab-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .location-content {
+        margin-bottom: 4rem;
+        /* Adjust spacing as needed */
+    }
+</style>
+
+<script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const locationContents = document.querySelectorAll('.location-content');
+    const semarangContent = document.getElementById('semarang-content');
+    const baliContent = document.getElementById('bali-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const location = button.dataset.location;
+
+            // Update active button
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Show/hide location content
+            if (location === 'all') {
+                semarangContent.style.display = 'block';
+                baliContent.style.display = 'block';
+            } else {
+                locationContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.getElementById(`${location}-content`).style.display = 'block';
+            }
+        });
+    });
+</script>
