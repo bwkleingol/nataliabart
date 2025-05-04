@@ -87,13 +87,15 @@
   },
   "contact": {
     "title": "Hubungi Kami",
-    "intro": "Kami sangat bersemangat untuk merayakan hari spesial kami dengan Anda! Jika Anda memiliki pertanyaan atau ingin memberi tahu kami apakah Anda dapat hadir, silakan hubungi kami melalui WhatsApp. Kami menghargai kabar dari Anda sebelum",
+    "intro": "Hampir selesai! Kami harap situs web ini memiliki semua informasi yang Anda butuhkan. Jika ada hal lain, jangan ragu untuk menghubungi kami.",
     "deadline": "14 Mei 2025",
     "whatsapp": {
       "title": "Hubungi Kami melalui WhatsApp",
-      "description": "Untuk pertanyaan tentang pernikahan kami atau untuk memberi tahu kami apakah Anda dapat hadir, silakan hubungi kami langsung melalui WhatsApp. Kami akan dengan senang hati membantu dengan informasi apa pun yang Anda butuhkan.",
+      "description": "Untuk pertanyaan apa pun mengenai pernikahan kami, silakan hubungi kami langsung melalui WhatsApp. Kami akan dengan senang hati membantu dengan informasi apa pun yang Anda butuhkan.",
       "number": "WhatsApp:",
-      "button": "Hubungi Kami di WhatsApp"
+      "button": "WhatsApp Bart",
+      "number2": "WhatsApp:",
+      "button2": "WhatsApp Natalia"
     },
     "info": {
       "message": "Saat mengirim pesan, Anda mungkin ingin menyertakan:",
