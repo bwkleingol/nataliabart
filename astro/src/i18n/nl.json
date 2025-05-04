@@ -34,7 +34,7 @@
     }
   },
   "events": {
-    "title": "Evenement Details",
+    "title": "Pemberkatan Pernikahan",
     "ceremony": {
       "title": "Traditionele Javaanse Ceremonie",
       "time": "14 juni 2025 • 10:00 uur",
@@ -92,7 +92,9 @@
       "title": "Neem Contact Op via WhatsApp",
       "description": "klik op een van de WhatsApp buttons hieronder om direct contact met ons op te nemen via WhatsApp.",
       "number": "WhatsApp:",
-      "button": "Contact Via WhatsApp"
+      "button": "WhatsApp Bart",
+      "number2": "WhatsApp:",
+      "button2": "WhatsApp Natalia"
     },
     "info": {
       "message": "Bij het sturen van een bericht kun je het volgende vermelden:",
