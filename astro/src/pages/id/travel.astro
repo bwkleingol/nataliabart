@@ -7,280 +7,480 @@ const currentLocale = Astro.currentLocale || 'id';
 setCurrentLocale(currentLocale);
 ---
 
-<Layout title={`${t('nav.travel')} - ${t('site.title')}`}>
+<Layout title="Perjalanan & Akomodasi - Pernikahan Nathalia & Bart">
+
     <section class="page-header">
-        <h1>{t('nav.travel')}</h1>
+        <h1>Perjalanan & Akomodasi</h1>
         <div class="divider"></div>
     </section>
 
-    <div class="content-container">
-        <section class="travel-section">
-            <div class="section-header">
-                <h2>Getting to Semarang</h2>
-                <div class="divider"></div>
-            </div>
+    <section class="travel-content">
+        <div class="location-tabs">
+            <button class="tab-button active" data-location="all">Semua Info</button>
+            <button class="tab-button" data-location="semarang">Semarang</button>
+            <button class="tab-button" data-location="bali">Bali</button>
+            <button class="tab-button" data-location="tips">Tips Perjalanan Umum</button>
+        </div>
 
-            <div class="travel-options">
-                <div class="travel-option">
-                    <div class="icon">✈️</div>
-                    <h3>By Air</h3>
-                    <p>Ahmad Yani International Airport (SRG) serves Semarang with direct flights from Jakarta, Bali, Singapore, and Kuala Lumpur.</p>
-                    <p>For international guests, you'll likely connect through Jakarta's Soekarno-Hatta International Airport (CGK) or Bali's Ngurah Rai International Airport (DPS).</p>
-                    <div class="recommended-airlines">
-                        <h4>Recommended Airlines:</h4>
+        <div class="location-content" id="all-content">
+            <div class="intro">
+                <p>
+                    Di bawah ini Anda akan menemukan informasi untuk membantu Anda merencanakan perjalanan ke pernikahan kami. Ini berisi semua informasi untuk tamu dari luar negeri dan lokal. Termasuk info bagi mereka yang bepergian bersama kami ke dan dari Bali. Tombol di atas dapat digunakan untuk memfilter tampilan Anda.
+                </p>
+            </div>
+        </div>
+
+        <div class="location-content" id="semarang-content" style="display: none;">
+            <div class="travel-section">
+                <h2>Menuju Semarang</h2>
+                <div class="travel-cards">
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                            </svg>
+                        </div>
+                        <h3>Untuk Tamu yang Tiba dengan Pesawat</h3>
+                        <p>
+                            Semarang memiliki satu bandara. Bernama Bandar Udara Internasional Jenderal Ahmad Yani (SRG). Untuk wisatawan internasional, sebagian besar koneksi melalui bandara Bali (DPS) atau Jakarta (CGK).
+                        </p><br>
+                        <h4>Penerbangan dari Bali (bersama Pengantin)</h4>
+                        <p>
+                            Kami sendiri akan terbang ke Semarang pada tanggal 12 Juni dan kembali ke Bali pada tanggal 16 Juni.
+                            Menggunakan penerbangan berikut:
+                        </p>
                         <ul>
-                            <li>Garuda Indonesia</li>
-                            <li>Singapore Airlines (to Jakarta/Bali, then connect)</li>
-                            <li>KLM (to Jakarta, then connect)</li>
-                            <li>Emirates (to Jakarta, then connect)</li>
+                            <li><strong>Ke Semarang:</strong> 12 Juni, 15:00, Lion Air JT 271</li>
+                            <li><strong>Ke Bali:</strong> 16 Juni, 11:30, Lion Air JT 272</li>
                         </ul>
+                        <p>
+                            Harga tiket pulang pergi sekitar €150 per orang saat terakhir kami periksa.<br> <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoqEgoyMDI1LTA2LTEyag0IAhIJL20vMDJuYmgxcg0IAxIJL20vMDQ5Nm1oGioSCjIwMjUtMDYtMTZqDQgDEgkvbS8wNDk2bWhyDQgCEgkvbS8wMm5iaDFAAUgBcAGCAQsI____________AZgBAQ&curr=EUR" target="_blank" style="color: #8D5A97;">Periksa ketersediaan & harga.</a>
+                        </p>
                     </div>
-                </div>
-
-                <div class="travel-option">
-                    <div class="icon">🚆</div>
-                    <h3>By Train</h3>
-                    <p>Semarang is well-connected by train to major cities in Java. Executive class trains from Jakarta (Gambir Station) to Semarang (Tawang Station) take approximately 5-6 hours.</p>
-                    <p>Trains are comfortable and offer beautiful views of the Javanese countryside.</p>
-                    <div class="booking-info">
-                        <h4>Booking Information:</h4>
-                        <p>Tickets can be purchased through the official Indonesian Railways website or app: <a href="https://kai.id" target="_blank">KAI.id</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="accommodation-section">
-            <div class="section-header">
-                <h2>Where to Stay</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="accommodation-info">
-                <p class="intro-text">We've arranged special rates at several hotels in Semarang. Please mention "Natalia & Bart Wedding" when booking to receive the discounted rate.</p>
-
-                <div class="hotels">
-                    <div class="hotel-card">
-                        <div class="hotel-image gumaya"></div>
-                        <div class="hotel-info">
-                            <h3>Gumaya Tower Hotel</h3>
-                            <div class="hotel-rating">★★★★★</div>
-                            <p class="hotel-description">Our reception venue and recommended accommodation. This 5-star hotel offers luxury rooms with city views, a rooftop pool, and is conveniently located in the heart of Semarang.</p>
-                            <div class="hotel-details">
-                                <div class="detail-item">
-                                    <span class="label">Address:</span>
-                                    <span>Jl. Gajahmada No.59-61, Semarang</span>
+    
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3>Transportasi Darat</h3>
+                        <p>
+                            Dari Bandar Udara Internasional Ahmad Yani, Anda memiliki beberapa pilihan transportasi untuk mencapai Grand Candi Hotel. Perjalanan ke Grand Candi Hotel biasanya memakan waktu <a href="https://maps.app.goo.gl/RbU14qDYAJYUV5eAA" target="_blank" style="color: #8D5A97;">sekitar 30 menit.</a>
+                        </p>
+                        <ul>
+                            <li><strong>Aplikasi Transportasi Online:</strong> Gojek dan Grab adalah layanan transportasi online yang sangat populer dan nyaman di Semarang. Kami sarankan untuk mengunduh aplikasinya di ponsel Anda sebelum tiba. Ini seringkali merupakan cara paling hemat biaya untuk bepergian. Menuju pintu keluar bandara, Anda akan bertemu dengan perwakilan dari setiap aplikasi transportasi online. Mereka dengan senang hati membantu Anda menemukan tumpangan dan sering memberikan kode diskon.</li>
+                            <li><strong>Taksi:</strong> Taksi tersedia di bandara. Pastikan taksi menggunakan argo, atau setujui harga terlebih dahulu. Waktu tempuh ke Grand Candi Hotel sekitar 30-45 menit, tergantung lalu lintas.</li>
+                            <li><strong>Transfer Hotel:</strong> Grand Candi Hotel mungkin menawarkan layanan transfer bandara. Harap periksa langsung dengan hotel saat melakukan reservasi Anda.</li>
+                        </ul>
+                        <p>
+                            Unduh Aplikasi Transportasi Online di sini:
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <strong>Gojek:</strong>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a href="https://apps.apple.com/id/app/gojek/id944875099" target="_blank" style="display: inline-flex; align-items: center;">
+                                        <img src="/images/appstore.svg" alt="Apple App Store" style="height: 24px; margin-right: 0.3rem;">
+                                    </a>
+                                    <a href="https://play.google.com/store/apps/details/Gojek?id=com.gojek.app&hl=en_NZ" target="_blank" style="display: inline-flex; align-items: center;">
+                                        <img src="/images/googleplay.svg" alt="Google Play Store" style="height: 24px;">
+                                    </a>
                                 </div>
-                                <div class="detail-item">
-                                    <span class="label">Distance to Reception:</span>
-                                    <span>On-site</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Distance to Ceremony:</span>
-                                    <span>3.5 km (10 min drive)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Special Rate:</span>
-                                    <span>IDR 1,200,000/night (approx. $80 USD)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Booking:</span>
-                                    <span><a href="https://gumayatowerhotel.com" target="_blank">Website</a> | <a href="tel:+62248355555">+62 24 835 5555</a></span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <strong>Grab:&nbsp;&nbsp;</strong>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <a href="https://apps.apple.com/id/app/grab-taxi-ride-food-delivery/id647268330" target="_blank" style="display: inline-flex; align-items: center;">
+                                        <img src="/images/appstore.svg" alt="Apple App Store" style="height: 24px; margin-right: 0.3rem;">
+                                    </a>
+                                    <a href="https://play.google.com/store/search?q=grab&c=apps" target="_blank" style="display: inline-flex; align-items: center;">
+                                        <img src="/images/googleplay.svg" alt="Google Play Store" style="height: 24px;">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- End of Land Transport Travel Card -->
+                </div> <!-- Close Travel Cards -->
+            </div> <!-- Close Travel Section -->
 
+
+            <div class="accommodation-section">
+                <h2>Tempat Menginap di Semarang</h2>
+                <div class="hotel-cards">
                     <div class="hotel-card">
-                        <div class="hotel-image oakwood"></div>
-                        <div class="hotel-info">
-                            <h3>Oakwood Hotel & Residence</h3>
-                            <div class="hotel-rating">★★★★</div>
-                            <p class="hotel-description">Modern serviced apartments with kitchen facilities, perfect for families or longer stays. Features a pool, fitness center, and restaurant.</p>
+                        <div class="hotel-image">
+                            <img src="/images/lobby.webp" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Grand Candi Hotel (Disarankan) </h3>
+                            <div class="hotel-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="hotel-description">
+                                Grand Candi Hotel adalah hotel bintang 5 di Semarang, yang dikenal dengan fasilitas dan layanannya. Sering menjadi tempat untuk acara-acara penting, dan menyediakan akomodasi dengan fasilitas seperti tempat makan dan ruang acara di tempat.
+                            </p>
                             <div class="hotel-details">
-                                <div class="detail-item">
-                                    <span class="label">Address:</span>
-                                    <span>Jl. Pandanaran No.40, Semarang</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Distance to Reception:</span>
-                                    <span>1.2 km (5 min drive)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Distance to Ceremony:</span>
-                                    <span>2.8 km (8 min drive)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Special Rate:</span>
-                                    <span>IDR 950,000/night (approx. $65 USD)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Booking:</span>
-                                    <span><a href="https://oakwood.com/semarang" target="_blank">Website</a> | <a href="tel:+62248455555">+62 24 845 5555</a></span>
-                                </div>
+                                <p><strong>Alamat:</strong> <a href="https://maps.app.goo.gl/xZS2ZtsepYT3zK5m6"target="_blank" style="color: #8D5A97;">Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232</a></p>
+                                <p><strong>Telepon:</strong> +62 248 416 222</p>
+                                <p><strong>Email:</strong> <a href="mailto:reservation@grandcandihotel.com" target="_blank" style="color: #8D5A97;">reservation@grandcandihotel.com</a></p>
+                                <p><strong>Info Pemesanan:</strong> Kami merekomendasikan untuk menginap di sini untuk kenyamanan Anda, karena resepsi
+                                akan diadakan di hotel ini. Harga menginap per malam mulai dari €35. <br>Selain di
+                                <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode="target="_blank" style="color: #8D5A97;">situs web mereka sendiri</a>
+                                , Kami merekomendasikan untuk menjelajahi marketplace seperti <a href="https://trv.lk/7da45acc"target="_blank" style="color: #8D5A97;">Traveloka</a>
+                                , <a href="https://www.agoda.com/en-gb/grand-candi-hotel/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=5%2C16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                atau <a href="https://www.booking.com/Share-aq8fWyABooking.com"target="_blank" style="color: #8D5A97;">Booking.com</a> untuk mendapatkan harga terbaik.</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="hotel-card">
-                        <div class="hotel-image santika"></div>
-                        <div class="hotel-info">
-                            <h3>Hotel Santika Premiere</h3>
-                            <div class="hotel-rating">★★★★</div>
-                            <p class="hotel-description">Comfortable rooms with traditional Javanese touches. Offers a swimming pool, spa, and excellent breakfast buffet.</p>
+                        <div class="hotel-image">
+                            <img src="/images/Lobby-Hotel-Aruss-Semarang.webp" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Hotel Aruss</h3>
+                            <div class="hotel-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="hotel-description">
+                                Hotel Aruss di Semarang menyediakan penginapan modern dan nyaman dengan akses mudah ke tempat-tempat menarik dan kawasan bisnis di kota. Tamu dapat mengharapkan kamar-kamar yang dilengkapi dengan baik dan fasilitas penting, menjadikannya pilihan yang nyaman dan praktis bagi pengunjung.
+                            </p>
                             <div class="hotel-details">
-                                <div class="detail-item">
-                                    <span class="label">Address:</span>
-                                    <span>Jl. Pandanaran No.116-120, Semarang</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Distance to Reception:</span>
-                                    <span>1.5 km (5 min drive)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Distance to Ceremony:</span>
-                                    <span>2.2 km (7 min drive)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Special Rate:</span>
-                                    <span>IDR 850,000/night (approx. $58 USD)</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="label">Booking:</span>
-                                    <span><a href="https://santika.com/semarang" target="_blank">Website</a> | <a href="tel:+62248413115">+62 24 841 3115</a></span>
-                                </div>
+                                <p><strong>Alamat:</strong> <a href="https://maps.app.goo.gl/3KkGjCSmySabjvpc7"target="_blank" style="color: #8D5A97;">Jl. Dr. Wahidin No.116, Jatingaleh, Kec. Candisari, Kota Semarang, Jawa Tengah 50254</a></p>
+                                <p><strong>Telepon:</strong> +62 248 600 5339</p>
+                                <p><strong>Email:</strong> <a href="mailto:reservation@hotelaruss.com" target="_blank" style="color: #8D5A97;">reservation@hotelaruss.com</a></p>
+                                <p><strong>Info Pemesanan:</strong> Harga menginap per malam di Aruss mulai dari €50. <br>Selain di
+                                <a href="https://booking.hotelaruss.com/en/offers?hotel=ARSH&checkin=2025-06-12&checkout=2025-07-16&adults=2&children=0&promocode="target="_blank" style="color: #8D5A97;">situs web mereka sendiri</a>
+                                , Kami merekomendasikan untuk menjelajahi marketplace seperti <a href="https://trv.lk/9b454eb5"target="_blank" style="color: #8D5A97;">Traveloka</a>
+                                , <a href="https://www.agoda.com/en-gb/hotel-aruss-semarang/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                atau <a href="https://www.booking.com/Share-qfyR46"target="_blank" style="color: #8D5A97;">Booking.com</a> untuk mendapatkan harga terbaik.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="/images/lobby-hotel-patra.webp" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Patra Semarang</h3>
+                            <div class="hotel-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="hotel-description">
+                                Patra Semarang Hotel menawarkan akomodasi yang nyaman dan sederhana dengan fasilitas penting untuk masa inap praktis di kota. Tamu dapat mengharapkan layanan yang nyaman dan lokasi yang menyediakan akses yang wajar ke tempat-tempat menarik dan kawasan bisnis di Semarang.
+                            </p>
+                            <div class="hotel-details">
+                                <p><strong>Alamat:</strong> <a href="https://maps.app.goo.gl/P34mRVshtLYAwFNNA"target="_blank" style="color: #8D5A97;">Candi Baru, Jl. Sisingamangaraja, Wonotingal, Kec. Candisari, Kota Semarang, Jawa Tengah 50252</a></p>
+                                <p><strong>Telepon:</strong> +62 248 414 141</p>
+                                <p><strong>Email:</strong> <a href="mailto:reservation.semarang@patra-jasa.com" target="_blank" style="color: #8D5A97;">reservation.semarang@patra-jasa.com</a></p>
+                                <p><strong>Info Pemesanan:</strong> Harga menginap per malam di Aruss mulai dari €50. <br>Selain di
+                                <a href="https://mypatrahotels.com/en/patra-jasa-hotel/hotel/patra-semarang"target="_blank" style="color: #8D5A97;">situs web mereka sendiri</a>
+                                , Kami merekomendasikan untuk menjelajahi marketplace seperti <a href="https://trv.lk/efdb0871"target="_blank" style="color: #8D5A97;">Traveloka</a>
+                                , <a href="https://www.agoda.com/en-gb/patra-hotel-convention-semarang/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                atau <a href="https://www.booking.com/Share-qfyR46"target="_blank" style="color: #8D5A97;">Booking.com</a> untuk mendapatkan harga terbaik.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="transportation-section">
-            <div class="section-header">
-                <h2>Local Transportation</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="transportation-options">
-                <div class="transport-option">
-                    <div class="icon">🚕</div>
-                    <h3>Taxis</h3>
-                    <p>Blue Bird taxis are reliable and use meters. They can be hailed on the street or booked through their app.</p>
-                </div>
-
-                <div class="transport-option">
-                    <div class="icon">📱</div>
-                    <h3>Ride-Sharing</h3>
-                    <p>Grab and Gojek apps offer convenient and affordable transportation options, including cars and motorbikes.</p>
-                </div>
-
-                <div class="transport-option">
-                    <div class="icon">🚐</div>
-                    <h3>Wedding Shuttle</h3>
-                    <p>We'll provide shuttle service between the recommended hotels and wedding venues on the day of the ceremony and reception.</p>
-                </div>
-
-                <div class="transport-option">
-                    <div class="icon">🚗</div>
-                    <h3>Car Rental</h3>
-                    <p>Several car rental services are available at the airport and in the city center. International driver's license required.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="explore-section">
-            <div class="section-header">
-                <h2>Exploring Semarang</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="attractions">
-                <div class="attraction-card">
-                    <div class="attraction-image lawang-sewu"></div>
-                    <div class="attraction-info">
+            
+            <div class="explore-section">
+                <h2>Jelajahi Semarang</h2>
+                <p class="explore-intro">
+                    Selama Anda berada di Semarang, luangkan waktu untuk menjelajahi kota yang indah ini.
+                    Berikut adalah beberapa atraksi yang kami rekomendasikan:
+                </p>
+                <div class="attraction-cards">
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/kota-lama.webp" alt="Kota Lama" />
+                        </div>
+                        <h3>Kota Lama</h3>
+                        <p>
+                            Kota Lama adalah bagian tertua dari Semarang, yang dulunya merupakan pusat perdagangan dan administrasi selama era kolonial Belanda. Dengan bangunan-bangunan bergaya Eropa yang terawat baik, area ini dikenal sebagai "Little Netherlands" (Belanda Kecil).
+                            <br><br>
+                            Berjalan-jalan di Kota Lama terasa seperti melangkah mundur ke masa lalu—di tengah bangunan-bangunan tua,
+                            Gereja Blenduk yang ikonik, dan kafe-kafe klasik yang memancarkan suasana hangat dan nostalgia.
+                            <br><br>
+                            Kami percaya bahwa ini adalah tempat yang benar-benar istimewa, bukan hanya karena sejarahnya, tetapi juga karena bagaimana tempat ini sekarang melambangkan
+                            persahabatan antara masa lalu dan masa kini—antara Indonesia dan Belanda.
+                        </p>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/lawang-sewu1.webp" alt="Lawang Sewu" />
+                        </div>
                         <h3>Lawang Sewu</h3>
-                        <p>Historic Dutch colonial building with "a thousand doors" and beautiful stained glass windows.</p>
+                        <p>
+                            Lawang Sewu adalah salah satu landmark paling ikonik di Semarang dan contoh arsitektur era kolonial yang indah. Nama "Lawang Sewu" berarti "seribu pintu," mengacu pada banyak pintu dan jendela tinggi bangunan yang menciptakan gaya visual yang unik. Dibangun pada awal abad ke-20 oleh pemerintah kolonial Belanda sebagai kantor pusat Nederlandsch-Indische Spoorweg Maatschappij (NIS), sebuah perusahaan kereta api.
+                            <br><br>
+                            Dengan desain arsitektur Eropa yang mencolok, Lawang Sewu
+                            telah dipugar dan sekarang berfungsi sebagai museum yang terbuka untuk umum. Pengunjung dapat menjelajahi aula-aula tuanya,
+                            belajar tentang sejarah perkeretaapian di Indonesia, dan bahkan mengunjungi bagian bawah tanahnya, yang menyimpan
+                            banyak kisah menarik.
+                        </p>
                     </div>
-                </div>
-
-                <div class="attraction-card">
-                    <div class="attraction-image sam-poo-kong"></div>
-                    <div class="attraction-info">
-                        <h3>Sam Poo Kong Temple</h3>
-                        <p>The oldest Chinese temple in Semarang, featuring beautiful architecture and cultural significance.</p>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/pecinan.webp" alt="Kuil Sam Poo Kong" />
+                        </div>
+                        <h3>Pecinan</h3>
+                        <p>
+                            Pecinan Semarang, yang dikenal secara lokal sebagai Pecinan, adalah salah satu kawasan budaya tertua dan paling hidup di kota ini. Di sinilah sejarah dan kehidupan sehari-hari bertemu—melalui gang-gang sempit yang dipenuhi rumah toko berusia seabad, lampion merah yang menggantung, dan kuil-kuil aktif yang mencerminkan pengaruh mendalam komunitas Tionghoa-Indonesia.
+                            <br><br>
+                            Salah satu daya tarik utamanya adalah Kuil Tay Kak Sie, sebuah situs yang terawat indah
+                            yang telah berdiri selama beberapa generasi sebagai tempat ibadah dan koneksi budaya. Pada siang hari,
+                            lingkungan ini ramai dengan aktivitas—dari pasar tradisional dan toko jamu hingga pedagang makanan lokal
+                            yang menyajikan hidangan autentik seperti lumpia dan kue beras manis.
+                            <br><br>
+                            Menjelajahi Pecinan dengan berjalan kaki menawarkan lebih
+                            dari sekadar pengalaman visual—ini memungkinkan pengunjung untuk merasakan denyut jantung Semarang melalui kehangatan
+                            penduduknya dan kekayaan lapisan budayanya.
+                        </p>
                     </div>
-                </div>
-
-                <div class="attraction-card">
-                    <div class="attraction-image old-town"></div>
-                    <div class="attraction-info">
-                        <h3>Kota Lama (Old Town)</h3>
-                        <p>Charming district with well-preserved Dutch colonial buildings, cafes, and art spaces.</p>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/d-kambodja-heritage3.webp" alt="Pasar Semawis" />
+                        </div>
+                        <h3>D’Kambodja Heritage</h3>
+                        <p>
+                            D’Kambodja Heritage adalah restoran bergaya keluarga yang menawarkan masakan rumahan tradisional Jawa dalam suasana yang damai dan kaya budaya. Berlokasi di rumah kolonial yang dipugar, restoran ini menyajikan berbagai hidangan autentik seperti sego gudeg koyor, bihun goreng, dan pecel karak, disajikan dalam prasmanan swalayan.
+                            <br><br>
+                            Makan di sini terasa seperti masuk ke dapur nenek—hangat, sederhana, dan penuh cita rasa.
+                            Interiornya didekorasi dengan sentuhan warisan Jawa, termasuk detail ukiran kayu dan alunan lembut
+                            musik gamelan. Ini adalah tempat yang ideal bagi tamu yang ingin merasakan jiwa masakan Indonesia
+                            dalam suasana santai dan tulus.
+                        </p>
                     </div>
-                </div>
-
-                <div class="attraction-card">
-                    <div class="attraction-image culinary"></div>
-                    <div class="attraction-info">
-                        <h3>Culinary Delights</h3>
-                        <p>Try local specialties like Lumpia Semarang (spring rolls), Bandeng Presto (milkfish), and Wingko Babat (coconut cake).</p>
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/sego-bancakan.webp" alt="Pasar Semawis" />
+                        </div>
+                        <h3>Sego Bancakan</h3>
+                        <p>
+                            Terletak di distrik Kota Lama yang bersejarah di Semarang, Sego Bancakan Pawone Simbah menawarkan pengalaman kuliner
+                            yang memadukan cita rasa autentik dengan suasana nostalgia. Restoran ini menyajikan lebih dari 40
+                            hidangan tradisional Jawa, seperti ayam goreng pandan, koyor, cumi gemuk, sambal goreng ati, dan
+                            sayur lodeh, disajikan dalam gaya prasmanan, memungkinkan tamu untuk memilih sesuai preferensi mereka.
+                            <br><br>
+                            Dengan harga mulai dari hanya IDR 8.000, Sego Bancakan Pawone Simbah adalah pilihan yang sangat baik bagi mereka
+                            yang ingin menikmati masakan Jawa rumahan dalam suasana nyaman yang penuh kenangan.
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="location-content" id="bali-content" style="display: none;">
+            <div class="travel-section">
+                <h2>Menuju Bali</h2>
+                <div class="travel-cards">
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                            </svg>
+                        </div>
+                        <h3>Melalui Udara ke Bali</h3>
+                        <p>
+                            Bali dilayani oleh satu bandara internasional, yaitu Ngurah Rai Denpasar (DPS). Semua penerbangan ke Bali akan tiba di sini. Untuk memastikan kedatangan yang lebih lancar, disarankan untuk mengatur beberapa hal sebelumnya. Lihat
+                            <a href="/travel/#general-tips"target="_blank" style="color: #8D5A97;">bagian ini</a>. <br>
+                            Untuk pemegang paspor internasional yang memenuhi syarat, bandara kini menawarkan e-gate, yang biasanya memberikan proses imigrasi yang cepat dan mudah.
+                        <p>Anda akan menemukan konter penukaran mata uang dan ATM di ruang kedatangan. Umumnya disarankan untuk menukar sejumlah kecil uang untuk kebutuhan mendesak dan kemudian menggunakan ATM untuk nilai tukar yang lebih baik setelah Anda mencapai tujuan Anda. Pastikan ATM tersebut adalah ATM bank resmi.</p>
+                        <p>Pembelian kartu SIM: Jika Anda tidak mendapatkan eSIM (yang kami rekomendasikan), Anda dapat membeli kartu SIM lokal di bandara. Telkomsel, Indosat Ooredoo, dan XL Axiata adalah penyedia utama di mana Telkomsel memiliki jangkauan terbaik di seluruh Indonesia.</p>
+                        <p>Wi-Fi Gratis: Bandara menawarkan Wi-Fi gratis, meskipun koneksinya terkadang tidak dapat diandalkan, terutama pada jam-jam sibuk.</p>
+                        </p>
+                    </div>
+                    <div class="travel-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <h3>Transportasi Darat di Bali</h3>
+                        <p>
+                            Setelah Anda keluar dari bandara, kami sarankan untuk menggunakan Grab atau Gojek ke akomodasi Anda. Anda akan menemukan banyak orang menawarkan tumpangan taksi (yang juga tidak masalah), tetapi dengan Grab atau Gojek Anda dijamin mendapatkan harga yang baik. Sebagai gambaran. Untuk perjalanan dari bandara ke Sanur, Anda biasanya membayar sekitar IDR 150 ribu hingga 250 ribu (termasuk biaya tol dan parkir. Mereka biasanya mengenakan biaya ini di atas harga dasar).
+                            Titik penjemputan Grab & Gojek dapat ditemukan langsung di pintu keluar bandara.
+                        </p>
+                        <img src="/images/bali-airport-to-grab-gojek-point1.avif" alt="Arah ke titik penjemputan Grab & Gojek" style="display: block; max-width: 100%; height: auto;">
+                        Jalan menuju Titik Penjemputan Grab & Gojek.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="accommodation-section">
+                <h2>Tempat Menginap di Bali</h2>
+                <div class="hotel-cards">
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="/images/sanur-boardwalk.avif" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Area Sanur</h3>
+                            <div class="hotel-description">
+                                <h4>Menginap di Bali Sebelum Pernikahan</h4>
+                                <p>
+                                    Bagi Anda yang tiba di Bali sebelum perayaan pernikahan kami, kami ingin memberitahukan bahwa kami tinggal di daerah Sanur yang indah. Kami sangat suka tinggal di sini!
+                                    <br>
+                                    Jika rencana perjalanan Anda memungkinkan untuk menghabiskan waktu lebih lama di Bali sebelum kita menuju Semarang, kami sangat menyarankan untuk mempertimbangkan menginap di Sanur juga. Ini akan memudahkan kita untuk berkoordinasi perjalanan ke bandara bersama-sama untuk perjalanan kita ke Semarang. :)
+                                </p>
+    
+                                <h4>Tips & Trik Sanur:</h4>
+                                <p>
+                                    Sanur menawarkan suasana yang lebih santai dan ramah keluarga dibandingkan dengan beberapa area ramai lainnya di Bali. Berikut adalah beberapa hal yang perlu diingat:
+                                </p>
+                                <ul>
+                                    <li><strong>Berkeliling:</strong> Sanur cukup mudah dijangkau dengan berjalan kaki, terutama di sepanjang jalan utama <a href="https://maps.app.goo.gl/TarursGZS4X9uRFq6"target="_blank" style="color: #8D5A97;">(Jalan Danau Tamblingan)</a> dan jalan tepi pantai.</li>
+                                    <li><strong>Skuter:</strong> Banyak orang menyewa skuter untuk menjelajah, tetapi jika Anda tidak nyaman atau tidak berpengalaman, kami sarankan untuk tetap berada di sisi pantai 'bypass' (Jalan Bypass Ngurah Rai). Area ini memiliki akses lebih mudah ke sebagian besar fasilitas, restoran, dan pantai tanpa perlu sering menyeberangi jalan utama yang ramai.</li>
+                                    <li><strong>Kesenangan Tepi Pantai:</strong> Pantai Sanur indah untuk jalan-jalan saat matahari terbit, berenang, dan menikmati perairan yang tenang. Ada jalan beraspal yang fantastis yang membentang di sepanjang garis pantai, sempurna untuk berjalan-jalan atau bersepeda.</li>
+                                    <li><strong>Makan:</strong> Sanur menawarkan beragam restoran yang luar biasa, dari warung lokal yang menyajikan makanan Indonesia lezat hingga masakan internasional. Anda akan menemukan banyak pilihan di sepanjang jalan utama dan lebih dekat ke pantai.</li>
+                                    <li><strong>Aktivitas:</strong> Selain bersantai di pantai, Anda dapat menikmati aktivitas seperti stand-up paddleboarding, kayak, bersepeda, dan menjelajahi pasar lokal.</li>
+                                    <li><strong>Lokasi Kami:</strong> Kami berdua berlokasi dekat <a href="https://maps.app.goo.gl/SnVh32NW7m5Jvegz5"target="_blank" style="color: #8D5A97;">Kidz Cafe</a>. Ini adalah sisi lain dari 'bypass' yang ramai, tetapi kami berdua punya skuter dan dapat mampir kapan saja untuk mengunjungi Anda jika Anda menginap di area yang kami rekomendasikan di atas.</li>
+                                </ul>
+                                <p>
+                                    Kami sangat senang Anda dapat merasakan sedikit Bali sebelum kita semua menuju Semarang! Jangan ragu untuk menghubungi jika Anda memiliki pertanyaan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div class="extended-stay">
-                <h3>Extending Your Stay</h3>
-                <p>If you're traveling from abroad, we recommend extending your trip to explore more of Indonesia. Consider visiting:</p>
-                <ul>
-                    <li><strong>Yogyakarta</strong> (3 hours from Semarang): Home to Borobudur and Prambanan temples</li>
-                    <li><strong>Bali</strong>: Beautiful beaches, cultural experiences, and luxury resorts</li>
-                    <li><strong>Komodo National Park</strong>: See the famous Komodo dragons and pristine marine environments</li>
-                    <li><strong>Raja Ampat</strong>: World-class diving and breathtaking island scenery</li>
+            <!-- <div class="explore-section">
+                <h2>Explore Bali</h2>
+                <p class="explore-intro">
+                    Bali, the "Island of the Gods," is famous for its stunning natural beauty, vibrant culture, and spiritual atmosphere. Here are some popular attractions:
+                </p>
+                <div class="attraction-cards">
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel1.jpg" alt="Uluwatu Temple" />
+                        </div>
+                        <h3>Uluwatu Temple</h3>
+                        <p>A spectacular cliff-top temple with breathtaking ocean views, famous for its Kecak fire dance performance at sunset.</p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel2.jpg" alt="Ubud Rice Terraces" />
+                        </div>
+                        <h3>Tegalalang Rice Terraces (Ubud)</h3>
+                        <p>Iconic lush green rice paddies carved into the hillsides, offering stunning photo opportunities.</p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel3.jpg" alt="Seminyak Beach" />
+                        </div>
+                        <h3>Seminyak Beach</h3>
+                        <p>A popular beach known for its golden sands, surf breaks, trendy beach clubs, and vibrant nightlife.</p>
+                    </div>
+
+                    <div class="attraction-card">
+                        <div class="attraction-image">
+                            <img src="/images/hotel3.jpg" alt="Tanah Lot Temple" />
+                        </div>
+                        <h3>Tanah Lot Temple</h3>
+                        <p>A picturesque sea temple perched on a rock formation, especially beautiful during sunset.</p>
+                    </div>
+                </div>
+            </div>
+        </div> End of Bali Section -->
+
+        <div class="travel-tips" id="tips-content" style="display: none;">
+        <h2><a id="general-tips"></a>Tips Perjalanan Umum</h2>
+        <div class="tips-container">
+            <div class="tip">
+                <h3>Sebelum Bepergian ke Indonesia</h3>
+                <p>Kami menyarankan untuk menyelesaikan beberapa hal sebelum bepergian ke Indonesia. Ini akan membuat kedatangan Anda lancar, dan Anda akan keluar dari bandara dalam waktu singkat :).</p>
+                <p>
+                    <strong>Visa:</strong> <br>
+                    Sebaiknya urus visa Anda sebelum tiba di Indonesia. Visa saat kedatangan (Visa on Arrival) bisa dilakukan, tetapi mengurusnya terlebih dahulu memungkinkan Anda untuk melewati antrean di bandara. Anda dapat mengurus visa secara online melalui <a href="https://evisa.imigrasi.go.id/"target="_blank" style="color: #8D5A97;"><strong>tautan ini</strong></a>.<br>
+                    Cukup mudah, tetapi jika Anda memiliki pertanyaan, langkah-langkah yang perlu dipilih adalah: <i>'Umum, keluarga, atau sosial' → 'Pariwisata, Kunjungan Keluarga, dan Transit' → 'B1 - Turis (Visa saat Kedatangan)'</i>.
+                    <br><br>
+                    <strong>Deklarasi Bea Cukai (Sehari sebelum perjalanan Anda):</strong> <br>
+                    Ini adalah persyaratan untuk setiap penumpang yang tiba dengan pesawat di Indonesia. Anda perlu menunjukkan kode ini kepada petugas bea cukai setelah mengambil bagasi Anda saat keluar. Karena Wi-Fi di bandara tidak selalu lancar seperti yang kita harapkan, disarankan untuk melakukannya sehari sebelum Anda berangkat. Setelah mengisi deklarasi bea cukai, Anda akan mendapatkan QR. Cukup ambil tangkapan layar dari ini, sehingga Anda mudah mengaksesnya di ponsel Anda.
+                    Ini adalah <a href=" https://ecd.beacukai.go.id/"target="_blank" style="color: #8D5A97;"><strong>tautan</strong></a> ke Formulir Deklarasi Bea Cukai
+                    <br><br>
+                    <strong>Deklarasi Kesehatan (Sehari sebelum perjalanan Anda):</strong> <br>
+                    Mirip dengan Deklarasi Bea Cukai, ini juga merupakan formulir yang perlu Anda isi yang menghasilkan kode QR. Ini terhubung ke paspor Anda dan umumnya tidak diminta, tetapi sebaiknya ambil tangkapan layar kode QR ini di ponsel Anda juga. Temukan kuesioner formulir deklarasi kesehatan <a href="https://sshp.kemkes.go.id/"target="_blank" style="color: #8D5A97;"><strong>di sini</strong></a>
+                </p>
                 </ul>
-                <p>We're happy to provide recommendations for your extended stay in Indonesia. Feel free to contact us for suggestions!</p>
             </div>
-        </section>
-
-        <section class="travel-tips">
-            <div class="section-header">
-                <h2>Travel Tips</h2>
-                <div class="divider"></div>
+            <div class="tip">
+                <h3>Informasi Visa</h3>
+                <p>
+                    Harap diperhatikan bahwa visa diperlukan untuk pariwisata di Indonesia.
+                </p>
+                <p>
+                    Visa saat Kedatangan (VoA): Anda dapat memperoleh Visa saat Kedatangan di bandara-bandara utama Indonesia, termasuk Denpasar (Bali). Visa ini berlaku untuk masa tinggal 30 hari dan dapat diperpanjang satu kali untuk 30 hari tambahan di kantor imigrasi setempat. Biaya untuk Visa saat Kedatangan adalah IDR 500.000 (sekitar USD 35).
+                </p>
+                <p>
+                    Visa Elektronik (e-Visa): Warga negara Belanda dan Australia juga dapat mengajukan permohonan e-Visa secara online melalui situs web resmi Imigrasi Indonesia. Ini dapat mempercepat kedatangan Anda. e-Visa tersedia untuk berbagai durasi, termasuk visa turis 60 hari.
+                </p>
+                <h4>Pengingat Penting:</h4>
+               <p>
+                <ul>
+                        <li>Selalu konsultasikan situs web resmi Imigrasi Indonesia (<a href="https://www.imigrasi.go.id/" target="_blank" style="color: #8D5A97;">https://www.imigrasi.go.id/</a>) untuk peraturan visa terbaru dan paling akurat yang khusus untuk kewarganegaraan Anda.</li>
+                        <li>Pastikan paspor Anda memiliki masa berlaku minimal enam bulan sejak tanggal kedatangan yang Anda rencanakan di Indonesia.</li>
+                </ul>
             </div>
-
-            <div class="tips-container">
-                <div class="tip-card">
-                    <h3>Visa Information</h3>
-                    <p>Many countries receive visa-free entry to Indonesia for up to 30 days. Check the <a href="https://www.imigrasi.go.id" target="_blank">Indonesian Immigration website</a> for the most current information.</p>
-                </div>
-
-                <div class="tip-card">
-                    <h3>Weather</h3>
-                    <p>June in Semarang is typically warm and relatively dry. Expect temperatures between 24-32°C (75-90°F). Light, breathable clothing is recommended.</p>
-                </div>
-
-                <div class="tip-card">
-                    <h3>Currency</h3>
-                    <p>The local currency is Indonesian Rupiah (IDR). ATMs are widely available, and major credit cards are accepted at hotels and larger establishments.</p>
-                </div>
-
-                <div class="tip-card">
-                    <h3>Language</h3>
-                    <p>Bahasa Indonesia is the official language, with Javanese being widely spoken in Semarang. English is spoken in tourist areas and major hotels.</p>
-                </div>
-
-                <div class="tip-card">
-                    <h3>Health & Safety</h3>
-                    <p>We recommend travel insurance that covers medical emergencies. Drink bottled water and use mosquito repellent, especially in the evenings.</p>
-                </div>
-
-                <div class="tip-card">
-                    <h3>Electricity</h3>
-                    <p>Indonesia uses 220V with European-style round pin plugs (types C and F). Bring an adapter if needed.</p>
-                </div>
+            <div class="tip">
+                <h3>Cuaca</h3>
+                <p>
+                    Juni di Indonesia umumnya hangat dan relatif kering, terutama di Semarang dan Bali.
+                    Perkirakan suhu antara 24-32°C (75-90°F). Kami merekomendasikan pakaian yang ringan dan mudah menyerap keringat serta perlindungan dari sinar matahari.
+                </p>
             </div>
-        </section>
+            <div class="tip">
+                <h3>Mata Uang</h3>
+                <p>
+                    Mata uang lokal adalah Rupiah Indonesia (IDR). ATM tersedia di mana-mana,
+                    dan kartu kredit utama diterima di hotel dan tempat usaha yang lebih besar.
+                    Sebaiknya siapkan sejumlah uang tunai untuk pedagang kecil dan transportasi.
+                </p>
+            </div>
+            <div class="tip">
+                <h3>Bahasa</h3>
+                <p>
+                    Bahasa Indonesia adalah bahasa resmi. Bahasa Inggris digunakan di area wisata dan hotel-hotel besar.
+                    Kami akan menyediakan buku frasa kecil dalam paket selamat datang Anda.
+                </p>
+            </div>
+        </div>
     </div>
+
+    <div class="contact-info" style="display: none;">
+        <h2>Butuh Bantuan?</h2>
+        <p>
+            Jika Anda memiliki pertanyaan tentang pengaturan perjalanan atau memerlukan bantuan,
+            jangan ragu untuk menghubungi koordinator pernikahan kami:
+        </p>
+        <div class="coordinator-info">
+            <p><strong>Nama:</strong> Ferren</p>
+            <p><strong>Telepon: </strong> <a href="https://wa.me/6282135291198" target="_blank" style="color: #8D5A97;">+62 8213 5291 198</a> </p>
+        </div>
+    </div>
+    </section>
 </Layout>
 
 <style>
@@ -295,7 +495,6 @@ setCurrentLocale(currentLocale);
     .page-header h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
-        text-align: center;
     }
 
     .divider {
@@ -305,93 +504,124 @@ setCurrentLocale(currentLocale);
         margin: 0 auto;
     }
 
-    .content-container {
+    .travel-content {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 0 1rem 5rem;
     }
 
-    .travel-section, .accommodation-section, .transportation-section, .explore-section, .travel-tips {
-        margin: 4rem 0;
-    }
-
-    .section-header {
+    .intro {
         text-align: center;
         margin-bottom: 3rem;
     }
 
-    .section-header h2 {
-        color: var(--primary-color);
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .section-header .divider {
-        width: 100px;
-        height: 2px;
-        background-color: var(--secondary-color);
+    .intro p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        max-width: 800px;
         margin: 0 auto;
     }
 
-    /* Travel Options */
-    .travel-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+    .location-tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
     }
 
-    .travel-option {
+    .tab-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .location-content {
+        margin-bottom: 4rem;
+    }
+
+    .travel-section,
+    .accommodation-section,
+    .explore-section,
+    .travel-tips,
+    .contact-info {
+        margin-bottom: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .travel-cards {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .travel-card {
+        flex: 1;
         background-color: white;
         border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         padding: 2rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .travel-option:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
     }
 
-    .icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+    .card-icon svg {
+        width: 30px;
+        height: 30px;
     }
 
-    .travel-option h3 {
+    .travel-card h3 {
+        font-size: 1.5rem;
         color: var(--primary-color);
         margin-bottom: 1rem;
-    }
-
-    .recommended-airlines, .booking-info {
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .recommended-airlines h4, .booking-info h4 {
-        color: var(--primary-color);
-        margin-bottom: 0.5rem;
-    }
-
-    .recommended-airlines ul {
-        padding-left: 1.5rem;
-    }
-
-    .recommended-airlines li {
-        margin-bottom: 0.5rem;
-    }
-
-    /* Accommodation */
-    .intro-text {
         text-align: center;
-        max-width: 800px;
-        margin: 0 auto 3rem;
+    }
+
+    .travel-card h4 {
         font-size: 1.1rem;
+        margin: 1rem 0 0.5rem;
+    }
+
+    .travel-card p,
+    .travel-card ul {
         line-height: 1.6;
     }
 
-    .hotels {
+    .travel-card ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hotel-cards {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -401,210 +631,275 @@ setCurrentLocale(currentLocale);
         display: flex;
         background-color: white;
         border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hotel-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     }
 
     .hotel-image {
-        width: 300px;
-        background-size: cover;
-        background-position: center;
+        flex: 0 0 300px;
     }
 
-    .hotel-image.gumaya {
-        background-image: url('/images/gumaya-hotel.jpg');
+    .hotel-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .hotel-image.oakwood {
-        background-image: url('/images/oakwood-hotel.jpg');
-    }
-
-    .hotel-image.santika {
-        background-image: url('/images/santika-hotel.jpg');
-    }
-
-    .hotel-info {
+    .hotel-content {
         flex: 1;
         padding: 2rem;
     }
 
-    .hotel-info h3 {
-        color: var(--primary-color);
-        margin: 0 0 0.5rem 0;
-    }
-
-    .hotel-rating {
-        color: gold;
-        margin-bottom: 1rem;
-    }
-
-    .hotel-description {
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-    }
-
-    .hotel-details {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-
-    .detail-item {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .label {
-        font-weight: 600;
-        color: var(--primary-color);
-        margin-bottom: 0.25rem;
-    }
-
-    /* Transportation */
-    .transportation-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-
-    .transport-option {
-        background-color: white;
-        border-radius: 10px;
-        padding: 1.5rem;
-        text-align: center;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-    }
-
-    .transport-option:hover {
-        transform: translateY(-5px);
-    }
-
-    .transport-option .icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .transport-option h3 {
+    .hotel-content h3 {
+        font-size: 1.5rem;
         color: var(--primary-color);
         margin-bottom: 0.5rem;
     }
 
-    /* Explore Section */
-    .attractions {
+    .hotel-rating {
+        margin-bottom: 1rem;
+        color: var(--secondary-color);
+    }
+
+    .hotel-description {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .hotel-details {
+        margin-bottom: 1.5rem;
+    }
+
+    .hotel-details p {
+        margin-bottom: 0.5rem;
+    }
+
+    .book-button {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .book-button:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+    }
+
+    .explore-intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .attraction-cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        margin-bottom: 3rem;
     }
 
     .attraction-card {
         background-color: white;
         border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-    }
-
-    .attraction-card:hover {
-        transform: translateY(-5px);
     }
 
     .attraction-image {
         height: 200px;
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
     }
 
-    .attraction-image.lawang-sewu {
-        background-image: url('/images/lawang-sewu.jpg');
+    .attraction-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
     }
 
-    .attraction-image.sam-poo-kong {
-        background-image: url('/images/sam-poo-kong.jpg');
+    .attraction-card:hover .attraction-image img {
+        transform: scale(1.1);
     }
 
-    .attraction-image.old-town {
-        background-image: url('/images/old-town.jpg');
-    }
-
-    .attraction-image.culinary {
-        background-image: url('/images/semarang-food.jpg');
-    }
-
-    .attraction-info {
-        padding: 1.5rem;
-    }
-
-    .attraction-info h3 {
+    .attraction-card h3 {
+        font-size: 1.3rem;
         color: var(--primary-color);
-        margin-bottom: 0.5rem;
+        margin: 1rem;
     }
 
-    .extended-stay {
-        background-color: white;
-        border-radius: 10px;
-        padding: 2rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .extended-stay h3 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-    }
-
-    .extended-stay ul {
-        padding-left: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .extended-stay li {
-        margin-bottom: 0.5rem;
+    .attraction-card p {
+        padding: 0 1rem 1.5rem;
         line-height: 1.6;
     }
 
-    /* Travel Tips */
     .tips-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
-    .tip-card {
+    .tip {
         background-color: white;
         border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         padding: 1.5rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .tip-card h3 {
+    .tip h3 {
+        font-size: 1.3rem;
         color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .tip p {
+        line-height: 1.6;
+    }
+
+    .tip a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .tip a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info p {
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .coordinator-info {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .coordinator-info p {
         margin-bottom: 0.5rem;
     }
 
-    /* Responsive Styles */
     @media (max-width: 768px) {
+        .travel-cards {
+            flex-direction: column;
+        }
+
         .hotel-card {
             flex-direction: column;
         }
 
         .hotel-image {
-            width: 100%;
-            height: 200px;
+            flex: 0 0 200px;
         }
 
-        .hotel-details {
+        .attraction-cards,
+        .tips-container {
             grid-template-columns: 1fr;
-        }
-
-        .icon {
-            font-size: 2rem;
         }
     }
 </style>
+
+<style>
+    .location-tabs {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .tab-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .location-content {
+        margin-bottom: 4rem;
+        /* Adjust spacing as needed */
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('.location-tabs .tab-button');
+        const allContent = document.getElementById('all-content');
+        const semarangContent = document.getElementById('semarang-content');
+        const baliContent = document.getElementById('bali-content');
+        const tipsContent = document.querySelector('.travel-tips');
+        const contactInfo = document.querySelector('.contact-info');
+        const allLocationContent = [allContent, semarangContent, baliContent, tipsContent];
+
+        const hideAllLocationContent = () => {
+            allLocationContent.forEach(content => {
+                if (content) {
+                    content.style.display = 'none';
+                }
+            });
+            if (contactInfo) contactInfo.style.display = 'none';
+        };
+
+        // Initially show all relevant content and activate 'All Info'
+        hideAllLocationContent();
+        if (allContent) allContent.style.display = 'block';
+        if (semarangContent) semarangContent.style.display = 'block';
+        if (baliContent) baliContent.style.display = 'block';
+        if (tipsContent) tipsContent.style.display = 'block';
+        if (contactInfo) contactInfo.style.display = 'block';
+
+        tabButtons.forEach(button => {
+            if (button.dataset.location === 'all') {
+                button.classList.add('active');
+            }
+
+            button.addEventListener('click', function() {
+                const location = this.dataset.location;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                hideAllLocationContent();
+
+                if (location === 'all') {
+                    if (allContent) allContent.style.display = 'block';
+                    if (semarangContent) semarangContent.style.display = 'block';
+                    if (baliContent) baliContent.style.display = 'block';
+                    if (tipsContent) tipsContent.style.display = 'block';
+                } else if (location === 'semarang') {
+                    if (semarangContent) semarangContent.style.display = 'block';
+                } else if (location === 'bali') {
+                    if (baliContent) baliContent.style.display = 'block';
+                } else if (location === 'tips') {
+                    if (tipsContent) tipsContent.style.display = 'block';
+                }
+
+                if (contactInfo) contactInfo.style.display = 'block';
+            });
+        });
+    });
+</script>
