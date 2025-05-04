@@ -15,13 +15,6 @@ setCurrentLocale(currentLocale);
     </section>
 
     <section class="travel-content">
-        <div class="intro">
-            <p>
-                Hieronder vindt u informatie om uw reis naar onze bruiloft te plannen. Het bevat alle informatie voor gasten uit het buitenland, lokale gasten en gasten die met ons van en naar Bali reizen. Gebruik de tabbladen hieronder om details per locatie te bekijken.
-            </p>
-        </div>
-
-
         <div class="location-tabs">
             <button class="tab-button active" data-location="all">All Info</button>
             <button class="tab-button" data-location="semarang">Semarang</button>
@@ -29,9 +22,17 @@ setCurrentLocale(currentLocale);
             <button class="tab-button" data-location="tips">General Travel Tips</button>
         </div>
 
-        <div class="location-content" id="semarang-content">
+        <div class="location-content" id="all-content">
+            <div class="intro">
+                <p>
+                    Hieronder vindt u informatie om uw reis naar onze bruiloft te plannen. Het bevat alle informatie voor gasten uit het buitenland, lokale gasten en gasten die met ons van en naar Bali reizen. Gebruik de tabbladen hieronder om details per locatie te bekijken.
+                </p>
+            </div>
+        </div>
+
+        <div class="location-content" id="semarang-content" style="display: none;">
             <div class="travel-section">
-                <h2>Getting to Semarang</h2>
+                <h2>Reizen naar Semarang</h2>
                 <div class="travel-cards">
                     <div class="travel-card">
                         <div class="card-icon">
@@ -40,25 +41,25 @@ setCurrentLocale(currentLocale);
                                 <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
                             </svg>
                         </div>
-                        <h3>For Guests Arriving by Air</h3>
+                        <h3>Voor gasten die per vliegtuig aankomen</h3>
                         <p>
-                            Semarang has one airport. Named Jenderal Ahmad Yani Airport International Airport (SRG). For international travelers, most connections are going through either Bali (DPS) or Jakarta (CGK) airports.
+                            Semarang heeft één luchthaven, genaamd Jenderal Ahmad Yani International Airport (SRG). Voor internationale reizigers lopen de meeste verbindingen via de luchthavens van Bali (DPS) of Jakarta (CGK).
                         </p><br>
-                            <h4>Flights from Bali (with the Bride & Groom)</h4>
+                            <h4>Vluchten vanaf Bali (met het bruidspaar)</h4>
                             <p>
-                                We ourselves will be flying to Semarang on 12 June and fly back to Bali on 16 June. 
-                                Using the following flights:
+                                Wijzelf vliegen op 12 juni naar Semarang en vliegen op 16 juni terug naar Bali.
+                                Met de volgende vluchten:
                             </p>
                             <ul>
-                                <li><strong>To Semarang:</strong> June 12th, 3:00 PM, Lion Air JT 271</li>
-                                <li><strong>To Bali:</strong> June 16th, 11:30 AM, Lion Air JT 272</li>
+                                <li><strong>Naar Semarang:</strong> 12 juni, 15:00 uur, Lion Air JT 271</li>
+                                <li><strong>Naar Bali:</strong> 16 juni, 11:30 uur, Lion Air JT 272</li>
                             </ul>
                             <p>
-                            The round-trip flight goes around €150 per person the last time we checked.<br> <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoqEgoyMDI1LTA2LTEyag0IAhIJL20vMDJuYmgxcg0IAxIJL20vMDQ5Nm1oGioSCjIwMjUtMDYtMTZqDQgDEgkvbS8wNDk2bWhyDQgCEgkvbS8wMm5iaDFAAUgBcAGCAQsI____________AZgBAQ&curr=EUR" target="_blank" style="color: #8D5A97;">Check availability & pricing.</a>
+                                De retourvlucht kostte de laatste keer dat we keken ongeveer €150 per persoon.<br> <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhoqEgoyMDI1LTA2LTEyag0IAhIJL20vMDJuYmgxcg0IAxIJL20vMDQ5Nm1oGioSCjIwMjUtMDYtMTZqDQgDEgkvbS8wNDk2bWhyDQgCEgkvbS8wMm5iaDFAAUgBcAGCAQsI____________AZgBAQ&curr=EUR" target="_blank" style="color: #8D5A97;">Beschikbaarheid en prijzen controleren.</a>
                             </p>
-                        
+    
                     </div>
-
+    
                     <div class="travel-card">
                         <div class="card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -68,16 +69,16 @@ setCurrentLocale(currentLocale);
                                 <circle cx="18.5" cy="18.5" r="2.5"></circle>
                             </svg>
                         </div>
-                        <h3>Ground Transportation</h3>
+                        <h3>Vervoer over land</h3>
                         <p>
-                            From Ahmad Yani International Airport, you have several transportation options to reach the Grand Candi Hotel. The ride to the Grad Candi hotel usually takes <a href="https://maps.app.goo.gl/RbU14qDYAJYUV5eAA" target="_blank" style="color: #8D5A97;">around 30 minutes.</a><p>
+                            Vanaf Ahmad Yani International Airport heeft u verschillende transportmogelijkheden om het Grand Candi Hotel te bereiken. De rit naar het Grand Candi Hotel duurt meestal <a href="https://maps.app.goo.gl/RbU14qDYAJYUV5eAA" target="_blank" style="color: #8D5A97;">ongeveer 30 minuten.</a></p>
                         <ul>
-                        <li><strong>Ride-Sharing Apps:</strong> Gojek and Grab are very popular and convenient ride-sharing services in Semarang. We recommend downloading the apps on your phone before arriving. This is often the most cost-effective way to get around. Towards the airport exit, you will run into a representative from each ride-sharing app. They happily help you find a ride and often provide a discount code.</li>
-                        <li><strong>Taxi:</strong> Taxis are readily available at the airport. Make sure the taxi uses the meter, or agree on a price beforehand. Travel time to Grand Candi Hotel is approximately 30-45 minutes, depending on traffic.</li>
-                        <li><strong>Hotel Transfer:</strong> The Grand Candi Hotel may offer airport transfer services. Please check with the hotel directly when making your reservation.</li>
+                            <li><strong>Ride-Sharing Apps:</strong> Gojek en Grab zijn erg populaire en handige ride-sharing diensten in Semarang. We raden aan om de apps op uw telefoon te downloaden voordat u aankomt. Dit is vaak de meest kosteneffectieve manier om u te verplaatsen. Bij de uitgang van de luchthaven komt u vertegenwoordigers van beide ride-sharing apps tegen. Zij helpen u graag met het vinden van een rit en bieden vaak een kortingscode aan.</li>
+                            <li><strong>Taxi:</strong> Taxi's zijn gemakkelijk beschikbaar op de luchthaven. Zorg ervoor dat de taxi de meter gebruikt of spreek vooraf een prijs af. De reistijd naar het Grand Candi Hotel is ongeveer 30-45 minuten, afhankelijk van het verkeer.</li>
+                            <li><strong>Hoteltransfer:</strong> Het Grand Candi Hotel biedt mogelijk luchthaventransfers aan. Informeer hiernaar rechtstreeks bij het hotel wanneer u uw reservering maakt.</li>
                         </ul>
                         <p>
-                            Download Ride Share Apps here:
+                            Download hier Ride Share Apps:
                         </p>
                         <div style="display: flex; flex-direction: column; gap: 0.8rem;">
                             <div style="display: flex; align-items: center; gap: 1rem;">
@@ -92,7 +93,7 @@ setCurrentLocale(currentLocale);
                                 </div>
                             </div>
                             <div style="display: flex; align-items: center; gap: 1rem;">
-                                <strong>Grab:&nbsp;&nbsp;</strong>
+                                <strong>Grab:</strong>
                                 <div style="display: flex; gap: 0.5rem;">
                                     <a href="https://apps.apple.com/id/app/grab-taxi-ride-food-delivery/id647268330" target="_blank" style="display: inline-flex; align-items: center;">
                                         <img src="/images/appstore.svg" alt="Apple App Store" style="height: 24px; margin-right: 0.3rem;">
@@ -106,161 +107,192 @@ setCurrentLocale(currentLocale);
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="accommodation-section">
-                <h2>Where to Stay in Semarang</h2>
-
-                <div class="hotel-cards">
-                    <div class="hotel-card">
-                        <div class="hotel-image">
-                            <img src="/images/lobby.webp" alt="Grand Candi Hotel" />
+        <div class="accommodation-section">
+            <h2>Waar te verblijven in Semarang</h2>
+            <div class="hotel-cards">
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="/images/lobby.webp" alt="Grand Candi Hotel" />
+                    </div>
+                    <div class="hotel-content">
+                        <h3>Grand Candi Hotel (Aanbevolen) </h3>
+                        <div class="hotel-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
                         </div>
-                        <div class="hotel-content">
-                            <h3>Grand Candi Hotel (Recommended) </h3>
-                            <div class="hotel-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <p class="hotel-description">
-                                Grand Candi Hotel is a 5-star hotel in Semarang, known for its facilities and service. It often serves as a venue for significant events, and provides accommodations with amenities like on-site dining and event spaces.
+                        <p class="hotel-description">
+                            Grand Candi Hotel is een 5-sterrenhotel in Semarang, bekend om zijn faciliteiten en service. Het dient vaak als locatie voor belangrijke evenementen en biedt accommodaties met voorzieningen zoals restaurants en evenementenruimtes.
+                        </p>
+                        <div class="hotel-details">
+                            <p><strong>Adres:</strong> <a href="https://maps.app.goo.gl/xZS2ZtsepYT3zK5m6"target="_blank" style="color: #8D5A97;">Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232</a></p>
+                            <p><strong>Telefoon:</strong> +62 248 416 222</p>
+                            <p><strong>E-mail:</strong> <a href="mailto:reservation@grandcandihotel.com" target="_blank" style="color: #8D5A97;">reservation@grandcandihotel.com</a></p>
+                            <p><strong>Boekingsinformatie:</strong> Wij raden u aan hier te verblijven voor uw gemak, aangezien de receptie in dit hotel zal plaatsvinden. Een overnachting begint vanaf €35. <br>Naast
+                                <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode="target="_blank" style="color: #8D5A97;">hun eigen website</a>
+                                , raden we aan om marktplaatsen zoals <a href="https://trv.lk/7da45acc"target="_blank" style="color: #8D5A97;">Traveloka</a>
+                                , <a href="https://www.agoda.com/en-gb/grand-candi-hotel/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=5%2C16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                of <a href="https://www.booking.com/Share-aq8fWyABooking.com"target="_blank" style="color: #8D5A97;">Booking.com</a> te verkennen voor de beste tarieven.
                             </p>
-                            <div class="hotel-details">
-                                <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/xZS2ZtsepYT3zK5m6"target="_blank" style="color: #8D5A97;">Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232</a></p>
-                                <p><strong>Phone:</strong> +62 248 416 222</p>
-                                <p><strong>Email:</strong> <a href="mailto:reservation@grandcandihotel.com" target="_blank" style="color: #8D5A97;">reservation@grandcandihotel.com</a></p>
-                                <p><strong>Booking Info:</strong> We recommend staying here for your convenience, as the reception 
-                                    will be held at this hotel. A night's stay starts from €35. <br>Next to 
-                                    <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode="target="_blank" style="color: #8D5A97;">their own website</a>
-                                    , We recommend exploring marketplaces like <a href="https://trv.lk/7da45acc"target="_blank" style="color: #8D5A97;">Traveloka</a> 
-                                    , <a href="https://www.agoda.com/en-gb/grand-candi-hotel/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=5%2C16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
-                                    or <a href="https://www.booking.com/Share-aq8fWyABooking.com"target="_blank" style="color: #8D5A97;">Booking.com</a> for the best rates.</p>
-                            </div>
-                            <!-- <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode=" target="_blank" class="book-button">Own Website</a> 
-                            <a href="https://trv.lk/7da45acc" target="_blank" class="book-button">Booking.com</a>
-                            <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
                         </div>
                     </div>
-                    <div class="hotel-card">
-                        <div class="hotel-image">
-                            <img src="/images/Lobby-Hotel-Aruss-Semarang.webp" alt="Grand Candi Hotel" />
-                        </div>
-                        <div class="hotel-content">
-                            <h3>Hotel Aruss</h3>
-                            <div class="hotel-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <p class="hotel-description">
-                                Hotel Aruss in Semarang provides modern, comfortable lodging with easy access to city highlights and business areas. Guests can expect well-equipped rooms and essential amenities, making it a convenient and practical choice for visitors.
-                            </p>
-                            <div class="hotel-details">
-                                <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/3KkGjCSmySabjvpc7"target="_blank" style="color: #8D5A97;">Jl. Dr. Wahidin No.116, Jatingaleh, Kec. Candisari, Kota Semarang, Jawa Tengah 50254</a></p>
-                                <p><strong>Phone:</strong> +62 248 600 5339</p>
-                                <p><strong>Email:</strong> <a href="mailto:reservation@hotelaruss.com" target="_blank" style="color: #8D5A97;">reservation@hotelaruss.com</a></p>
-                                <p><strong>Booking Info:</strong> A night's stay at Aruss starts from €50. <br>Next to 
-                                    <a href="https://booking.hotelaruss.com/en/offers?hotel=ARSH&checkin=2025-06-12&checkout=2025-07-16&adults=2&children=0&promocode="target="_blank" style="color: #8D5A97;">their own website</a>
-                                    , We recommend exploring marketplaces like <a href="https://trv.lk/9b454eb5"target="_blank" style="color: #8D5A97;">Traveloka</a> 
-                                    , <a href="https://www.agoda.com/en-gb/hotel-aruss-semarang/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
-                                    or <a href="https://www.booking.com/Share-qfyR46"target="_blank" style="color: #8D5A97;">Booking.com</a> for the best rates.</p>
-                            </div>
-                            <!-- <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode=" target="_blank" class="book-button">Own Website</a> 
-                            <a href="https://trv.lk/7da45acc" target="_blank" class="book-button">Booking.com</a>
-                            <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
-                        </div>
+                </div> <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="/images/Lobby-Hotel-Aruss-Semarang.webp" alt="Grand Candi Hotel" />
                     </div>
-                    <div class="hotel-card">
-                        <div class="hotel-image">
-                            <img src="/images/lobby-hotel-patra.webp" alt="Grand Candi Hotel" />
+                    <div class="hotel-content">
+                        <h3>Hotel Aruss</h3>
+                        <div class="hotel-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
                         </div>
-                        <div class="hotel-content">
-                            <h3>Patra Semarang</h3>
-                            <div class="hotel-rating">
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                                <span class="star">★</span>
-                            </div>
-                            <p class="hotel-description">
-                                Patra Semarang Hotel offers comfortable and straightforward accommodations with essential amenities for a practical stay in the city. Guests can expect convenient services and a location that provides reasonable access to Semarang's attractions and business areas.
-                            </p>
-                            <div class="hotel-details">
-                                <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/P34mRVshtLYAwFNNA"target="_blank" style="color: #8D5A97;">Candi Baru, Jl. Sisingamangaraja, Wonotingal, Kec. Candisari, Kota Semarang, Jawa Tengah 50252</a></p>
-                                <p><strong>Phone:</strong> +62 248 414 141</p>
-                                <p><strong>Email:</strong> <a href="mailto:reservation.semarang@patra-jasa.com" target="_blank" style="color: #8D5A97;">reservation.semarang@patra-jasa.com</a></p>
-                                <p><strong>Booking Info:</strong> A night's stay at Aruss starts from €50. <br>Next to 
-                                    <a href="https://mypatrahotels.com/en/patra-jasa-hotel/hotel/patra-semarang"target="_blank" style="color: #8D5A97;">their own website</a>
-                                    , We recommend exploring marketplaces like <a href="https://trv.lk/efdb0871"target="_blank" style="color: #8D5A97;">Traveloka</a> 
-                                    , <a href="https://www.agoda.com/en-gb/patra-hotel-convention-semarang/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
-                                    or <a href="https://www.booking.com/Share-qfyR46"target="_blank" style="color: #8D5A97;">Booking.com</a> for the best rates.</p>
-                            </div>
-                            <!-- <a href="https://book.grandcandihotel.com/en/offers?hotel=GCIH&checkin=2025-06-12&checkout=2025-06-16&adults=2&children=0&children_ages=&promocode=" target="_blank" class="book-button">Own Website</a> 
-                            <a href="https://trv.lk/7da45acc" target="_blank" class="book-button">Booking.com</a>
-                            <a href="https://www.booking.com/Share-aq8fWyABooking.com" target="_blank" class="book-button">Traveloka</a> -->
-                        </div>
-                    </div>
-
-            <div class="explore-section">
-                <h2>Explore Semarang</h2>
-
-                <p class="explore-intro">
-                    While you're in Semarang, take some time to explore this beautiful city.
-                    Here are some attractions we recommend:
-                </p>
-
-                <div class="attraction-cards">
-                    <div class="attraction-card">
-                        <div class="attraction-image">
-                            <img src="/images/attraction1.jpg" alt="Lawang Sewu" />
-                        </div>
-                        <h3>Lawang Sewu</h3>
-                        <p>
-                            A historic colonial landmark known as the "Thousand Doors" building,
-                            featuring stunning Dutch architecture and interesting exhibitions.
+                        <p class="hotel-description">
+                            Hotel Aruss in Semarang biedt moderne, comfortabele accommodatie met gemakkelijke toegang tot de hoogtepunten en zakelijke gebieden van de stad. Gasten kunnen goed uitgeruste kamers en essentiële voorzieningen verwachten, waardoor het een handige en praktische keuze is voor bezoekers.
                         </p>
-                    </div>
-
-                    <div class="attraction-card">
-                        <div class="attraction-image">
-                            <img src="/images/attraction2.jpg" alt="Sam Poo Kong Temple" />
+                        <div class="hotel-details">
+                            <p><strong>Adres:</strong> <a href="https://maps.app.goo.gl/3KkGjCSmySabjvpc7"target="_blank" style="color: #8D5A97;">Jl. Dr. Wahidin No.116, Jatingaleh, Kec. Candisari, Kota Semarang, Jawa Tengah 50254</a></p>
+                            <p><strong>Telefoon:</strong> +62 248 600 5339</p>
+                            <p><strong>E-mail:</strong> <a href="mailto:reservation@hotelaruss.com" target="_blank" style="color: #8D5A97;">reservation@hotelaruss.com</a></p>
+                            <p><strong>Boekingsinformatie:</strong> Een overnachting in Aruss begint vanaf €50. <br>Naast
+                                <a href="https://booking.hotelaruss.com/en/offers?hotel=ARSH&checkin=2025-06-12&checkout=2025-07-16&adults=2&children=0&promocode="target="_blank" style="color: #8D5A97;">hun eigen website</a>
+                                , raden we aan om marktplaatsen zoals <a href="https://trv.lk/9b454eb5"target="_blank" style="color: #8D5A97;">Traveloka</a>
+                                , <a href="https://www.agoda.com/en-gb/hotel-aruss-semarang/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                of <a href="https://www.booking.com/Share-qfyR46"target="_blank" style="color: #8D5A97;">Booking.com</a> te verkennen voor de beste tarieven.</p>
                         </div>
-                        <h3>Sam Poo Kong Temple</h3>
-                        <p>
-                            The oldest Chinese temple in Semarang, featuring beautiful red architecture
-                            and a fascinating history of Chinese influence in Indonesia.
-                        </p>
-                    </div>
-
-                    <div class="attraction-card">
-                        <div class="attraction-image">
-                            <img src="/images/attraction3.jpg" alt="Old Town (Kota Lama)" />
                         </div>
-                        <h3>Old Town (Kota Lama)</h3>
-                        <p>
-                            Explore the charming colonial district with well-preserved Dutch buildings,
-                            cafes, and art galleries. Perfect for a leisurely stroll.
-                        </p>
+                </div>
+                <div class="hotel-card">
+                    <div class="hotel-image">
+                        <img src="/images/lobby-hotel-patra.webp" alt="Grand Candi Hotel" />
                     </div>
-
-                    <div class="attraction-card">
-                        <div class="attraction-image">
-                            <img src="/images/attraction4.jpg" alt="Semawis Market" />
+                    <div class="hotel-content">
+                        <h3>Patra Semarang</h3>
+                        <div class="hotel-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
                         </div>
-                        <h3>Semawis Night Market</h3>
-                        <p>
-                            Experience local cuisine and culture at this vibrant night market in the
-                            Chinatown area, offering a variety of delicious Indonesian street food.
+                        <p class="hotel-description">
+                            Patra Semarang Hotel biedt comfortabele en eenvoudige accommodaties met essentiële voorzieningen voor een praktisch verblijf in de stad. Gasten kunnen handige services verwachten en een locatie die redelijke toegang biedt tot de bezienswaardigheden en zakelijke gebieden van Semarang.
                         </p>
-                    </div>
+                        <div class="hotel-details">
+                            <p><strong>Adres:</strong> <a href="https://maps.app.goo.gl/P34mRVshtLYAwFNNA"target="_blank" style="color: #8D5A97;">Candi Baru, Jl. Sisingamangaraja, Wonotingal, Kec. Candisari, Kota Semarang, Jawa Tengah 50252</a></p>
+                            <p><strong>Telefoon:</strong> +62 248 414 141</p>
+                            <p><strong>E-mail:</strong> <a href="mailto:reservation.semarang@patra-jasa.com" target="_blank" style="color: #8D5A97;">reservation.semarang@patra-jasa.com</a></p>
+                            <p><strong>Boekingsinformatie:</strong> Een overnachting in Aruss begint vanaf €50. <br>Naast
+                                <a href="https://mypatrahotels.com/en/patra-jasa-hotel/hotel/patra-semarang"target="_blank" style="color: #8D5A97;">hun eigen website</a>
+                                , raden we aan om marktplaatsen zoals <a href="https://trv.lk/efdb0871"target="_blank" style="color: #8D5A97;">Traveloka</a>
+                                , <a href="https://www.agoda.com/en-gb/patra-hotel-convention-semarang/hotel/semarang-id.html?countryId=192&finalPriceView=2&isShowMobileAppPrice=false&cid=1922865&numberOfBedrooms=&familyMode=false&adults=1&children=0&rooms=1&maxRooms=0&checkIn=2025-06-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=0&showReviewSubmissionEntry=false&currencyCode=SGD&isFreeOccSearch=false&tag=0c18cb19-7dcc-4f6a-bb15-28b98840e1fb&tspTypes=16&los=4&searchrequestid=dd08c6b6-d9ca-4878-8380-a7cc2b2dabc0&ds=yoXqi3IFmQDSoKWn"target="_blank" style="color: #8D5A97;">Agoda</a>
+                                of <a href="https://www.booking.com/Share-qfyR46"target="_blank" style="color: #8D5A97;">Booking.com</a> te verkennen voor de beste tarieven.</p>
+                        </div>
+                        </div>
                 </div>
             </div>
-        </div> <div class="location-content" id="bali-content" style="display: none;">
+        </div>
+            
+        <div class="explore-section">
+            <h2>Ontdek Semarang</h2>
+            <p class="explore-intro">
+                Als je in Semarang bent, neem dan de tijd om deze prachtige stad te verkennen.
+                Hier zijn enkele attracties die we aanbevelen:
+            </p>
+            <div class="attraction-cards">
+                <div class="attraction-card">
+                    <div class="attraction-image">
+                        <img src="/images/kota-lama.webp" alt="Oude Stad (Kota Lama)" />
+                    </div>
+                    <h3>Kota Lama</h3>
+                    <p>
+                        Kota Lama is het oudste deel van Semarang, ooit het centrum van handel en bestuur tijdens de Nederlandse
+                        koloniale tijd. Met zijn goed bewaarde gebouwen in Europese stijl staat dit gebied liefkozend bekend als
+                        het "Kleine Nederland".
+                        <br><br>
+                        Wandelen door Kota Lama voelt als een reis terug in de tijd—tussen oude gebouwen,
+                        de iconische Blenduk Kerk en klassieke cafés die een warme, nostalgische sfeer uitstralen.
+                        <br><br>
+                        Wij geloven dat dit een werkelijk bijzondere plek is, niet alleen vanwege zijn geschiedenis, maar ook vanwege hoe het nu de
+                        vriendschap symboliseert tussen het verleden en het heden—tussen Indonesië en Nederland.
+                    </p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">
+                        <img src="/images/lawang-sewu1.webp" alt="Lawang Sewu" />
+                    </div>
+                    <h3>Lawang Sewu</h3>
+                    <p>
+                        Lawang Sewu is een van de meest iconische bezienswaardigheden van Semarang en een prachtig voorbeeld van architectuur uit de koloniale tijd. De naam "Lawang Sewu" betekent "duizend deuren" en verwijst naar de vele hoge deuren en ramen van het gebouw die een unieke visuele stijl creëren. Het werd in het begin van de 20e eeuw gebouwd door de Nederlandse koloniale regering als het hoofdkantoor van de Nederlandsch-Indische Spoorweg Maatschappij (NIS), een spoorwegmaatschappij.
+                        <br><br>
+                        Met zijn opvallende Europese architectonische ontwerp is Lawang Sewu
+                        gerestaureerd en dient het nu als een museum dat open is voor het publiek. Bezoekers kunnen de oude zalen verkennen,
+                        meer leren over de geschiedenis van de spoorwegen in Indonesië en zelfs het ondergrondse gedeelte bezoeken, dat vele intrigerende verhalen herbergt.
+                    </p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">
+                        <img src="/images/pecinan.webp" alt="Sam Poo Kong Tempel" />
+                    </div>
+                    <h3>Pecinan</h3>
+                    <p>
+                        De Chinatown van Semarang, lokaal bekend als Pecinan, is een van de oudste en meest levendige culturele
+                        gebieden van de stad. Het is waar geschiedenis en het dagelijks leven samenkomen—door smalle steegjes met eeuwenoude
+                        winkelhuizen, hangende rode lantaarns en actieve tempels die de diepe invloed van de
+                        Chinees-Indonesische gemeenschap weerspiegelen.
+                        <br><br>
+                        Een van de hoogtepunten is de Tay Kak Sie Tempel, een prachtig bewaard gebleven
+                        plek die al generaties lang een plaats van aanbidding en culturele verbinding is. Overdag
+                        bruist de buurt van activiteit—van traditionele markten en kruidenwinkels tot lokale voedselverkopers
+                        die authentieke favorieten serveren zoals lumpia en zoete rijstcakes.
+                        <br><br>
+                        Pecinan te voet verkennen biedt meer
+                        dan alleen een visuele ervaring—het stelt bezoekers in staat de hartslag van Semarang te voelen door de warmte
+                        van zijn mensen en de rijkdom van zijn culturele lagen.
+                    </p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">
+                        <img src="/images/d-kambodja-heritage3.webp" alt="Semawis Markt" />
+                    </div>
+                    <h3>D’Kambodja Heritage</h3>
+                    <p>
+                        D’Kambodja Heritage is een familierestaurant dat traditionele Javaanse huisgemaakte gerechten aanbiedt in een
+                        vredige en cultureel rijke omgeving. Gelegen in een gerestaureerd koloniaal huis, serveert het een verscheidenheid aan
+                        authentieke gerechten zoals sego gudeg koyor (stoofpot van jackfruit met runderpees), roergebakken vermicelli en
+                        pecel karak (groenten met pindasaus), gepresenteerd in een zelfbedieningsbuffet.
+                        <br><br>
+                        Dineren hier voelt als een stap in de keuken van een grootmoeder—warm, eenvoudig en vol smaak.
+                        Het interieur is versierd met accenten van Javaans erfgoed, waaronder gesneden houten details en zachte
+                        gamelanmuziek. Het is een ideale plek voor gasten die de ziel van de Indonesische keuken willen ervaren
+                        in een ontspannen, authentieke sfeer.
+                    </p>
+                </div>
+                <div class="attraction-card">
+                    <div class="attraction-image">
+                        <img src="/images/sego-bancakan.webp" alt="Semawis Markt" />
+                    </div>
+                    <h3>Sego Bancakan</h3>
+                    <p>
+                        Sego Bancakan Pawone Simbah, gelegen in het historische Kota Lama district van Semarang, biedt een culinaire
+                        ervaring die authentieke smaken combineert met een nostalgische ambiance. Het restaurant serveert meer dan 40
+                        traditionele Javaanse gerechten, zoals pandan gefrituurde kip, koyor, vette inktvis, sambal goreng lever en
+                        groentestoofpot, gepresenteerd in een buffetstijl, waardoor gasten naar eigen voorkeur kunnen kiezen.
+                        <br><br>
+                        Met prijzen vanaf slechts IDR 8.000 is Sego Bancakan Pawone Simbah een uitstekende keuze voor wie
+                        wil genieten van huisgemaakte Javaanse gerechten in een comfortabele omgeving vol herinneringen.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="location-content" id="bali-content" style="display: none;">
             <div class="travel-section">
-                <h2>Getting to Bali</h2>
+                <h2>Reizen naar Bali</h2>
                 <div class="travel-cards">
                     <div class="travel-card">
                         <div class="card-icon">
@@ -269,21 +301,16 @@ setCurrentLocale(currentLocale);
                                 <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
                             </svg>
                         </div>
-                        <h3>By Air to Bali</h3>
+                        <h3>Per vliegtuig naar Bali</h3>
                         <p>
-                            The main airport in Bali is Denpasar (DPS), also known as Ngurah Rai International Airport.
-                            It's well-connected with international and domestic flights.
+                            Bali heeft één internationale luchthaven, Ngurah Rai Denpasar (DPS). Alle vluchten naar Bali komen hier aan. Om een soepelere aankomst te garanderen, is het raadzaam om een paar dingen vooraf te regelen. Zie
+                            <a href="/travel/#general-tips"target="_blank" style="color: #8D5A97;">deze sectie</a>. <br>
+                            Voor in aanmerking komende internationale paspoorthouders biedt de luchthaven nu e-gates, die doorgaans een snel en eenvoudig immigratieproces bieden.
+                        <p>In de aankomsthal vindt u wisselkantoren en geldautomaten. Het is over het algemeen raadzaam om een klein bedrag te wisselen voor onmiddellijke behoeften en vervolgens geldautomaten te gebruiken voor betere tarieven zodra u uw bestemming bereikt. Zorg ervoor dat de geldautomaten officiële bankautomaten zijn.</p>
+                        <p>Aankoop simkaart: Als u geen eSIM heeft aangeschaft (wat wij aanbevelen), kunt u een lokale simkaart op de luchthaven kopen. Telkomsel, Indosat Ooredoo en XL Axiata zijn grote providers, waarvan Telkomsel de beste ontvangst heeft in heel Indonesië.</p>
+                        <p>Gratis wifi: De luchthaven biedt gratis wifi, hoewel de verbinding soms onbetrouwbaar kan zijn, vooral tijdens piekuren.</p>
                         </p>
-                        <h4>Airlines Serving Bali:</h4>
-                        <ul>
-                            <li>Garuda Indonesia</li>
-                            <li>Singapore Airlines</li>
-                            <li>Malaysia Airlines</li>
-                            <li>Qantas</li>
-                            <li>Many other international and budget carriers</li>
-                        </ul>
                     </div>
-
                     <div class="travel-card">
                         <div class="card-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -293,28 +320,58 @@ setCurrentLocale(currentLocale);
                                 <circle cx="18.5" cy="18.5" r="2.5"></circle>
                             </svg>
                         </div>
-                        <h3>Ground Transportation in Bali</h3>
+                        <h3>Vervoer over land op Bali</h3>
                         <p>
-                            Getting around Bali is usually done by:
+                            Zodra u de luchthaven verlaat, raden wij u aan een Grab of Gojek naar uw accommodatie te nemen. U zult veel mensen tegenkomen die u een taxirit aanbieden (wat prima is), maar met Grab of Gojek bent u verzekerd van een goede prijs. Ter indicatie: voor een rit van de luchthaven naar Sanur betaalt u over het algemeen ongeveer IDR 150K tot 250K (inclusief tolweg en parkeerkosten. Deze worden normaal bovenop de basisprijs berekend).
+                            De ophaalpunten van Grab & Gojek bevinden zich direct bij de uitgang van de luchthaven.
                         </p>
-                        <ul>
-                            <li>Taxi: Widely available, agree on a price beforehand or use metered taxis.</li>
-                            <li>Ride-sharing: Grab and Gojek are popular.</li>
-                            <li>Scooter/Motorbike Rental: A common way to explore, but be cautious with traffic.</li>
-                            <li>Private Driver: Can be hired for day trips or longer durations.</li>
-                        </ul>
+                        <img src="/images/bali-airport-to-grab-gojek-point1.avif" alt="Route naar Grab & Gojek ophaalpunt" style="display: block; max-width: 100%; height: auto;">
+                        Route naar het Grab & Gojek Ophaalpunt.
                     </div>
                 </div>
             </div>
-
+    
             <div class="accommodation-section">
-                <h2>Where to Stay in Bali</h2>
-                <p>Bali offers a wide range of accommodation options to suit every budget and preference, from luxurious resorts to budget-friendly guesthouses in areas like Seminyak, Ubud, Canggu, and Nusa Dua.</p>
-                <p>We recommend exploring booking platforms like Booking.com, Agoda, and Airbnb to find the best deals and locations based on your interests.</p>
-                <p>Consider staying near popular areas for easier access to beaches, restaurants, and attractions.</p>
+                <h2>Waar te verblijven op Bali</h2>
+                <div class="hotel-cards">
+                    <div class="hotel-card">
+                        <div class="hotel-image">
+                            <img src="/images/sanur-boardwalk.avif" alt="Grand Candi Hotel" />
+                        </div>
+                        <div class="hotel-content">
+                            <h3>Sanur Area</h3>
+                            <p class="hotel-description">
+                                <h4>Verblijven op Bali voor de Bruiloft</h4>
+                                <p>
+                                    Voor degenen onder u die vóór onze bruiloftsvieringen op Bali aankomen, wilden we graag delen dat wij in de mooie omgeving van Sanur wonen. We zijn helemaal weg van het wonen hier!
+                                    <br>
+                                    Als uw reisplannen wat extra tijd op Bali toestaan voordat we naar Semarang vertrekken, raden we u ten zeerste aan om ook in Sanur te overwegen te verblijven. Dit zou het gemakkelijker maken om ons gezamenlijke vertrek naar de luchthaven voor onze reis naar Semarang te coördineren. :)
+                                </p>
+    
+                                <h4>Sanur Tips & Tricks:</h4>
+                                <p>
+                                    Sanur biedt een meer ontspannen en gezinsvriendelijke sfeer in vergelijking met sommige andere drukke gebieden op Bali. Hier zijn een paar dingen om in gedachten te houden:
+                                </p>
+                                <ul>
+                                    <li><strong>Vervoer:</strong> Sanur is vrij goed begaanbaar, vooral langs de hoofdstraat <a href="https://maps.app.goo.gl/TarursGZS4X9uRFq6"target="_blank" style="color: #8D5A97;">(Jalan Danau Tamblingan)</a> en de strandpromenade.</li>
+                                    <li><strong>Scooters:</strong> Veel mensen huren scooters om de omgeving te verkennen, maar als u zich niet comfortabel voelt of geen ervaring heeft, raden we u aan om aan de strandzijde van de 'bypass' (Jalan Bypass Ngurah Rai) te blijven. Dit gebied heeft gemakkelijker toegang tot de meeste voorzieningen, restaurants en het strand zonder de drukke hoofdweg vaak over te hoeven steken.</li>
+                                    <li><strong>Zalig aan het Strand:</strong> Het strand van Sanur is prachtig voor wandelingen bij zonsopgang, zwemmen en genieten van het kalme water. Er is een fantastisch verhard pad dat langs de kustlijn loopt, perfect om te wandelen of te fietsen.</li>
+                                    <li><strong>Dineren:</strong> Sanur biedt een prachtig aanbod aan restaurants, van lokale warungs die heerlijke Indonesische gerechten serveren tot internationale keukens. U vindt tal van opties langs de hoofdstraat en dichter bij het strand.</li>
+                                    <li><strong>Activiteiten:</strong> Naast ontspannen op het strand kunt u genieten van activiteiten zoals stand-up paddleboarden, kajakken, fietsen en het verkennen van de lokale markten.</li>
+                                    <li><strong>Onze Locatie:</strong> Wij wonen beiden in de buurt van <a href="https://maps.app.goo.gl/SnVh32NW7m5Jvegz5"target="_blank" style="color: #8D5A97;">Kidz Cafe</a>. Dit is de andere kant van de drukke 'bypass', maar we hebben allebei een scooter en kunnen op elk moment langskomen om u te bezoeken als u in het gebied verblijft dat we hierboven aanbevelen.</li>
+                                </ul>
+                                <p>
+                                    We zijn enthousiast dat u een stukje Bali kunt ervaren voordat we allemaal naar Semarang vertrekken! Aarzel niet om contact op te nemen als u vragen heeft.
+                                </p>
+                            </p>
+                            </div>
+                            </div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-            <div class="explore-section">
+            <!-- <div class="explore-section">
                 <h2>Explore Bali</h2>
                 <p class="explore-intro">
                     Bali, the "Island of the Gods," is famous for its stunning natural beauty, vibrant culture, and spiritual atmosphere. Here are some popular attractions:
@@ -353,59 +410,80 @@ setCurrentLocale(currentLocale);
                     </div>
                 </div>
             </div>
-        </div>
+        </div> End of Bali Section -->
 
-
-        <div class="travel-tips">
-            <h2>General Travel Tips</h2>
-
+        <div class="travel-tips" id="tips-content" style="display: none;">
+            <h2><a id="general-tips"></a>Algemene Reistips</h2>
             <div class="tips-container">
                 <div class="tip">
-                    <h3>Visa Information</h3>
+                    <h3>Voordat u naar Indonesië reist</h3>
+                    <p>We raden aan om een paar dingen te regelen voordat u naar Indonesië reist. Het zal uw aankomst soepel laten verlopen en u bent het vliegveld sneller uit dan u denkt :).</p>
                     <p>
-                        Many countries are eligible for visa-free entry to Indonesia for stays up to 30 days.
-                        Please check the <a href="https://www.imigrasi.go.id/" target="_blank">Indonesian Immigration website</a>
-                        for the most up-to-date information regarding your country.
+                        <strong>Visum:</strong> <br>
+                        Het is handig om uw visum al voor aankomst in Indonesië te regelen. Een visum bij aankomst is prima mogelijk, maar als u dit vooraf regelt, kunt u de rij op het vliegveld overslaan. U kunt uw visum online regelen via <a href="https://evisa.imigrasi.go.id/"target="_blank" style="color: #8D5A97;"><strong>deze link</strong></a>.<br>
+                        Het is vrij eenvoudig, maar mocht u vragen hebben, dan zijn de te kiezen stappen: <i>'General, family, or social' → 'Tourism, Family Visit, and Transit' → 'B1 - Tourist (Visa on Arrival)'</i>.
+                        <br><br>
+                        <strong>Douaneaangifte (Dag voor uw reis):</strong> <br>
+                        Dit is een vereiste voor elke passagier die per vliegtuig in Indonesië aankomt. U moet deze code aan de grensbewaking laten zien net nadat u uw bagage hebt opgehaald op weg naar buiten. Aangezien de wifi op de luchthaven niet altijd zo soepel is als we zouden willen, is het raadzaam om dit de dag voor uw vertrek te doen. Na het invullen van de douaneaangifte ontvangt u een QR-code. Maak hier eenvoudig een screenshot van, zodat u deze handig op uw telefoon hebt.
+                        Dit is <a href=" https://ecd.beacukai.go.id/"target="_blank" style="color: #8D5A97;"><strong>de link</strong></a> naar het Douaneaangifteformulier
+                        <br><br>
+                        <strong>Gezondheidsverklaring (Dag voor uw reis):</strong> <br>
+                        Net als de douaneaangifte is dit ook een formulier dat u moet invullen en dat een QR-code genereert. Het is gekoppeld aan uw paspoort en wordt over het algemeen niet gevraagd, maar het is verstandig om ook van deze QR-code een screenshot op uw telefoon te maken. Het vragenformulier voor de gezondheidsverklaring vindt u <a href="https://sshp.kemkes.go.id/"target="_blank" style="color: #8D5A97;"><strong>hier</strong></a>
+                    </p>
+                    </ul>
+                </div>
+                <div class="tip">
+                    <h3>Visuminformatie</h3>
+                    <p>
+                        Houd er rekening mee dat een visum vereist is voor toerisme in Indonesië.
+                    </p>
+                    <p>
+                        Visum bij Aankomst (VoA): U kunt een Visum bij Aankomst verkrijgen op de grote Indonesische luchthavens, waaronder Denpasar (Bali). Dit visum is 30 dagen geldig en kan eenmaal met nog eens 30 dagen worden verlengd bij een lokaal immigratiekantoor. De kosten voor het Visum bij Aankomst bedragen IDR 500.000 (ongeveer USD 35).
+                    </p>
+                    <p>
+                        Elektronisch Visum (e-Visum): Nederlandse en Australische staatsburgers kunnen ook online een e-Visum aanvragen via de officiële website van de Indonesische immigratiedienst. Dit kan uw aankomst versnellen. e-Visa zijn beschikbaar voor verschillende verblijfsduren, waaronder een toeristenvisum van 60 dagen.
+                    </p>
+                    <h4>Belangrijke Herinneringen:</h4>
+                   <p>
+                    <ul>
+                        <li>Raadpleeg altijd de officiële website van de Indonesische immigratiedienst (https://www.imigrasi.go.id/) voor de meest accurate en actuele visumvoorschriften die specifiek zijn voor uw nationaliteit.</li>
+                        <li>Zorg ervoor dat uw paspoort nog minimaal zes maanden geldig is vanaf uw beoogde aankomstdatum in Indonesië.</li>
+                    </ul>
+                </div>
+                <div class="tip">
+                    <h3>Weer</h3>
+                    <p>
+                        Juni in Indonesië is over het algemeen warm en relatief droog, vooral in Semarang en Bali.
+                        Verwacht temperaturen tussen 24-32°C (75-90°F). We raden lichte, ademende kleding en bescherming tegen de zon aan.
                     </p>
                 </div>
-
                 <div class="tip">
-                    <h3>Weather</h3>
+                    <h3>Valuta</h3>
                     <p>
-                        June in Indonesia is generally warm and relatively dry, especially in Semarang and Bali.
-                        Expect temperatures between 75-90°F (24-32°C). We recommend light, breathable clothing and sun protection.
+                        De lokale valuta is de Indonesische Rupiah (IDR). Geldautomaten zijn overal beschikbaar,
+                        en de gangbare creditcards worden geaccepteerd in hotels en grotere gelegenheden.
+                        Het is handig om wat contant geld bij u te hebben voor kleinere verkopers en vervoer.
                     </p>
                 </div>
-
                 <div class="tip">
-                    <h3>Currency</h3>
+                    <h3>Taal</h3>
                     <p>
-                        The local currency is Indonesian Rupiah (IDR). ATMs are widely available,
-                        and major credit cards are accepted at hotels and larger establishments.
-                        It's good to have some cash for smaller vendors and transportation.
-                    </p>
-                </div>
-
-                <div class="tip">
-                    <h3>Language</h3>
-                    <p>
-                        Bahasa Indonesia is the official language. English is spoken in tourist areas and major hotels.
-                        We'll provide a small phrasebook in your welcome package.
+                        Bahasa Indonesia is de officiële taal. In toeristische gebieden en grote hotels wordt Engels gesproken.
+                        We zullen een klein taalgidsje in uw welkomstpakket toevoegen.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="contact-info">
-            <h2>Need Assistance?</h2>
+        <div class="contact-info" style="display: none;">
+            <h2>Hulp Nodig?</h2>
             <p>
-                If you have any questions about travel arrangements or need assistance,
-                please don't hesitate to contact our wedding coordinator:
+                Als u vragen heeft over reisarrangementen of hulp nodig heeft,
+                aarzel dan niet om contact op te nemen met onze weddingplanner:
             </p>
             <div class="coordinator-info">
-                <p><strong>Name:</strong> Ferren</p>
-                <p><strong>Email:</strong> maya@bartnathaliawedding.com</p>
-                <p><strong>Phone:</strong> +62 812 3456 7890</p>
+                <p><strong>Naam:</strong> Ferren</p>
+                <p><strong>Telefoon: </strong> <a href="https://wa.me/6282135291198" target="_blank" style="color: #8D5A97;">+62 8213 5291 198</a> </p>
             </div>
         </div>
     </section>
@@ -433,7 +511,7 @@ setCurrentLocale(currentLocale);
     }
 
     .travel-content {
-        max-max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 1rem 5rem;
     }
@@ -775,56 +853,59 @@ setCurrentLocale(currentLocale);
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const tabButtons = document.querySelectorAll('.location-tabs .tab-button');
-      const semarangContent = document.getElementById('semarang-content');
-      const baliContent = document.getElementById('bali-content');
-      const tipsContent = document.querySelector('.travel-tips');
-      const contactInfo = document.querySelector('.contact-info');
-      const allLocationContent = [semarangContent, baliContent, tipsContent];
-  
-      const hideAllLocationContent = () => {
-        allLocationContent.forEach(content => {
-          if (content) {
-            content.style.display = 'none';
-          }
+        const tabButtons = document.querySelectorAll('.location-tabs .tab-button');
+        const allContent = document.getElementById('all-content');
+        const semarangContent = document.getElementById('semarang-content');
+        const baliContent = document.getElementById('bali-content');
+        const tipsContent = document.querySelector('.travel-tips');
+        const contactInfo = document.querySelector('.contact-info');
+        const allLocationContent = [allContent, semarangContent, baliContent, tipsContent];
+
+        const hideAllLocationContent = () => {
+            allLocationContent.forEach(content => {
+                if (content) {
+                    content.style.display = 'none';
+                }
+            });
+            if (contactInfo) contactInfo.style.display = 'none';
+        };
+
+        // Initially show all relevant content and activate 'All Info'
+        hideAllLocationContent();
+        if (allContent) allContent.style.display = 'block';
+        if (semarangContent) semarangContent.style.display = 'block';
+        if (baliContent) baliContent.style.display = 'block';
+        if (tipsContent) tipsContent.style.display = 'block';
+        if (contactInfo) contactInfo.style.display = 'block';
+
+        tabButtons.forEach(button => {
+            if (button.dataset.location === 'all') {
+                button.classList.add('active');
+            }
+
+            button.addEventListener('click', function() {
+                const location = this.dataset.location;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                hideAllLocationContent();
+
+                if (location === 'all') {
+                    if (allContent) allContent.style.display = 'block';
+                    if (semarangContent) semarangContent.style.display = 'block';
+                    if (baliContent) baliContent.style.display = 'block';
+                    if (tipsContent) tipsContent.style.display = 'block';
+                } else if (location === 'semarang') {
+                    if (semarangContent) semarangContent.style.display = 'block';
+                } else if (location === 'bali') {
+                    if (baliContent) baliContent.style.display = 'block';
+                } else if (location === 'tips') {
+                    if (tipsContent) tipsContent.style.display = 'block';
+                }
+
+                if (contactInfo) contactInfo.style.display = 'block';
+            });
         });
-      };
-  
-      // Initially show all and activate 'All Info'
-      hideAllLocationContent();
-      if (semarangContent) semarangContent.style.display = 'block';
-      if (baliContent) baliContent.style.display = 'block';
-      if (tipsContent) tipsContent.style.display = 'block';
-      if (contactInfo) contactInfo.style.display = 'block';
-      tabButtons.forEach(button => {
-        if (button.dataset.location === 'all') {
-          button.classList.add('active');
-        }
-      });
-  
-      tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const location = this.dataset.location;
-  
-          tabButtons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-  
-          hideAllLocationContent();
-  
-          if (location === 'all') {
-            if (semarangContent) semarangContent.style.display = 'block';
-            if (baliContent) baliContent.style.display = 'block';
-            if (tipsContent) tipsContent.style.display = 'block';
-          } else if (location === 'semarang') {
-            if (semarangContent) semarangContent.style.display = 'block';
-          } else if (location === 'bali') {
-            if (baliContent) baliContent.style.display = 'block';
-          } else if (location === 'tips') {
-            if (tipsContent) tipsContent.style.display = 'block';
-          }
-  
-          if (contactInfo) contactInfo.style.display = 'block';
-        });
-      });
     });
-  </script>
+</script>
