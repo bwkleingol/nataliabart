@@ -60,11 +60,17 @@
   },
   "gallery": {
     "title": "Our Gallery",
+    "description": "Sweet memories we've made together" ,
     "categories": {
       "all": "All Photos",
       "engagement": "Engagement",
       "travels": "Our Travels",
       "family": "Family"
+    },
+    "gallerybutton":
+    { 
+      "title": "View Full Gallery",
+      "url":"/gallery"
     },
     "photos": {
       "proposal": {

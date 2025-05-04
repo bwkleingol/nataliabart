@@ -58,11 +58,17 @@
   },
   "gallery": {
     "title": "Galeri Kami",
+    "description": "Memori manis yang telah kita buat bersama" ,
     "categories": {
       "all": "Semua Foto",
       "engagement": "Pertunangan",
       "travels": "Perjalanan Kami",
       "family": "Keluarga"
+    },
+    "gallerybutton":
+    { 
+      "title": "Lihat Galeri Lengkap",
+      "url":"id/galery"
     },
     "photos": {
       "proposal": {

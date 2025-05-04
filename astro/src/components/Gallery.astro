@@ -1,11 +1,16 @@
 ---
+import { t, setCurrentLocale } from '../i18n/utils';
+
+// Set the current locale
+const currentLocale = Astro.currentLocale || 'nl';
+setCurrentLocale(currentLocale);
 ---
 
 <section class="gallery-section">
     <div class="section-header">
-        <h2>Memories</h2>
+        <h2>{t('gallery.title')}</h2>
         <div class="divider"></div>
-        <p class="section-description">Sweet memories we've made together</p>
+        <p class="section-description">{t('gallery.description')}</p>
     </div>
 
     <div class="gallery-grid">
@@ -29,7 +34,7 @@
         </div>
     </div>
 
-    <a href="/gallery" class="view-more">View Full Gallery</a>
+    <a href={t('gallery.gallerybutton.url')} class="view-more">{t('gallery.gallerybutton.title')}</a>
 </section>
 
 <style>

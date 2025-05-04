@@ -58,11 +58,17 @@
   },
   "gallery": {
     "title": "Onze Galerij",
+    "description": "Een blik op wat fijne herinneringen die we samen gemaakt hebben" ,
     "categories": {
       "all": "Alle Foto's",
       "engagement": "Verloving",
       "travels": "Onze Reizen",
       "family": "Familie"
+    },
+    "gallerybutton":
+    { 
+      "title": "Bekijk Volledige Galerij",
+      "url":"nl/galery"
     },
     "photos": {
       "proposal": {
