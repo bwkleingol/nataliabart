@@ -68,7 +68,7 @@
     "gallerybutton":
     { 
       "title": "Bekijk Volledige Galerij",
-      "url":"nl/galery"
+      "url":"/nl/gallery/"
     },
     "photos": {
       "proposal": {

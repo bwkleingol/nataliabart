@@ -68,7 +68,7 @@
     "gallerybutton":
     { 
       "title": "Lihat Galeri Lengkap",
-      "url":"id/galery"
+      "url":"/id/gallery"
     },
     "photos": {
       "proposal": {
