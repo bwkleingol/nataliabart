@@ -15,36 +15,10 @@ setCurrentLocale(currentLocale);
     </section>
 
     <section class="contact-content">
-        <div class="contact-intro">
-            <p>
-                {t('contact.intro')} <strong>{t('contact.deadline')}</strong>.
-            </p>
-        </div>
 
         <ContactForm />
 
-        <div class="contact-info">
-            <div class="info-card">
-                <h3>{t('contact.important.title')}</h3>
-                <ul>
-                    {Array.isArray(t('contact.important.items', { returnObjects: true })) &&
-                        t('contact.important.items', { returnObjects: true }).map((item: string) => (
-                            <li>{item}</li>
-                        ))
-                    }
-                </ul>
-            </div>
-
-            <div class="info-card">
-                <h3>{t('contact.questions.title')}</h3>
-                <p>
-                    {t('contact.questions.text')}
-                </p>
-                <p><strong>Maya Wijaya</strong><br>
-                Email: maya@nataliabart.info<br>
-                Phone: +62 812 3456 7890</p>
-            </div>
-        </div>
+        
     </section>
 </Layout>
 
