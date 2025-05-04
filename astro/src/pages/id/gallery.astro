@@ -7,87 +7,167 @@ const currentLocale = Astro.currentLocale || 'id';
 setCurrentLocale(currentLocale);
 ---
 
-<Layout title={`${t('nav.gallery')} - ${t('site.title')}`}>
+<Layout title="Gallery - Nathalia & Bart's Wedding">
     <section class="page-header">
-        <h1>{t('nav.gallery')}</h1>
+        <h1>Our Gallery</h1>
         <div class="divider"></div>
     </section>
 
-    <div class="content-container">
-        <div class="gallery-intro">
-            <p>A collection of our favorite moments together. We'll add more photos after the wedding!</p>
+    <section class="gallery-content">
+        <div class="gallery-categories">
+            <button class="category-button active" data-category="all">Semua Foto</button>
+            <button class="category-button" data-category="engagement">Tunangan</button>
+            <button class="category-button" data-category="travels">Perjalanan</button>
+            <button class="category-button" data-category="family">Keluarga</button>
+            <button class="category-button" data-category="everydaylife">Kehidupan Sehari-hari</button>
         </div>
-
+    
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="/images/gallery/natbart1.avif" alt="Natalia and Bart in Amsterdam" loading="lazy" />
-                <div class="caption">Amsterdam, 2022</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/gallery/nnatbart2.avif" alt="Natalia and Bart in Bali" loading="lazy" />
-                <div class="caption">Bali, 2023</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart3.avif" alt="Natalia and Bart hiking" loading="lazy" />
-                <div class="caption">Hiking in Java, 2023</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart4.avif" alt="Natalia and Bart at a dinner" loading="lazy" />
-                <div class="caption">Anniversary Dinner, 2024</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart5.avif.jpg" alt="Natalia and Bart at the beach" loading="lazy" />
-                <div class="caption">Scheveningen Beach, 2022</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart6.avif" alt="Natalia and Bart in Jakarta" loading="lazy" />
-                <div class="caption">Jakarta, 2019</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart7.avif" alt="Natalia and Bart at a festival" loading="lazy" />
-                <div class="caption">King's Day, Amsterdam, 2023</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart8.avif" alt="Natalia and Bart cooking together" loading="lazy" />
-                <div class="caption">Cooking Class, 2024</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/gallery/natbart1.avif" alt="Engagement photo" loading="lazy" />
-                <div class="caption">Engagement Day, Bali, 2023</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/gallery/engagement-9.jpg" alt="Engagement ring" loading="lazy" />
-                <div class="caption">The Proposal</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart10.avif" alt="Family gathering" loading="lazy" />
-                <div class="caption">Family Gathering, 2023</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/natbart11.avif" alt="Family dinner" loading="lazy" />
-                <div class="caption">Christmas Dinner, 2023</div>
-            </div>
-        </div>
-
-        <div class="share-photos">
-            <h2>Share Your Photos With Us</h2>
-            <div class="divider"></div>
-            <p>We'd love to see your photos from our wedding day! Please share them using our wedding hashtag or upload them to our shared album.</p>
-
-            <div class="share-options">
-                <div class="share-option">
-                    <h3>Wedding Hashtag</h3>
-                    <p class="hashtag">#NathaliaAndBart2025</p>
-                    <p>Use this hashtag when posting on Instagram or Facebook</p>
-                </div>
-
-                <div class="share-option">
-                    <h3>Photo Sharing App</h3>
-                    <p>We'll be using a photo sharing app for the wedding. Details will be provided closer to the date.</p>
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart3.avif" alt="Jalan-jalan di desa kelahiran Bart" />
+                <div class="gallery-caption">
+                    <h3>Jalan-jalan di desa kelahiran Bart</h3>
+                    <p>Mariënvelde, Februari 2025</p>
                 </div>
             </div>
+    
+            <div class="gallery-item" data-category="engagement">
+                <img src="/images/natbart10.avif" alt="Lamaran" />
+                <div class="gallery-caption">
+                    <h3>Lamaran</h3>
+                    <p>Nusa Penida, November 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart14.avif" alt="Perjalanan akhir pekan ke Winterberg" />
+                <div class="gallery-caption">
+                    <h3>Perjalanan akhir pekan ke Winterberg</h3>
+                    <p>Winterberg, Jerman, Januari 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart1.avif" alt="Perjalanan kota Amsterdam" />
+                <div class="gallery-caption">
+                    <h3>Perjalanan kota Amsterdam</h3>
+                    <p>Amsterdam, Februari 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart2.avif" alt="Akhir pekan ke salju di Winterberg, Jerman" />
+                <div class="gallery-caption">
+                    <h3>Akhir pekan ke salju</h3>
+                    <p>Winterberg, Jerman, Januari 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart6.avif" alt="Pura Goa Giri Putri, Nusa Penida" />
+                <div class="gallery-caption">
+                    <h3>Pura Goa Giri Putri</h3>
+                    <p>Nusa Penida, Agustus 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart7.avif" alt="Perjalanan ke 'Kota Lama' Semarang" />
+                <div class="gallery-caption">
+                    <h3>Perjalanan ke 'Kota Lama' Semarang</h3>
+                    <p>Semarang, Mei 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart12.avif" alt="Senang-senang di perjalanan perahu yang terlalu penuh ke Gili Trawangan" />
+                <div class="gallery-caption">
+                    <h3>Senang-senang di perjalanan perahu yang terlalu penuh ke Gili T.</h3>
+                    <p>Di suatu tempat antara Padangbai & Gili T, April 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart13.avif" alt="Di feri menuju Banyuwangi, Jawa" />
+                <div class="gallery-caption">
+                    <h3>Di feri menuju Banyuwangi, Jawa.</h3>
+                    <p>Feri Gilimanuk-Banyuwangi, Mei 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="everydaylife">
+                <img src="/images/natbart15.avif" alt="Makan & Bekerja di salah satu restoran favorit kami di Sanur" />
+                <div class="gallery-caption">
+                    <h3>Makan & Bekerja di salah satu restoran favorit kami di Sanur</h3>
+                    <p>Dinver di sawah Sanur, Februari 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="family">
+                <img src="/images/natbart8.avif" alt="Kota Lama Semarang bersama keluarga" />
+                <div class="gallery-caption">
+                    <h3>Semarang 'Kota Lama'</h3>
+                    <p>Semarang, Mei 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="everydaylife">
+                <img src="/images/natbart9.avif" alt="Upacara pembukaan Kafe Natalia di Ubud" />
+                <div class="gallery-caption">
+                    <h3>Upacara pembukaan Kafe Natalia</h3>
+                    <p>Ubud, Februari 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="travels">
+                <img src="/images/natbart11.avif" alt="Bersepeda di Gili Trawangan bersama keluarga" />
+                <div class="gallery-caption">
+                    <h3>Bersepeda di Gili Trawangan</h3>
+                    <p>Gili T, April 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="family">
+                <img src="/images/familysemarang2.webp" alt="Makan malam keluarga di Semarang" />
+                <div class="gallery-caption">
+                    <h3>Makan malam keluarga di Semarang</h3>
+                    <p>Semarang, Mei 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="family">
+                <img src="/images/familymarienvelde.webp" alt="Pertemuan hari Minggu dengan keluarga Bart di Mariënvelde" />
+                <div class="gallery-caption">
+                    <h3>Pertemuan hari Minggu dengan keluarga Bart</h3>
+                    <p>Mariënvelde, Januari 2025</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="everydaylife">
+                <img src="/images/natbart4.avif" alt="Senang-senang saat berbelanja di Sanur, Bali" />
+                <div class="gallery-caption">
+                    <h3>Senang-senang saat berbelanja</h3>
+                    <p>Sanur, Bali, November 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="everydaylife">
+                <img src="/images/natbart5.avif" alt="Lebih senang saat berbelanja bahan makanan di Sanur, Bali setelah kalah taruhan" />
+                <div class="gallery-caption">
+                    <h3>Lebih senang saat berbelanja bahan makanan setelah kalah taruhan</h3>
+                    <p>Sanur, Bali, November 2024</p>
+                </div>
+            </div>
+    
+            <div class="gallery-item" data-category="family">
+                <img src="/images/famimilysemarang1.webp" alt="Kencan malam dengan Andi & Ibed di Semarang" />
+                <div class="gallery-caption">
+                    <h3>Kencan malam dengan Andi & Ibed</h3>
+                    <p>Semarang, Mei 2024</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </Layout>
 
 <style>
@@ -102,7 +182,6 @@ setCurrentLocale(currentLocale);
     .page-header h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
-        text-align: center;
     }
 
     .divider {
@@ -112,22 +191,36 @@ setCurrentLocale(currentLocale);
         margin: 0 auto;
     }
 
-    .content-container {
+    .gallery-content {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 0 1rem 5rem;
     }
 
-    .gallery-intro {
-        text-align: center;
+    .gallery-categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
         margin-bottom: 3rem;
     }
 
-    .gallery-intro p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.6;
+    .category-button {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .category-button:hover, .category-button.active {
+        background-color: var(--primary-color);
+        color: white;
     }
 
     .gallery-grid {
@@ -162,21 +255,84 @@ setCurrentLocale(currentLocale);
         transform: scale(1.05);
     }
 
-    .caption {
+    .gallery-caption {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.7);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
         color: white;
-        padding: 0.75rem;
-        font-size: 0.9rem;
+        padding: 1.5rem 1rem 1rem;
         transform: translateY(100%);
         transition: transform 0.3s ease;
     }
 
-    .gallery-item:hover .caption {
+    .gallery-item:hover .gallery-caption {
         transform: translateY(0);
+    }
+
+    .gallery-caption h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .gallery-caption p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    /* Lightbox styles will be handled by JavaScript */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .lightbox.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 80vh;
+    }
+
+    .lightbox-image {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 5px;
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .lightbox-caption {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        color: white;
+        text-align: center;
     }
 
     .share-photos {
@@ -233,7 +389,8 @@ setCurrentLocale(currentLocale);
         margin-bottom: 1rem;
     }
 
-    @media (max-width: 768px) {
+
+    @media (max-width: 992px) {
         .gallery-grid {
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         }
@@ -246,4 +403,339 @@ setCurrentLocale(currentLocale);
             padding: 2rem 1.5rem;
         }
     }
+    /* Lightbox styles */
+    #gallery-lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #gallery-lightbox.active {
+        opacity: 1;
+    }
+
+    #lightbox-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #lightbox-img {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 4px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #lightbox-img.loaded {
+        opacity: 1;
+    }
+
+    #lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    #lightbox-close:hover {
+        opacity: 1;
+    }
+
+    #lightbox-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #lightbox-loader {
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        border-top: 5px solid white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -20px;
+    }
+
+    #lightbox-prev,
+    #lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    padding: 0.5rem; /* Reduce padding around the arrows */
+    }
+
+    #lightbox-prev:hover,
+    #lightbox-next:hover {
+    opacity: 1;
+    }
+
+    #lightbox-prev {
+    left: 20px; /* Bring closer to the left edge */
+    }
+
+    #lightbox-next {
+    right: 20px; /* Bring closer to the right edge */
+    }
+
+    @media (max-width: 768px) {
+    #lightbox-wrapper {
+        padding: 5px; /* Further reduce padding on mobile */
+    }
+
+    #lightbox-prev {
+        left: 5px; /* Even closer on mobile */
+        font-size: 1.5rem;
+    }
+
+    #lightbox-next {
+        right: 5px; /* Even closer on mobile */
+        font-size: 1.5rem;
+    }
+}
+
+/* Adjust styles for smaller screens if needed */
+@media (max-width: 768px) {
+    #lightbox-prev {
+        left: 10px;
+        font-size: 1.5rem;
+    }
+
+    #lightbox-next {
+        right: 10px;
+        font-size: 1.5rem;
+    }
+}
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+        #lightbox-img {
+            max-width: 95%;
+            width: 100%;
+            max-height: 70vh;
+        }
+
+        #lightbox-close {
+            top: 10px;
+            right: 10px;
+        }
+        
+    }
 </style>
+
+<!-- Lightbox HTML structure -->
+<div id="gallery-lightbox">
+    <button id="lightbox-close">&times;</button>
+    <div id="lightbox-wrapper">
+    <button id="lightbox-prev">&lt;</button>
+    <div id="lightbox-loader"></div>
+    <img id="lightbox-img" src="" alt="Enlarged image">
+     <button id="lightbox-next">&gt;</button>
+     </div>
+     <div id="lightbox-caption"></div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxWrapper = document.getElementById('lightbox-wrapper');
+        const lightboxLoader = document.getElementById('lightbox-loader');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        let currentGalleryItem = null;
+        let allGalleryItems = [];
+
+        function updateAllGalleryItems() {
+            const activeCategory = document.querySelector('.category-button.active')?.dataset.category || 'all';
+            allGalleryItems = Array.from(galleryItems).filter(item => {
+                return activeCategory === 'all' || item.dataset.category === activeCategory;
+            });
+        }
+        updateAllGalleryItems();
+
+        const categoryButtons = document.querySelectorAll('.category-button');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const category = button.dataset.category;
+                galleryItems.forEach(item => {
+                    item.style.display = (category === 'all' || item.dataset.category === category) ? 'block' : 'none';
+                });
+                updateAllGalleryItems();
+                if (lightbox.classList.contains('active')) {
+                    const currentItemIndex = Array.from(galleryItems).filter(item => item.style.display !== 'none').indexOf(currentGalleryItem);
+                    if (currentItemIndex !== -1) {
+                        openLightbox(currentGalleryItem);
+                    } else if (allGalleryItems.length > 0) {
+                        openLightbox(allGalleryItems[0]); // Open the first item of the new filter
+                    } else {
+                        closeLightbox(); // Close if no items in the new filter
+                    }
+                }
+            });
+        });
+
+        function openLightbox(item) {
+            currentGalleryItem = item;
+            const img = item.querySelector('img');
+            const captionElement = item.querySelector('.gallery-caption');
+            const caption = captionElement ? captionElement.textContent || captionElement.innerText : '';
+
+            lightboxLoader.style.display = 'block';
+            lightboxImg.classList.remove('loaded');
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'block';
+            void lightbox.offsetWidth;
+            lightbox.classList.add('active');
+
+            lightboxImg.onload = function() {
+                lightboxLoader.style.display = 'none';
+                lightboxImg.classList.add('loaded');
+            };
+
+            lightboxImg.onerror = function() {
+                lightboxLoader.style.display = 'none';
+                lightboxCaption.textContent = 'Error loading image';
+                console.error('Error loading image:', img.src); // Log the error
+            };
+
+            lightboxImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+            updateNavigationButtons();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightboxImg.classList.remove('loaded');
+            setTimeout(() => {
+                lightbox.style.display = 'none';
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+                currentGalleryItem = null;
+            }, 300);
+        }
+
+        function updateNavigationButtons() {
+            if (!currentGalleryItem) return;
+            const currentIndex = allGalleryItems.indexOf(currentGalleryItem);
+            lightboxPrev.style.display = currentIndex > 0 ? 'block' : 'none';
+            lightboxNext.style.display = currentIndex < allGalleryItems.length - 1 ? 'block' : 'none';
+        }
+
+        function navigateLightbox(direction) {
+            if (!currentGalleryItem) return;
+            const currentIndex = allGalleryItems.indexOf(currentGalleryItem);
+            let newIndex = direction === 'prev' ? currentIndex - 1 : currentIndex + 1;
+
+            if (newIndex >= 0 && newIndex < allGalleryItems.length) {
+                openLightbox(allGalleryItems[newIndex]);
+            }
+        }
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                openLightbox(this);
+            });
+        });
+
+        lightboxClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeLightbox();
+        });
+
+        lightboxWrapper.addEventListener('click', function(e) {
+            if (e.target === lightboxWrapper) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft' && lightboxPrev.style.display === 'block') {
+                navigateLightbox('prev');
+            } else if (e.key === 'ArrowRight' && lightboxNext.style.display === 'block') {
+                navigateLightbox('next');
+            }
+        });
+
+        lightboxPrev.addEventListener('click', () => navigateLightbox('prev'));
+        lightboxNext.addEventListener('click', () => navigateLightbox('next'));
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        lightboxWrapper.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches()[0].screenX;
+        }, false);
+
+        lightboxWrapper.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches()[0].screenX;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50 && lightboxNext.style.display === 'block') {
+                navigateLightbox('next');
+            } else if (touchEndX > touchStartX + 50 && lightboxPrev.style.display === 'block') {
+                navigateLightbox('prev');
+            }
+        }
+    });
+</script>
