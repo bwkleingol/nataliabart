@@ -25,29 +25,34 @@
   "couple": {
     "title": "Pasangan",
     "bart": {
-      "origin": "dari Belanda",
-      "description": "Bart tumbuh di Amsterdam dan pindah ke Semarang pada tahun 2020 di mana ia bekerja sebagai digital nomad. Dia suka menjelajahi kota dan mendalami budaya Jawa lokal."
+      "origin": "berasal dari Belanda",
+      "description": "Bart tumbuh besar di Mariënvelde, sebuah kota kecil berpenduduk 900 jiwa yang terletak di 'de Achterhoek' (diterjemahkan sebagai 'pojok belakang'), di mana ia menikmati masa muda yang damai dan tanpa kekhawatiran. Ia tumbuh dengan satu kakak perempuan dan orang tua yang menjalankan bengkel. Bart dibesarkan dengan jiwa kewirausahaan, Bart belajar menjadi seorang insinyur listrik. Setelah beberapa tahun bekerja di perusahaan, ia memutuskan bahwa itu bukan untuknya, dan Bart berkeliling dunia, di mana ia menemukan hasrat sejatinya. Ia pindah ke Bali pada tahun 2022 untuk mengerjakan sebuah startup dan telah menetap secara permanen di sana sejak tahun 2023, mengejar mimpinya."
     },
     "natalia": {
-      "origin": "dari Indonesia",
-      "description": "Natalia lahir dan dibesarkan di Semarang. Dia bekerja di bidang perhotelan di kota kelahirannya. Dia menikmati memasak hidangan tradisional Jawa dan berbagi warisan budayanya."
-    }
+      "origin": "berasal dari Indonesia",
+      "description": "Natalia lahir dan besar di Semarang, ibu kota Jawa Tengah, dengan populasi 1,7 juta jiwa. Sebagai anak bungsu dari tiga bersaudara, dengan dua kakak laki-laki, ia mengalami kehidupan keluarga yang hangat. Natalia mengejar minat akademiknya dengan belajar menjadi seorang akuntan. Mencari pengembangan profesional setelah studinya, ia pindah ke Jawa Barat untuk bekerja di sebuah perusahaan pengembangan properti terkemuka. Didorong oleh keinginan untuk tantangan dan pengalaman baru, Natalia pindah ke Bali pada tahun 2021. Berakar kuat pada pendidikannya, ia memegang teguh kearifan Jawa dan memiliki rasa bangga yang kuat terhadap kekayaan budaya Jawanya."
+   }
   },
   "events": {
     "title": "Detail Acara",
     "ceremony": {
-      "title": "Upacara Adat Jawa",
+      "title": "Upacara Doa Malam Pernikahan",
       "time": "14 Juni 2025 • 10:00 WIB",
-      "location": "Semarang Grand Ballroom",
-      "address": "Jl. Pemuda No. 123, Semarang, Indonesia",
-      "description": "Bergabunglah dengan kami untuk upacara pernikahan adat Jawa yang menghormati latar belakang budaya kami berdua."
-    },
-    "reception": {
+      "location": "Gereja Katolik St. Petrus Sambiroto",
+      "address": "Jl. Arum Sari Raya No.A5, Sambiroto, Kec. Tembalang, Kota Semarang, Jawa Tengah 50276",
+      "description": "Upacara 'pemberkatan pernikahan' ini menjadi landasan spiritual yang penting bagi pernikahan kami. Selama upacara ini, kami akan bertukar janji suci di hadapan Tuhan dan gereja, serta menerima doa untuk kehidupan cinta, kebahagiaan, dan pertumbuhan spiritual bersama."
+      },
+      "reception": {
       "title": "Resepsi",
-      "time": "14 Juni 2025 • 18:00 WIB",
-      "location": "Semarang Beachfront",
-      "address": "Pantai Marina, Semarang, Indonesia",
-      "description": "Rayakan bersama kami di resepsi tepi pantai kami yang menampilkan perpaduan masakan Indonesia dan Belanda, musik live, dan dansa di bawah bintang-bintang."
+      "time": "14 Juni 2025 • 13:30 WIB",
+      "location": "Hotel Grand Candi",
+      "address": "Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232",
+      "description": "Setelah upacara di gereja, resepsi kami akan diadakan di Hotel Grand Candi, di mana para tamu dapat memberikan selamat secara tradisional kepada pengantin dan keluarga yang duduk di depan panggung. Setelah Anda menyapa pengantin dan keluarga, hidangan pernikahan khas Indonesia yang lezat akan tersedia untuk Anda nikmati, dengan alunan musik live yang dimainkan."
+      },
+    "dresscode": {
+      "description": "Informasi mengenai saran pakaian selama pernikahan dapat Anda ",
+      "url": "/id/travel/#dress-code",
+      "descriptionpart2": "temukan di sini"
     },
     "location": "Lokasi"
   },

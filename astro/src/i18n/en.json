@@ -51,6 +51,11 @@
       "address": "Jl. Sisingamangaraja No.16, Kaliwiru, Kec. Candisari, Kota Semarang, Jawa Tengah 50232",
       "description": "After the church ceremony, our reception will be at Hotel Grand Candi, where guests can traditionally congratulate the newlyweds and families seated at the front on a stage. Once you've greeted the newlyweds and families, the delicious Indonesian wedding dishes will be available for you to enjoy, with live music played in "
     },
+    "dresscode": {
+      "description": "In case you're curious about our dress code, you can find information ",
+      "url": "/travel/#dress-code",
+      "descriptionpart2": "here"
+    },
     "location": "Location"
   },
   "gallery": {
