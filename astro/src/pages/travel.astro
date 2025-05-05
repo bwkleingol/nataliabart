@@ -447,7 +447,7 @@ import Layout from '../layouts/Layout.astro';
                         <strong>Visa:</strong> <br>
                         Its handy to aleady arrange your visa before arriving in Indonesia. Visa on arrival is perfectly doable, but 
                         arranging this beforehand allows you to jump the line in the airport.
-                        How to arrange your online visa can be <a href="/travel/#visa-info"target="_blank" style="color: #8D5A97;"><strong>read here</strong></a>.                     
+                        How to arrange your online visa can be <a href="/travel/#visa-info" style="color: #8D5A97;"><strong>read here</strong></a>.                     
                         <br><br>
                         <strong>Customs Declaration (Day before your travel):</strong> <br>
                         This is a requirement for every passenger arriving by plane in Indonesia. You need to show this code to 
@@ -964,5 +964,19 @@ import Layout from '../layouts/Layout.astro';
                 if (contactInfo) contactInfo.style.display = 'block';
             });
         });
+
+        // --- START: Smooth scrolling for hash fragments on page load ---
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1); // Remove the '#'
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Wait a short moment to ensure the element is fully rendered
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }, 100); // Adjust the delay if needed
+            }
+        }
+        // --- END: Smooth scrolling for hash fragments on page load ---
     });
 </script>

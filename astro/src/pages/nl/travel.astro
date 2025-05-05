@@ -959,5 +959,19 @@ setCurrentLocale(currentLocale);
                 if (contactInfo) contactInfo.style.display = 'block';
             });
         });
+
+        // --- START: Smooth scrolling for hash fragments on page load ---
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1); // Remove the '#'
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Wait a short moment to ensure the element is fully rendered
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }, 100); // Adjust the delay if needed
+            }
+        }
+        // --- END: Smooth scrolling for hash fragments on page load ---
     });
 </script>
